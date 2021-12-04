@@ -64,7 +64,7 @@ class CustomCard extends StatelessWidget {
                 Row(
                   children: const [
                     Text(
-                      "Go to",
+                      "اذهب الي",
                       style: TextStyle(color: Colors.white),
                     ),
                     Icon(

@@ -4,6 +4,7 @@ import 'package:fazakir/views/widgets/costum_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:sinusoidal/wave.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -18,9 +19,6 @@ class _HomeState extends State<Home> {
     final height = MediaQuery.of(context).size.height;
     final size = MediaQuery.of(context).size;
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("Fazakir"),
-      ),
       body: SafeArea(
         child: SingleChildScrollView(
           child: SizedBox(
@@ -30,6 +28,12 @@ class _HomeState extends State<Home> {
               mainAxisAlignment: MainAxisAlignment.center,
               mainAxisSize: MainAxisSize.max,
               children: [
+                const SizedBox(height: 18.0),
+                Text(
+                  AppLocalizations.of(context)!.appTitle,
+                  style: Theme.of(context).textTheme.headline4,
+                ),
+                const SizedBox(height: 14.0),
                 Container(
                   margin: const EdgeInsets.all(14.0),
                   decoration: BoxDecoration(
@@ -67,22 +71,22 @@ class _HomeState extends State<Home> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 const Text(
-                                  "last read",
+                                  "متابعة القراءة",
                                   style: TextStyle(color: Colors.white54),
                                 ),
                                 const SizedBox(height: 12.0),
                                 const Text(
-                                  "Ar-Rahman",
+                                  "الرحمن",
                                   style: TextStyle(color: Colors.white),
                                 ),
                                 const Text(
-                                  "No: 1",
+                                  "صفحه: 120",
                                   style: TextStyle(color: Colors.white54),
                                 ),
                                 Row(
                                   children: const [
                                     Text(
-                                      "Go to",
+                                      "اذهب الي",
                                       style: TextStyle(color: Colors.white),
                                     ),
                                     Icon(
