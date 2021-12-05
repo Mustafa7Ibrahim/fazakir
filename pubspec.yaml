@@ -24,6 +24,7 @@ dependencies:
   dio: ^4.0.4
   flutter_svg: ^0.23.0+1
   equatable: ^2.0.3
+  dartz: ^0.10.1
 
 dev_dependencies:
   flutter_test:
@@ -41,3 +42,4 @@ flutter:
     # Add assets from the images directory to the application.
     - assets/images/
     - assets/icons/
+    - assets/json/

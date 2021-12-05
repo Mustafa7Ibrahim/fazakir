@@ -1,10 +1,12 @@
 import 'dart:ui';
 
+import 'package:fazakir/views/azkar/azkar_list.dart';
 import 'package:fazakir/views/widgets/costum_card.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:sinusoidal/wave.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -117,6 +119,7 @@ class _HomeState extends State<Home> {
                       child: Column(
                         children: [
                           CustomCard(
+                            onTap: () {},
                             size: size,
                             image: "assets/icons/quran.svg",
                             title: "Quran",
@@ -127,6 +130,14 @@ class _HomeState extends State<Home> {
                             short: false,
                           ),
                           CustomCard(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                CupertinoPageRoute(
+                                  builder: (context) => const AzkarList(),
+                                ),
+                              );
+                            },
                             size: size,
                             image: "assets/icons/doaa.svg",
                             title: "Azkar",
@@ -143,6 +154,7 @@ class _HomeState extends State<Home> {
                       child: Column(
                         children: [
                           CustomCard(
+                            onTap: () {},
                             size: size,
                             image: "assets/icons/memorize.svg",
                             title: "Memorize",
@@ -153,6 +165,7 @@ class _HomeState extends State<Home> {
                             short: true,
                           ),
                           CustomCard(
+                            onTap: () {},
                             size: size,
                             image: "assets/icons/salah.svg",
                             title: "Prayer Time",
