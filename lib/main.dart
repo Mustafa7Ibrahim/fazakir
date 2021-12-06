@@ -31,8 +31,8 @@ class MyApp extends StatelessWidget {
       locale: const Locale("ar"),
       onGenerateTitle: (BuildContext context) => AppLocalizations.of(context)!.appTitle,
       theme: ThemeApp.lightTheme,
-      // darkTheme: ThemeApp.darkTheme,
-      themeMode: ThemeMode.light,
+      darkTheme: ThemeApp.darkTheme,
+      themeMode: ThemeMode.system,
       home: const Home(),
     );
   }

@@ -36,16 +36,12 @@ class ThemeApp {
     bottomNavigationBarTheme: const BottomNavigationBarThemeData(
       elevation: 0.0,
       backgroundColor: Color(0xffCBE4EB),
-      unselectedIconTheme: IconThemeData(
-        color: Color(0xff218B5F),
-      ),
+      unselectedIconTheme: IconThemeData(color: Color(0xff65C7A8)),
       enableFeedback: true,
-      selectedIconTheme: IconThemeData(
-        color: Color(0xff20695F),
-      ),
+      selectedIconTheme: IconThemeData(color: Color(0xff2EB3AF)),
     ),
     floatingActionButtonTheme: const FloatingActionButtonThemeData(
-      backgroundColor: Color(0xff218B5F),
+      backgroundColor: Color(0xff2EB3AF),
     ),
     textTheme: const TextTheme(
       headline6: TextStyle(
@@ -75,146 +71,71 @@ class ThemeApp {
     ),
   );
 
-  // static ThemeData darkTheme = ThemeData(
-  //   backgroundColor: const Color(0xff010313),
-  //   scaffoldBackgroundColor: const Color(0xff010313),
-  //   colorScheme: const ColorScheme(
-  //     primary: Color(0xffB9A2D8),
-  //     primaryVariant: Color(0xff9345F2),
-  //     secondary: Color(0xffF9AF8D),
-  //     secondaryVariant: Color(0xffE6704A),
-  //     surface: Color(0xff010313),
-  //     background: Color(0xff010313),
-  //     error: Color(0xffEF4444),
-  //     onPrimary: Color(0xffffffff),
-  //     onSecondary: Color(0xff011341),
-  //     onSurface: Color(0xffffffff),
-  //     onBackground: Color(0xffffffff),
-  //     onError: Color(0xffCF6679),
-  //     brightness: Brightness.dark,
-  //   ),
-  //   appBarTheme: const AppBarTheme(
-  //     centerTitle: true,
-  //     elevation: 0.0,
-  //     systemOverlayStyle: SystemUiOverlayStyle.dark,
-  //     backgroundColor: Colors.white,
-  //     titleTextStyle: TextStyle(
-  //       color: Colors.black,
-  //       fontWeight: FontWeight.w600,
-  //       fontSize: 20.0,
-  //       letterSpacing: 0.15,
-  //     ),
-  //   ),
-  //   bottomNavigationBarTheme: const BottomNavigationBarThemeData(
-  //     // elevation: 0.0,
-  //     backgroundColor: Color(0xff010313),
-  //     unselectedIconTheme: IconThemeData(
-  //       size: 14.0,
-  //       color: Color(0xffB9A2D8),
-  //     ),
-  //     enableFeedback: true,
-  //     selectedIconTheme: IconThemeData(
-  //       size: 14.0,
-  //       color: Color(0xff9345F2),
-  //     ),
-  //   ),
-  //   floatingActionButtonTheme: const FloatingActionButtonThemeData(
-  //     backgroundColor: Color(0xff9345F2),
-  //   ),
-  // );
-
-  // static ThemeData lightTheme = ThemeData(
-  //   scaffoldBackgroundColor: const Color(0xffFAF8FC),
-  //   colorScheme: const ColorScheme(
-  //     primary: Color(0xff9345F2),
-  //     primaryVariant: Color(0xff260F68),
-  //     secondary: Color(0xffF9AF8D),
-  //     secondaryVariant: Color(0xffE6704A),
-  //     surface: Color(0xffFAF8FC),
-  //     background: Color(0xffFAF8FC),
-  //     error: Color(0xffB00020),
-  //     onPrimary: Color(0xffffffff),
-  //     onSecondary: Color(0xff000000),
-  //     onSurface: Color(0xff000000),
-  //     onBackground: Color(0xff000000),
-  //     onError: Color(0xffB00020),
-  //     brightness: Brightness.light,
-  //   ),
-  //   appBarTheme: const AppBarTheme(
-  //     centerTitle: true,
-  //     elevation: 0.0,
-  //     systemOverlayStyle: SystemUiOverlayStyle.light,
-  //     backgroundColor: Colors.white,
-  //     titleTextStyle: TextStyle(
-  //       color: Colors.black,
-  //       fontWeight: FontWeight.w600,
-  //       fontSize: 20.0,
-  //       letterSpacing: 0.15,
-  //     ),
-  //   ),
-  //   bottomNavigationBarTheme: const BottomNavigationBarThemeData(
-  //     // elevation: 0.0,
-  //     backgroundColor: Color(0xffFAF8FC),
-  //     unselectedIconTheme: IconThemeData(
-  //       size: 14.0,
-  //       color: Color(0xff2E0D8A),
-  //     ),
-  //     enableFeedback: true,
-  //     selectedIconTheme: IconThemeData(
-  //       size: 14.0,
-  //       color: Color(0xff260F68),
-  //     ),
-  //   ),
-  //   floatingActionButtonTheme: const FloatingActionButtonThemeData(
-  //     backgroundColor: Color(0xff9345F2),
-  //   ),
-  // );
-
-  // static ThemeData darkTheme = ThemeData(
-  //   backgroundColor: const Color(0xff010313),
-  //   scaffoldBackgroundColor: const Color(0xff010313),
-  //   colorScheme: const ColorScheme(
-  //     primary: Color(0xffB9A2D8),
-  //     primaryVariant: Color(0xff9345F2),
-  //     secondary: Color(0xffF9AF8D),
-  //     secondaryVariant: Color(0xffE6704A),
-  //     surface: Color(0xff010313),
-  //     background: Color(0xff010313),
-  //     error: Color(0xffEF4444),
-  //     onPrimary: Color(0xffffffff),
-  //     onSecondary: Color(0xff011341),
-  //     onSurface: Color(0xffffffff),
-  //     onBackground: Color(0xffffffff),
-  //     onError: Color(0xffCF6679),
-  //     brightness: Brightness.dark,
-  //   ),
-  //   appBarTheme: const AppBarTheme(
-  //     centerTitle: true,
-  //     elevation: 0.0,
-  //     systemOverlayStyle: SystemUiOverlayStyle.light,
-  //     backgroundColor: Colors.white,
-  //     titleTextStyle: TextStyle(
-  //       color: Colors.black,
-  //       fontWeight: FontWeight.w600,
-  //       fontSize: 20.0,
-  //       letterSpacing: 0.15,
-  //     ),
-  //   ),
-  //   bottomNavigationBarTheme: const BottomNavigationBarThemeData(
-  //     // elevation: 0.0,
-  //     backgroundColor: Color(0xff010313),
-  //     unselectedIconTheme: IconThemeData(
-  //       size: 14.0,
-  //       color: Color(0xffB9A2D8),
-  //     ),
-  //     enableFeedback: true,
-  //     selectedIconTheme: IconThemeData(
-  //       size: 14.0,
-  //       color: Color(0xff9345F2),
-  //     ),
-  //   ),
-  //   floatingActionButtonTheme: const FloatingActionButtonThemeData(
-  //     backgroundColor: Color(0xff9345F2),
-  //   ),
-  // );
+  static ThemeData darkTheme = ThemeData(
+    backgroundColor: const Color(0xff010313),
+    scaffoldBackgroundColor: const Color(0xff010313),
+    colorScheme: const ColorScheme(
+      primary: Color(0xff2EB3AF),
+      primaryVariant: Color(0xff65C7A8),
+      secondary: Color(0xffA5D2D6),
+      secondaryVariant: Color(0xffA5D2D6),
+      surface: Color(0xff010313),
+      background: Color(0xff010313),
+      error: Color(0xffEF4444),
+      onPrimary: Color(0xffffffff),
+      onSecondary: Color(0xff010313),
+      onSurface: Color(0xffffffff),
+      onBackground: Color(0xffffffff),
+      onError: Color(0xffCF6679),
+      brightness: Brightness.dark,
+    ),
+    appBarTheme: const AppBarTheme(
+      centerTitle: true,
+      elevation: 0.0,
+      systemOverlayStyle: SystemUiOverlayStyle.dark,
+      backgroundColor: Color(0xff010313),
+      titleTextStyle: TextStyle(
+        color: Color(0xffffffff),
+        fontWeight: FontWeight.w600,
+        fontSize: 20.0,
+        letterSpacing: 0.15,
+      ),
+    ),
+    bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+      elevation: 0.0,
+      backgroundColor: Color(0xff010313),
+      unselectedIconTheme: IconThemeData(color: Color(0xff65C7A8)),
+      enableFeedback: true,
+      selectedIconTheme: IconThemeData(color: Color(0xff2EB3AF)),
+    ),
+    floatingActionButtonTheme: const FloatingActionButtonThemeData(
+      backgroundColor: Color(0xff65C7A8),
+    ),
+    textTheme: const TextTheme(
+      headline6: TextStyle(
+        fontFamily: "Othmani",
+        letterSpacing: 0.15,
+      ),
+      caption: TextStyle(
+        fontFamily: "Othmani",
+        letterSpacing: 0.4,
+      ),
+      button: TextStyle(
+        fontFamily: "Othmani",
+        letterSpacing: 1.25,
+      ),
+      overline: TextStyle(
+        fontFamily: "Othmani",
+        letterSpacing: 1.5,
+      ),
+      subtitle1: TextStyle(
+        fontFamily: "Othmani",
+        letterSpacing: 0.15,
+      ),
+      subtitle2: TextStyle(
+        fontFamily: "Othmani",
+        letterSpacing: 0.1,
+      ),
+    ),
+  );
 }

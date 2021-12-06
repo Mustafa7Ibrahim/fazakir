@@ -27,11 +27,11 @@ class Zekr extends StatelessWidget {
         return Container(
           width: size.width * 0.9,
           decoration: BoxDecoration(
-            color: Colors.white,
+            color: Theme.of(context).colorScheme.surface,
             borderRadius: BorderRadius.circular(8.0),
             boxShadow: [
               BoxShadow(
-                color: Colors.grey.withOpacity(0.3),
+                color: Theme.of(context).colorScheme.secondary.withOpacity(0.3),
                 blurRadius: 1,
                 offset: const Offset(0, 3),
               ),

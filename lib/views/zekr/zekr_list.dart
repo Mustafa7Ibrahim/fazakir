@@ -44,11 +44,22 @@ class _ZekrListState extends State<ZekrList> {
               itemBuilder: (context, index) {
                 return BlocProvider(
                   create: (context) => ZekrCubit(),
-                  child: Zekr(
-                    size: size,
-                    zekrModel: widget.azkarModel.content[index],
-                    index: index,
-                    total: widget.azkarModel.content.length,
+                  child: BlocListener<ZekrCubit, int>(
+                    listener: (context, state) {
+                      if (state == int.parse(widget.azkarModel.content[index].count)) {
+                        pageController.animateToPage(
+                          index + 1,
+                          duration: const Duration(milliseconds: 400),
+                          curve: Curves.easeInOut,
+                        );
+                      }
+                    },
+                    child: Zekr(
+                      size: size,
+                      zekrModel: widget.azkarModel.content[index],
+                      index: index,
+                      total: widget.azkarModel.content.length,
+                    ),
                   ),
                 );
               },
