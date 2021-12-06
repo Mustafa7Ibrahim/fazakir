@@ -6,8 +6,8 @@ class ThemeApp {
     applyElevationOverlayColor: true,
     scaffoldBackgroundColor: const Color(0xffffffff),
     colorScheme: const ColorScheme(
-      primary: Color(0xff218B5F),
-      primaryVariant: Color(0xff20695F),
+      primary: Color(0xff2EB3AF),
+      primaryVariant: Color(0xff65C7A8),
       secondary: Color(0xffA5D2D6),
       secondaryVariant: Color(0xffA5D2D6),
       surface: Color(0xffCBE4EB),
@@ -31,6 +31,7 @@ class ThemeApp {
         fontSize: 20.0,
         letterSpacing: 0.15,
       ),
+      iconTheme: IconThemeData(color: Color(0xFF000000)),
     ),
     bottomNavigationBarTheme: const BottomNavigationBarThemeData(
       elevation: 0.0,
@@ -45,6 +46,32 @@ class ThemeApp {
     ),
     floatingActionButtonTheme: const FloatingActionButtonThemeData(
       backgroundColor: Color(0xff218B5F),
+    ),
+    textTheme: const TextTheme(
+      headline6: TextStyle(
+        fontFamily: "Othmani",
+        letterSpacing: 0.15,
+      ),
+      caption: TextStyle(
+        fontFamily: "Othmani",
+        letterSpacing: 0.4,
+      ),
+      button: TextStyle(
+        fontFamily: "Othmani",
+        letterSpacing: 1.25,
+      ),
+      overline: TextStyle(
+        fontFamily: "Othmani",
+        letterSpacing: 1.5,
+      ),
+      subtitle1: TextStyle(
+        fontFamily: "Othmani",
+        letterSpacing: 0.15,
+      ),
+      subtitle2: TextStyle(
+        fontFamily: "Othmani",
+        letterSpacing: 0.1,
+      ),
     ),
   );
 

@@ -1,6 +1,8 @@
 import 'package:fazakir/bloc/azkar_cubit/azkar_cubit.dart';
+import 'package:fazakir/core/constant.dart';
 import 'package:fazakir/injection_container.dart';
 import 'package:fazakir/repository/azkar_repository/azkar_repository.dart';
+import 'package:fazakir/views/zekr/zekr_list.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -31,7 +33,7 @@ class AzkarList extends StatelessWidget {
                 separatorBuilder: (context, index) => const Divider(),
                 itemBuilder: (context, index) {
                   return ListTile(
-                    onTap: () {},
+                    onTap: () => goTo(context, ZekrList(azkarModel: state.azkarModel[index])),
                     leading: SvgPicture.asset(
                       "assets/icons/doaa.svg",
                       height: size.width * 0.1,

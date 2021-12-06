@@ -43,3 +43,14 @@ flutter:
     - assets/images/
     - assets/icons/
     - assets/json/
+    - assets/fonts/
+
+
+  fonts:
+    - family: Rika
+      fonts:
+        - asset: assets/fonts/Rika.ttf
+    - family: Othmani
+      fonts:
+        - asset: assets/fonts/Othmani.ttf
+        
