@@ -1,5 +1,5 @@
 import 'package:bloc/bloc.dart';
-import 'package:fazakir/bloc/azkar_cubit/op.dart';
+import 'package:fazakir/myobserver.dart';
 import 'package:fazakir/views/home/home.dart';
 import 'package:flutter/material.dart';
 
@@ -13,12 +13,9 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await init();
   BlocOverrides.runZoned(
-    () {
-      // ...
-    },
-    blocObserver: MyBlocObserver(),
+    () => runApp(const MyApp()),
+    blocObserver: MyObserver(),
   );
-  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {

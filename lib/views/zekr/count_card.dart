@@ -35,7 +35,9 @@ class CountCard extends StatelessWidget {
               : const SizedBox(),
           Text(
             count,
-            style: Theme.of(context).textTheme.headline5,
+            style: title != null
+                ? Theme.of(context).textTheme.overline
+                : Theme.of(context).textTheme.headline3,
           ),
         ],
       ),

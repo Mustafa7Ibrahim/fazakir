@@ -1,5 +1,9 @@
+import 'package:fazakir/bloc/zekr_cubit/zekr_cubit.dart';
 import 'package:fazakir/models/azkar_model.dart';
+import 'package:flutter/animation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 import 'zekr.dart';
 
@@ -25,13 +29,9 @@ class _ZekrListState extends State<ZekrList> {
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     return Scaffold(
-      // backgroundColor: Color(0xffBD84CA),
       appBar: AppBar(
         backgroundColor: Colors.transparent,
-        title: Text(
-          widget.azkarModel.title,
-          // style: TextStyle(color: Colors.white),
-        ),
+        title: Text(widget.azkarModel.title),
       ),
       body: Column(
         children: [
@@ -39,23 +39,42 @@ class _ZekrListState extends State<ZekrList> {
           Flexible(
             flex: 16,
             child: PageView.builder(
+              controller: pageController,
               itemCount: widget.azkarModel.content.length,
               itemBuilder: (context, index) {
-                return Zekr(
-                  size: size,
-                  zekrModel: widget.azkarModel.content[index],
-                  index: index,
+                return BlocProvider(
+                  create: (context) => ZekrCubit(),
+                  child: Zekr(
+                    size: size,
+                    zekrModel: widget.azkarModel.content[index],
+                    index: index,
+                    total: widget.azkarModel.content.length,
+                  ),
                 );
               },
             ),
           ),
-          const SizedBox(height: 12.0),
           Flexible(
             flex: 1,
-            child: Container(
-                // color: Colors.red,
+            child: Center(
+              child: SmoothPageIndicator(
+                controller: pageController,
+                count: widget.azkarModel.content.length,
+                effect: ScrollingDotsEffect(
+                  activeDotColor: Theme.of(context).colorScheme.primary,
+                  fixedCenter: true,
+                  maxVisibleDots: 7,
                 ),
-          )
+                onDotClicked: (index) {
+                  pageController.animateToPage(
+                    index,
+                    duration: const Duration(milliseconds: 400),
+                    curve: Curves.easeInOut,
+                  );
+                },
+              ),
+            ),
+          ),
         ],
       ),
     );
