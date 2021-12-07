@@ -120,7 +120,7 @@ class _HomeState extends State<Home> {
                             onTap: () {},
                             size: size,
                             image: "assets/icons/quran.svg",
-                            title: "Quran",
+                            title: "القرآن الكريم",
                             colors: const [
                               Color(0xff47A1B7),
                               Color(0xff76BEC3),
@@ -139,7 +139,7 @@ class _HomeState extends State<Home> {
                             },
                             size: size,
                             image: "assets/icons/doaa.svg",
-                            title: "Azkar",
+                            title: "حصن المسلم",
                             colors: const [
                               Color(0xffA582DB),
                               Color(0xffBD84CA),
@@ -157,7 +157,7 @@ class _HomeState extends State<Home> {
                             onTap: () {},
                             size: size,
                             image: "assets/icons/memorize.svg",
-                            title: "Memorize",
+                            title: "حفظ",
                             colors: const [
                               Color(0xffD077A5),
                               Color(0xffCB82BB),
@@ -169,7 +169,7 @@ class _HomeState extends State<Home> {
                             onTap: () {},
                             size: size,
                             image: "assets/icons/salah.svg",
-                            title: "Prayer Time",
+                            title: "مواقيت الصلاة",
                             colors: const [
                               Color(0xff7DA7E8),
                               Color(0xff8DA5E8),
