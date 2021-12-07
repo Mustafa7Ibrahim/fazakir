@@ -21,23 +21,20 @@ class _HomeState extends State<Home> {
     final height = MediaQuery.of(context).size.height;
     final size = MediaQuery.of(context).size;
     return Scaffold(
+      appBar: AppBar(
+        title: Text(AppLocalizations.of(context)!.appTitle),
+      ),
       body: SafeArea(
         child: SingleChildScrollView(
-          child: SizedBox(
+          child: Container(
+            margin: const EdgeInsets.symmetric(horizontal: 18.0),
             width: double.infinity,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.center,
               mainAxisSize: MainAxisSize.max,
               children: [
-                const SizedBox(height: 18.0),
-                Text(
-                  AppLocalizations.of(context)!.appTitle,
-                  style: Theme.of(context).textTheme.headline4,
-                ),
-                const SizedBox(height: 14.0),
                 Container(
-                  margin: const EdgeInsets.all(14.0),
                   decoration: BoxDecoration(
                     gradient: const LinearGradient(
                       colors: [
@@ -112,6 +109,7 @@ class _HomeState extends State<Home> {
                     ],
                   ),
                 ),
+                const SizedBox(height: 18.0),
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -129,6 +127,7 @@ class _HomeState extends State<Home> {
                             ],
                             short: false,
                           ),
+                          const SizedBox(height: 18.0),
                           CustomCard(
                             onTap: () {
                               Navigator.push(
@@ -150,6 +149,7 @@ class _HomeState extends State<Home> {
                         ],
                       ),
                     ),
+                    const SizedBox(width: 18.0),
                     Flexible(
                       child: Column(
                         children: [
@@ -164,6 +164,7 @@ class _HomeState extends State<Home> {
                             ],
                             short: true,
                           ),
+                          const SizedBox(height: 18.0),
                           CustomCard(
                             onTap: () {},
                             size: size,

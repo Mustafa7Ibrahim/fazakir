@@ -23,7 +23,6 @@ class CustomCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.all(14.0),
       decoration: BoxDecoration(
         gradient: LinearGradient(
           colors: colors,
@@ -45,7 +44,7 @@ class CustomCard extends StatelessWidget {
                 ),
                 child: Container(
                   color: Colors.white12,
-                  height: short ? size.height * 0.09 : size.height * 0.15,
+                  height: short ? size.height * 0.09 : size.height * 0.14,
                   width: size.width,
                 ),
               ),
@@ -60,7 +59,7 @@ class CustomCard extends StatelessWidget {
                     height: size.height * 0.12,
                     width: size.width * 0.12,
                   ),
-                  SizedBox(height: short ? size.height * 0.05 : size.height * 0.1),
+                  SizedBox(height: short ? size.height * 0.02 : size.height * 0.08),
                   Text(
                     title,
                     style: const TextStyle(color: Colors.white54),

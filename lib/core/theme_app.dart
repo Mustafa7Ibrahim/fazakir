@@ -3,15 +3,15 @@ import 'package:flutter/services.dart';
 
 class ThemeApp {
   static ThemeData lightTheme = ThemeData(
-    applyElevationOverlayColor: true,
+    applyElevationOverlayColor: false,
     scaffoldBackgroundColor: const Color(0xffffffff),
     colorScheme: const ColorScheme(
       primary: Color(0xff2EB3AF),
       primaryVariant: Color(0xff65C7A8),
       secondary: Color(0xffA5D2D6),
       secondaryVariant: Color(0xffA5D2D6),
-      surface: Color(0xffCBE4EB),
-      background: Color(0xffCBE4EB),
+      surface: Color(0xffffffff),
+      background: Color(0xffffffff),
       error: Color(0xffB00020),
       onPrimary: Color(0xffffffff),
       onSecondary: Color(0xff000000),
@@ -23,7 +23,11 @@ class ThemeApp {
     appBarTheme: const AppBarTheme(
       centerTitle: true,
       elevation: 0.0,
-      systemOverlayStyle: SystemUiOverlayStyle.light,
+      systemOverlayStyle: SystemUiOverlayStyle(
+        statusBarColor: Colors.transparent,
+        systemNavigationBarColor: Colors.transparent,
+        systemNavigationBarDividerColor: Colors.transparent,
+      ),
       backgroundColor: Color(0xffffffff),
       titleTextStyle: TextStyle(
         color: Color(0xFF000000),
