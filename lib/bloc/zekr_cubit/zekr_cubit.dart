@@ -8,9 +8,18 @@ class ZekrCubit extends Cubit<int> {
   void increment(int max) {
     if (state < max) {
       emit(state + 1);
-      HapticFeedback.mediumImpact();
-      SystemSound.play(SystemSoundType.click);
+      _haptic();
     }
+  }
+
+  void incrementWithoutMaxNumber() {
+    emit(state + 1);
+    _haptic();
+  }
+
+  void _haptic() {
+    HapticFeedback.mediumImpact();
+    SystemSound.play(SystemSoundType.click);
   }
 
   /// Subtract 1 from the current state.

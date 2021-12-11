@@ -159,7 +159,7 @@ class _HomeState extends State<Home> {
                               Navigator.push(
                                 context,
                                 CupertinoPageRoute(
-                                  builder: (context) => Praise(),
+                                  builder: (context) => const Praise(),
                                 ),
                               );
                             },

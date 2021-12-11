@@ -20,9 +20,7 @@ class Praise extends StatelessWidget {
         ),
       ),
       body: BlocProvider(
-        create: (context) =>
-            PraiseCubit(praiseRepositiry: getIt<PraiseRepositiry>())
-              ..getPraise(),
+        create: (context) => PraiseCubit(praiseRepositiry: getIt<PraiseRepositiry>())..getPraise(),
         child: BlocConsumer<PraiseCubit, PraiseState>(
           listener: (context, state) {
             if (state is PraiseError) {
@@ -33,20 +31,17 @@ class Praise extends StatelessWidget {
             var cubit = PraiseCubit.get(context);
             if (state is PraiseLoading) {
               return const Center(child: CircularProgressIndicator());
-            } else {
+            } else if (state is PraiseScasses) {
               return Column(
                 children: [
-                  PraiseCount(
-                    sum: cubit.sum,
-                  ),
+                  PraiseCount(sum: state.sum),
                   Expanded(
                     child: Padding(
                       padding: const EdgeInsets.all(12.0),
                       child: GridView.builder(
                         physics: const BouncingScrollPhysics(),
                         itemCount: 4,
-                        gridDelegate:
-                            const SliverGridDelegateWithMaxCrossAxisExtent(
+                        gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
                           maxCrossAxisExtent: 200,
                           childAspectRatio: 2 / 2,
                           crossAxisSpacing: 20,
@@ -54,10 +49,6 @@ class Praise extends StatelessWidget {
                         itemBuilder: (context, index) {
                           return PraiseName(
                             praiseData: cubit.praiseModel!.praise[index],
-                            count: cubit.count,
-                            onCount: () {
-                              cubit.praiseCount();
-                            },
                           );
                         },
                       ),
@@ -66,6 +57,7 @@ class Praise extends StatelessWidget {
                 ],
               );
             }
+            return Container();
           },
         ),
       ),

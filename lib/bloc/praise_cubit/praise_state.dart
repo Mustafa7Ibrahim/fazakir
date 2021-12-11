@@ -1,5 +1,4 @@
 import 'package:equatable/equatable.dart';
-
 import 'package:fazakir/models/praise_model.dart';
 
 abstract class PraiseState extends Equatable {
@@ -14,11 +13,13 @@ class PraiseLoading extends PraiseState {}
 
 class PraiseScasses extends PraiseState {
   final PraiseModel praiseModel;
+  final int sum;
   const PraiseScasses({
     required this.praiseModel,
+    required this.sum,
   });
   @override
-  List<Object> get props => [praiseModel];
+  List<Object> get props => [praiseModel, sum];
 }
 
 class PraiseError extends PraiseState {
@@ -29,5 +30,3 @@ class PraiseError extends PraiseState {
   @override
   List<Object> get props => [message];
 }
-
-class PraiseSum extends PraiseState {}

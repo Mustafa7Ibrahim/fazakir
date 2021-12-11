@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 class PraiseCount extends StatelessWidget {
-  PraiseCount({Key? key, required this.sum}) : super(key: key);
-  int sum = 0;
+  const PraiseCount({Key? key, required this.sum}) : super(key: key);
+  final int sum;
   @override
   Widget build(BuildContext context) {
     return Container(

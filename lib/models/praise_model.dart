@@ -9,6 +9,7 @@ class PraiseData {
   String? name;
   String? info;
   String? mening;
+
   PraiseData.fromJson(Map<String, dynamic> json) {
     name = json['name'];
     info = json['info'];
