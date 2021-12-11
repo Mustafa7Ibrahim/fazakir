@@ -54,4 +54,7 @@ flutter:
     - family: Othmani
       fonts:
         - asset: assets/fonts/Othmani.ttf
+    - family: quran
+      fonts:
+        - asset: assets/fonts/quran.ttf
         

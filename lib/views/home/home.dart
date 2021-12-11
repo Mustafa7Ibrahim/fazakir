@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:fazakir/views/azkar/azkar_list.dart';
+import 'package:fazakir/views/praise/praise.dart';
 import 'package:fazakir/views/widgets/costum_card.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -154,10 +155,17 @@ class _HomeState extends State<Home> {
                       child: Column(
                         children: [
                           CustomCard(
-                            onTap: () {},
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                CupertinoPageRoute(
+                                  builder: (context) => Praise(),
+                                ),
+                              );
+                            },
                             size: size,
                             image: "assets/icons/memorize.svg",
-                            title: "حفظ",
+                            title: "اذكر الله",
                             colors: const [
                               Color(0xffD077A5),
                               Color(0xffCB82BB),

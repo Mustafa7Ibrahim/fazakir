@@ -48,6 +48,11 @@ class ThemeApp {
       backgroundColor: Color(0xff2EB3AF),
     ),
     textTheme: const TextTheme(
+      headline5: TextStyle(
+        fontFamily: "quran",
+        letterSpacing: 0.15,
+        fontSize: 20,
+      ),
       headline6: TextStyle(
         fontFamily: "Othmani",
         letterSpacing: 0.15,
@@ -116,6 +121,11 @@ class ThemeApp {
       backgroundColor: Color(0xff65C7A8),
     ),
     textTheme: const TextTheme(
+      headline5: TextStyle(
+        fontFamily: "quran",
+        letterSpacing: 0.15,
+        fontSize: 20,
+      ),
       headline6: TextStyle(
         fontFamily: "Othmani",
         letterSpacing: 0.15,
