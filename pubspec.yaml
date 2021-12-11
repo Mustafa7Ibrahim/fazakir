@@ -26,12 +26,17 @@ dependencies:
   equatable: ^2.0.3
   dartz: ^0.10.1
   smooth_page_indicator: ^1.0.0+2
+  freezed_annotation: ^1.0.0
+  json_annotation: ^4.4.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
   flutter_lints: ^1.0.0
+  freezed: ^1.0.2+1
+  build_runner: ^2.1.5
+  json_serializable: ^6.1.1
 
 flutter:
   uses-material-design: true
@@ -57,4 +62,7 @@ flutter:
     - family: quran
       fonts:
         - asset: assets/fonts/quran.ttf
+    - family: Uthmanic
+      fonts:
+        - asset: assets/fonts/Uthmanic.otf
         
