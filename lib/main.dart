@@ -1,4 +1,5 @@
 import 'package:bloc/bloc.dart';
+import 'package:fazakir/data_source/local/hive_helper.dart';
 import 'package:fazakir/myobserver.dart';
 import 'package:fazakir/views/home/home.dart';
 import 'package:flutter/material.dart';
@@ -10,6 +11,7 @@ import 'injection_container.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await init();
+  await HiveHelper.init();
   BlocOverrides.runZoned(
     () => runApp(const MyApp()),
     blocObserver: MyObserver(),
@@ -27,8 +29,7 @@ class MyApp extends StatelessWidget {
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
       locale: const Locale("ar"),
-      onGenerateTitle: (BuildContext context) =>
-          AppLocalizations.of(context)!.appTitle,
+      onGenerateTitle: (BuildContext context) => AppLocalizations.of(context)!.appTitle,
       theme: ThemeApp.lightTheme,
       darkTheme: ThemeApp.darkTheme,
       themeMode: ThemeMode.light,
