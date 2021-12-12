@@ -1,4 +1,3 @@
-import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:fazakir/models/azkar_model.dart';
 import 'package:fazakir/repository/azkar_repository/azkar_repository.dart';

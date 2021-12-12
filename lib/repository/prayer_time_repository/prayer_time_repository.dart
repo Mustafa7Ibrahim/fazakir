@@ -8,7 +8,6 @@ import 'package:fazakir/data_source/local/hive_helper.dart';
 import 'package:fazakir/data_source/remote/dio_helper.dart';
 import 'package:fazakir/models/data_model/data_model.dart';
 import 'package:fazakir/models/method_model/method_model.dart';
-import 'package:fazakir/models/prayer_settings_model/prayer_settings_model.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:intl/intl.dart';

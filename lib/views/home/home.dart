@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:fazakir/views/azkar/azkar_list.dart';
 import 'package:fazakir/views/praise/praise.dart';
 import 'package:fazakir/views/widgets/costum_card.dart';
