@@ -145,6 +145,18 @@ class _HomeState extends State<Home> {
                             ],
                             short: true,
                           ),
+                          const SizedBox(height: 18.0),
+                          CustomCard(
+                            onTap: () {},
+                            size: size,
+                            image: "assets/icons/mosque2.svg",
+                            title: "مواقيت الصلاة",
+                            colors: const [
+                              Color(0xff7DA7E8),
+                              Color(0xff8DA5E8),
+                            ],
+                            short: true,
+                          ),
                         ],
                       ),
                     ),
@@ -172,21 +184,48 @@ class _HomeState extends State<Home> {
                           ),
                           const SizedBox(height: 18.0),
                           CustomCard(
-                            onTap: () {},
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                CupertinoPageRoute(
+                                  builder: (context) => const AzkarList(),
+                                ),
+                              );
+                            },
                             size: size,
                             image: "assets/icons/salah.svg",
-                            title: "مواقيت الصلاة",
+                            title: "صلاتي",
                             colors: const [
-                              Color(0xff7DA7E8),
-                              Color(0xff8DA5E8),
+                              Color(0xff041C32),
+                              Color(0xff064663),
                             ],
                             short: false,
                           ),
+                          const SizedBox(height: 18.0),
+                          CustomCard(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                CupertinoPageRoute(
+                                  builder: (context) => const AzkarList(),
+                                ),
+                              );
+                            },
+                            size: size,
+                            image: "assets/icons/kaaba.svg",
+                            title: "الحج والعمره",
+                            colors: const [
+                              Color(0xffECB365),
+                              Color(0xffFABB51),
+                            ],
+                            short: true,
+                          ),
+                          const SizedBox(height: 18.0),
                         ],
                       ),
                     ),
                   ],
-                )
+                ),
               ],
             ),
           ),
