@@ -22,25 +22,25 @@ class _$TimingsTearOff {
   const _$TimingsTearOff();
 
   _Timings call(
-      {required String fajr,
-      required String sunrise,
-      required String dhuhr,
-      required String asr,
-      required String sunset,
-      required String maghrib,
-      required String isha,
-      required String imsak,
-      required String midnigh}) {
+      {required String Fajr,
+      required String Sunrise,
+      required String Dhuhr,
+      required String Asr,
+      required String Sunset,
+      required String Maghrib,
+      required String Isha,
+      required String Imsak,
+      required String Midnight}) {
     return _Timings(
-      fajr: fajr,
-      sunrise: sunrise,
-      dhuhr: dhuhr,
-      asr: asr,
-      sunset: sunset,
-      maghrib: maghrib,
-      isha: isha,
-      imsak: imsak,
-      midnigh: midnigh,
+      Fajr: Fajr,
+      Sunrise: Sunrise,
+      Dhuhr: Dhuhr,
+      Asr: Asr,
+      Sunset: Sunset,
+      Maghrib: Maghrib,
+      Isha: Isha,
+      Imsak: Imsak,
+      Midnight: Midnight,
     );
   }
 
@@ -54,15 +54,15 @@ const $Timings = _$TimingsTearOff();
 
 /// @nodoc
 mixin _$Timings {
-  String get fajr => throw _privateConstructorUsedError;
-  String get sunrise => throw _privateConstructorUsedError;
-  String get dhuhr => throw _privateConstructorUsedError;
-  String get asr => throw _privateConstructorUsedError;
-  String get sunset => throw _privateConstructorUsedError;
-  String get maghrib => throw _privateConstructorUsedError;
-  String get isha => throw _privateConstructorUsedError;
-  String get imsak => throw _privateConstructorUsedError;
-  String get midnigh => throw _privateConstructorUsedError;
+  String get Fajr => throw _privateConstructorUsedError;
+  String get Sunrise => throw _privateConstructorUsedError;
+  String get Dhuhr => throw _privateConstructorUsedError;
+  String get Asr => throw _privateConstructorUsedError;
+  String get Sunset => throw _privateConstructorUsedError;
+  String get Maghrib => throw _privateConstructorUsedError;
+  String get Isha => throw _privateConstructorUsedError;
+  String get Imsak => throw _privateConstructorUsedError;
+  String get Midnight => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -74,15 +74,15 @@ abstract class $TimingsCopyWith<$Res> {
   factory $TimingsCopyWith(Timings value, $Res Function(Timings) then) =
       _$TimingsCopyWithImpl<$Res>;
   $Res call(
-      {String fajr,
-      String sunrise,
-      String dhuhr,
-      String asr,
-      String sunset,
-      String maghrib,
-      String isha,
-      String imsak,
-      String midnigh});
+      {String Fajr,
+      String Sunrise,
+      String Dhuhr,
+      String Asr,
+      String Sunset,
+      String Maghrib,
+      String Isha,
+      String Imsak,
+      String Midnight});
 }
 
 /// @nodoc
@@ -95,52 +95,52 @@ class _$TimingsCopyWithImpl<$Res> implements $TimingsCopyWith<$Res> {
 
   @override
   $Res call({
-    Object? fajr = freezed,
-    Object? sunrise = freezed,
-    Object? dhuhr = freezed,
-    Object? asr = freezed,
-    Object? sunset = freezed,
-    Object? maghrib = freezed,
-    Object? isha = freezed,
-    Object? imsak = freezed,
-    Object? midnigh = freezed,
+    Object? Fajr = freezed,
+    Object? Sunrise = freezed,
+    Object? Dhuhr = freezed,
+    Object? Asr = freezed,
+    Object? Sunset = freezed,
+    Object? Maghrib = freezed,
+    Object? Isha = freezed,
+    Object? Imsak = freezed,
+    Object? Midnight = freezed,
   }) {
     return _then(_value.copyWith(
-      fajr: fajr == freezed
-          ? _value.fajr
-          : fajr // ignore: cast_nullable_to_non_nullable
+      Fajr: Fajr == freezed
+          ? _value.Fajr
+          : Fajr // ignore: cast_nullable_to_non_nullable
               as String,
-      sunrise: sunrise == freezed
-          ? _value.sunrise
-          : sunrise // ignore: cast_nullable_to_non_nullable
+      Sunrise: Sunrise == freezed
+          ? _value.Sunrise
+          : Sunrise // ignore: cast_nullable_to_non_nullable
               as String,
-      dhuhr: dhuhr == freezed
-          ? _value.dhuhr
-          : dhuhr // ignore: cast_nullable_to_non_nullable
+      Dhuhr: Dhuhr == freezed
+          ? _value.Dhuhr
+          : Dhuhr // ignore: cast_nullable_to_non_nullable
               as String,
-      asr: asr == freezed
-          ? _value.asr
-          : asr // ignore: cast_nullable_to_non_nullable
+      Asr: Asr == freezed
+          ? _value.Asr
+          : Asr // ignore: cast_nullable_to_non_nullable
               as String,
-      sunset: sunset == freezed
-          ? _value.sunset
-          : sunset // ignore: cast_nullable_to_non_nullable
+      Sunset: Sunset == freezed
+          ? _value.Sunset
+          : Sunset // ignore: cast_nullable_to_non_nullable
               as String,
-      maghrib: maghrib == freezed
-          ? _value.maghrib
-          : maghrib // ignore: cast_nullable_to_non_nullable
+      Maghrib: Maghrib == freezed
+          ? _value.Maghrib
+          : Maghrib // ignore: cast_nullable_to_non_nullable
               as String,
-      isha: isha == freezed
-          ? _value.isha
-          : isha // ignore: cast_nullable_to_non_nullable
+      Isha: Isha == freezed
+          ? _value.Isha
+          : Isha // ignore: cast_nullable_to_non_nullable
               as String,
-      imsak: imsak == freezed
-          ? _value.imsak
-          : imsak // ignore: cast_nullable_to_non_nullable
+      Imsak: Imsak == freezed
+          ? _value.Imsak
+          : Imsak // ignore: cast_nullable_to_non_nullable
               as String,
-      midnigh: midnigh == freezed
-          ? _value.midnigh
-          : midnigh // ignore: cast_nullable_to_non_nullable
+      Midnight: Midnight == freezed
+          ? _value.Midnight
+          : Midnight // ignore: cast_nullable_to_non_nullable
               as String,
     ));
   }
@@ -152,15 +152,15 @@ abstract class _$TimingsCopyWith<$Res> implements $TimingsCopyWith<$Res> {
       __$TimingsCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String fajr,
-      String sunrise,
-      String dhuhr,
-      String asr,
-      String sunset,
-      String maghrib,
-      String isha,
-      String imsak,
-      String midnigh});
+      {String Fajr,
+      String Sunrise,
+      String Dhuhr,
+      String Asr,
+      String Sunset,
+      String Maghrib,
+      String Isha,
+      String Imsak,
+      String Midnight});
 }
 
 /// @nodoc
@@ -174,52 +174,52 @@ class __$TimingsCopyWithImpl<$Res> extends _$TimingsCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? fajr = freezed,
-    Object? sunrise = freezed,
-    Object? dhuhr = freezed,
-    Object? asr = freezed,
-    Object? sunset = freezed,
-    Object? maghrib = freezed,
-    Object? isha = freezed,
-    Object? imsak = freezed,
-    Object? midnigh = freezed,
+    Object? Fajr = freezed,
+    Object? Sunrise = freezed,
+    Object? Dhuhr = freezed,
+    Object? Asr = freezed,
+    Object? Sunset = freezed,
+    Object? Maghrib = freezed,
+    Object? Isha = freezed,
+    Object? Imsak = freezed,
+    Object? Midnight = freezed,
   }) {
     return _then(_Timings(
-      fajr: fajr == freezed
-          ? _value.fajr
-          : fajr // ignore: cast_nullable_to_non_nullable
+      Fajr: Fajr == freezed
+          ? _value.Fajr
+          : Fajr // ignore: cast_nullable_to_non_nullable
               as String,
-      sunrise: sunrise == freezed
-          ? _value.sunrise
-          : sunrise // ignore: cast_nullable_to_non_nullable
+      Sunrise: Sunrise == freezed
+          ? _value.Sunrise
+          : Sunrise // ignore: cast_nullable_to_non_nullable
               as String,
-      dhuhr: dhuhr == freezed
-          ? _value.dhuhr
-          : dhuhr // ignore: cast_nullable_to_non_nullable
+      Dhuhr: Dhuhr == freezed
+          ? _value.Dhuhr
+          : Dhuhr // ignore: cast_nullable_to_non_nullable
               as String,
-      asr: asr == freezed
-          ? _value.asr
-          : asr // ignore: cast_nullable_to_non_nullable
+      Asr: Asr == freezed
+          ? _value.Asr
+          : Asr // ignore: cast_nullable_to_non_nullable
               as String,
-      sunset: sunset == freezed
-          ? _value.sunset
-          : sunset // ignore: cast_nullable_to_non_nullable
+      Sunset: Sunset == freezed
+          ? _value.Sunset
+          : Sunset // ignore: cast_nullable_to_non_nullable
               as String,
-      maghrib: maghrib == freezed
-          ? _value.maghrib
-          : maghrib // ignore: cast_nullable_to_non_nullable
+      Maghrib: Maghrib == freezed
+          ? _value.Maghrib
+          : Maghrib // ignore: cast_nullable_to_non_nullable
               as String,
-      isha: isha == freezed
-          ? _value.isha
-          : isha // ignore: cast_nullable_to_non_nullable
+      Isha: Isha == freezed
+          ? _value.Isha
+          : Isha // ignore: cast_nullable_to_non_nullable
               as String,
-      imsak: imsak == freezed
-          ? _value.imsak
-          : imsak // ignore: cast_nullable_to_non_nullable
+      Imsak: Imsak == freezed
+          ? _value.Imsak
+          : Imsak // ignore: cast_nullable_to_non_nullable
               as String,
-      midnigh: midnigh == freezed
-          ? _value.midnigh
-          : midnigh // ignore: cast_nullable_to_non_nullable
+      Midnight: Midnight == freezed
+          ? _value.Midnight
+          : Midnight // ignore: cast_nullable_to_non_nullable
               as String,
     ));
   }
@@ -229,41 +229,41 @@ class __$TimingsCopyWithImpl<$Res> extends _$TimingsCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_Timings with DiagnosticableTreeMixin implements _Timings {
   _$_Timings(
-      {required this.fajr,
-      required this.sunrise,
-      required this.dhuhr,
-      required this.asr,
-      required this.sunset,
-      required this.maghrib,
-      required this.isha,
-      required this.imsak,
-      required this.midnigh});
+      {required this.Fajr,
+      required this.Sunrise,
+      required this.Dhuhr,
+      required this.Asr,
+      required this.Sunset,
+      required this.Maghrib,
+      required this.Isha,
+      required this.Imsak,
+      required this.Midnight});
 
   factory _$_Timings.fromJson(Map<String, dynamic> json) =>
       _$$_TimingsFromJson(json);
 
   @override
-  final String fajr;
+  final String Fajr;
   @override
-  final String sunrise;
+  final String Sunrise;
   @override
-  final String dhuhr;
+  final String Dhuhr;
   @override
-  final String asr;
+  final String Asr;
   @override
-  final String sunset;
+  final String Sunset;
   @override
-  final String maghrib;
+  final String Maghrib;
   @override
-  final String isha;
+  final String Isha;
   @override
-  final String imsak;
+  final String Imsak;
   @override
-  final String midnigh;
+  final String Midnight;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'Timings(fajr: $fajr, sunrise: $sunrise, dhuhr: $dhuhr, asr: $asr, sunset: $sunset, maghrib: $maghrib, isha: $isha, imsak: $imsak, midnigh: $midnigh)';
+    return 'Timings(Fajr: $Fajr, Sunrise: $Sunrise, Dhuhr: $Dhuhr, Asr: $Asr, Sunset: $Sunset, Maghrib: $Maghrib, Isha: $Isha, Imsak: $Imsak, Midnight: $Midnight)';
   }
 
   @override
@@ -271,15 +271,15 @@ class _$_Timings with DiagnosticableTreeMixin implements _Timings {
     super.debugFillProperties(properties);
     properties
       ..add(DiagnosticsProperty('type', 'Timings'))
-      ..add(DiagnosticsProperty('fajr', fajr))
-      ..add(DiagnosticsProperty('sunrise', sunrise))
-      ..add(DiagnosticsProperty('dhuhr', dhuhr))
-      ..add(DiagnosticsProperty('asr', asr))
-      ..add(DiagnosticsProperty('sunset', sunset))
-      ..add(DiagnosticsProperty('maghrib', maghrib))
-      ..add(DiagnosticsProperty('isha', isha))
-      ..add(DiagnosticsProperty('imsak', imsak))
-      ..add(DiagnosticsProperty('midnigh', midnigh));
+      ..add(DiagnosticsProperty('Fajr', Fajr))
+      ..add(DiagnosticsProperty('Sunrise', Sunrise))
+      ..add(DiagnosticsProperty('Dhuhr', Dhuhr))
+      ..add(DiagnosticsProperty('Asr', Asr))
+      ..add(DiagnosticsProperty('Sunset', Sunset))
+      ..add(DiagnosticsProperty('Maghrib', Maghrib))
+      ..add(DiagnosticsProperty('Isha', Isha))
+      ..add(DiagnosticsProperty('Imsak', Imsak))
+      ..add(DiagnosticsProperty('Midnight', Midnight));
   }
 
   @override
@@ -287,29 +287,29 @@ class _$_Timings with DiagnosticableTreeMixin implements _Timings {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _Timings &&
-            const DeepCollectionEquality().equals(other.fajr, fajr) &&
-            const DeepCollectionEquality().equals(other.sunrise, sunrise) &&
-            const DeepCollectionEquality().equals(other.dhuhr, dhuhr) &&
-            const DeepCollectionEquality().equals(other.asr, asr) &&
-            const DeepCollectionEquality().equals(other.sunset, sunset) &&
-            const DeepCollectionEquality().equals(other.maghrib, maghrib) &&
-            const DeepCollectionEquality().equals(other.isha, isha) &&
-            const DeepCollectionEquality().equals(other.imsak, imsak) &&
-            const DeepCollectionEquality().equals(other.midnigh, midnigh));
+            const DeepCollectionEquality().equals(other.Fajr, Fajr) &&
+            const DeepCollectionEquality().equals(other.Sunrise, Sunrise) &&
+            const DeepCollectionEquality().equals(other.Dhuhr, Dhuhr) &&
+            const DeepCollectionEquality().equals(other.Asr, Asr) &&
+            const DeepCollectionEquality().equals(other.Sunset, Sunset) &&
+            const DeepCollectionEquality().equals(other.Maghrib, Maghrib) &&
+            const DeepCollectionEquality().equals(other.Isha, Isha) &&
+            const DeepCollectionEquality().equals(other.Imsak, Imsak) &&
+            const DeepCollectionEquality().equals(other.Midnight, Midnight));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(fajr),
-      const DeepCollectionEquality().hash(sunrise),
-      const DeepCollectionEquality().hash(dhuhr),
-      const DeepCollectionEquality().hash(asr),
-      const DeepCollectionEquality().hash(sunset),
-      const DeepCollectionEquality().hash(maghrib),
-      const DeepCollectionEquality().hash(isha),
-      const DeepCollectionEquality().hash(imsak),
-      const DeepCollectionEquality().hash(midnigh));
+      const DeepCollectionEquality().hash(Fajr),
+      const DeepCollectionEquality().hash(Sunrise),
+      const DeepCollectionEquality().hash(Dhuhr),
+      const DeepCollectionEquality().hash(Asr),
+      const DeepCollectionEquality().hash(Sunset),
+      const DeepCollectionEquality().hash(Maghrib),
+      const DeepCollectionEquality().hash(Isha),
+      const DeepCollectionEquality().hash(Imsak),
+      const DeepCollectionEquality().hash(Midnight));
 
   @JsonKey(ignore: true)
   @override
@@ -324,36 +324,36 @@ class _$_Timings with DiagnosticableTreeMixin implements _Timings {
 
 abstract class _Timings implements Timings {
   factory _Timings(
-      {required String fajr,
-      required String sunrise,
-      required String dhuhr,
-      required String asr,
-      required String sunset,
-      required String maghrib,
-      required String isha,
-      required String imsak,
-      required String midnigh}) = _$_Timings;
+      {required String Fajr,
+      required String Sunrise,
+      required String Dhuhr,
+      required String Asr,
+      required String Sunset,
+      required String Maghrib,
+      required String Isha,
+      required String Imsak,
+      required String Midnight}) = _$_Timings;
 
   factory _Timings.fromJson(Map<String, dynamic> json) = _$_Timings.fromJson;
 
   @override
-  String get fajr;
+  String get Fajr;
   @override
-  String get sunrise;
+  String get Sunrise;
   @override
-  String get dhuhr;
+  String get Dhuhr;
   @override
-  String get asr;
+  String get Asr;
   @override
-  String get sunset;
+  String get Sunset;
   @override
-  String get maghrib;
+  String get Maghrib;
   @override
-  String get isha;
+  String get Isha;
   @override
-  String get imsak;
+  String get Imsak;
   @override
-  String get midnigh;
+  String get Midnight;
   @override
   @JsonKey(ignore: true)
   _$TimingsCopyWith<_Timings> get copyWith =>

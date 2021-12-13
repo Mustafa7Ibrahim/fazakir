@@ -16,16 +16,17 @@ class PrayerSettingsModelAdapter extends TypeAdapter<PrayerSettingsModel> {
     final fields = <int, dynamic>{
       for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
     };
-    return PrayerSettingsModel()
-      ..city = fields[0] as String?
-      ..country = fields[1] as String?
-      ..latitude = fields[2] as double?
-      ..longitude = fields[3] as double?
-      ..method = fields[4] == null ? 0 : fields[4] as int
-      ..shafaq = fields[5] == null ? 'general' : fields[5] as String
-      ..school = fields[6] == null ? 0 : fields[6] as int
-      ..midnightMode = fields[7] as int?
-      ..latitudeAdjustmentMethod = fields[8] as String?;
+    return PrayerSettingsModel(
+      city: fields[0] as String?,
+      country: fields[1] as String?,
+      latitude: fields[2] as double?,
+      longitude: fields[3] as double?,
+      method: fields[4] == null ? 0 : fields[4] as int?,
+      shafaq: fields[5] == null ? 'general' : fields[5] as String?,
+      school: fields[6] == null ? 0 : fields[6] as int?,
+      midnightMode: fields[7] as int?,
+      latitudeAdjustmentMethod: fields[8] as String?,
+    );
   }
 
   @override

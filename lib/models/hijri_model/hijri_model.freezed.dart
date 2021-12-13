@@ -28,7 +28,7 @@ class _$HijriModelTearOff {
       required WeekdayModel weekday,
       required MonthModel month,
       required String year,
-      required DesignationModel designatio,
+      required DesignationModel designation,
       required List<dynamic> holidays}) {
     return _HijriModel(
       date: date,
@@ -37,7 +37,7 @@ class _$HijriModelTearOff {
       weekday: weekday,
       month: month,
       year: year,
-      designatio: designatio,
+      designation: designation,
       holidays: holidays,
     );
   }
@@ -58,7 +58,7 @@ mixin _$HijriModel {
   WeekdayModel get weekday => throw _privateConstructorUsedError;
   MonthModel get month => throw _privateConstructorUsedError;
   String get year => throw _privateConstructorUsedError;
-  DesignationModel get designatio => throw _privateConstructorUsedError;
+  DesignationModel get designation => throw _privateConstructorUsedError;
   List<dynamic> get holidays => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -79,12 +79,12 @@ abstract class $HijriModelCopyWith<$Res> {
       WeekdayModel weekday,
       MonthModel month,
       String year,
-      DesignationModel designatio,
+      DesignationModel designation,
       List<dynamic> holidays});
 
   $WeekdayModelCopyWith<$Res> get weekday;
   $MonthModelCopyWith<$Res> get month;
-  $DesignationModelCopyWith<$Res> get designatio;
+  $DesignationModelCopyWith<$Res> get designation;
 }
 
 /// @nodoc
@@ -103,7 +103,7 @@ class _$HijriModelCopyWithImpl<$Res> implements $HijriModelCopyWith<$Res> {
     Object? weekday = freezed,
     Object? month = freezed,
     Object? year = freezed,
-    Object? designatio = freezed,
+    Object? designation = freezed,
     Object? holidays = freezed,
   }) {
     return _then(_value.copyWith(
@@ -131,9 +131,9 @@ class _$HijriModelCopyWithImpl<$Res> implements $HijriModelCopyWith<$Res> {
           ? _value.year
           : year // ignore: cast_nullable_to_non_nullable
               as String,
-      designatio: designatio == freezed
-          ? _value.designatio
-          : designatio // ignore: cast_nullable_to_non_nullable
+      designation: designation == freezed
+          ? _value.designation
+          : designation // ignore: cast_nullable_to_non_nullable
               as DesignationModel,
       holidays: holidays == freezed
           ? _value.holidays
@@ -157,9 +157,9 @@ class _$HijriModelCopyWithImpl<$Res> implements $HijriModelCopyWith<$Res> {
   }
 
   @override
-  $DesignationModelCopyWith<$Res> get designatio {
-    return $DesignationModelCopyWith<$Res>(_value.designatio, (value) {
-      return _then(_value.copyWith(designatio: value));
+  $DesignationModelCopyWith<$Res> get designation {
+    return $DesignationModelCopyWith<$Res>(_value.designation, (value) {
+      return _then(_value.copyWith(designation: value));
     });
   }
 }
@@ -177,7 +177,7 @@ abstract class _$HijriModelCopyWith<$Res> implements $HijriModelCopyWith<$Res> {
       WeekdayModel weekday,
       MonthModel month,
       String year,
-      DesignationModel designatio,
+      DesignationModel designation,
       List<dynamic> holidays});
 
   @override
@@ -185,7 +185,7 @@ abstract class _$HijriModelCopyWith<$Res> implements $HijriModelCopyWith<$Res> {
   @override
   $MonthModelCopyWith<$Res> get month;
   @override
-  $DesignationModelCopyWith<$Res> get designatio;
+  $DesignationModelCopyWith<$Res> get designation;
 }
 
 /// @nodoc
@@ -206,7 +206,7 @@ class __$HijriModelCopyWithImpl<$Res> extends _$HijriModelCopyWithImpl<$Res>
     Object? weekday = freezed,
     Object? month = freezed,
     Object? year = freezed,
-    Object? designatio = freezed,
+    Object? designation = freezed,
     Object? holidays = freezed,
   }) {
     return _then(_HijriModel(
@@ -234,9 +234,9 @@ class __$HijriModelCopyWithImpl<$Res> extends _$HijriModelCopyWithImpl<$Res>
           ? _value.year
           : year // ignore: cast_nullable_to_non_nullable
               as String,
-      designatio: designatio == freezed
-          ? _value.designatio
-          : designatio // ignore: cast_nullable_to_non_nullable
+      designation: designation == freezed
+          ? _value.designation
+          : designation // ignore: cast_nullable_to_non_nullable
               as DesignationModel,
       holidays: holidays == freezed
           ? _value.holidays
@@ -256,7 +256,7 @@ class _$_HijriModel implements _HijriModel {
       required this.weekday,
       required this.month,
       required this.year,
-      required this.designatio,
+      required this.designation,
       required this.holidays});
 
   factory _$_HijriModel.fromJson(Map<String, dynamic> json) =>
@@ -275,13 +275,13 @@ class _$_HijriModel implements _HijriModel {
   @override
   final String year;
   @override
-  final DesignationModel designatio;
+  final DesignationModel designation;
   @override
   final List<dynamic> holidays;
 
   @override
   String toString() {
-    return 'HijriModel(date: $date, format: $format, day: $day, weekday: $weekday, month: $month, year: $year, designatio: $designatio, holidays: $holidays)';
+    return 'HijriModel(date: $date, format: $format, day: $day, weekday: $weekday, month: $month, year: $year, designation: $designation, holidays: $holidays)';
   }
 
   @override
@@ -296,7 +296,7 @@ class _$_HijriModel implements _HijriModel {
             const DeepCollectionEquality().equals(other.month, month) &&
             const DeepCollectionEquality().equals(other.year, year) &&
             const DeepCollectionEquality()
-                .equals(other.designatio, designatio) &&
+                .equals(other.designation, designation) &&
             const DeepCollectionEquality().equals(other.holidays, holidays));
   }
 
@@ -309,7 +309,7 @@ class _$_HijriModel implements _HijriModel {
       const DeepCollectionEquality().hash(weekday),
       const DeepCollectionEquality().hash(month),
       const DeepCollectionEquality().hash(year),
-      const DeepCollectionEquality().hash(designatio),
+      const DeepCollectionEquality().hash(designation),
       const DeepCollectionEquality().hash(holidays));
 
   @JsonKey(ignore: true)
@@ -331,7 +331,7 @@ abstract class _HijriModel implements HijriModel {
       required WeekdayModel weekday,
       required MonthModel month,
       required String year,
-      required DesignationModel designatio,
+      required DesignationModel designation,
       required List<dynamic> holidays}) = _$_HijriModel;
 
   factory _HijriModel.fromJson(Map<String, dynamic> json) =
@@ -350,7 +350,7 @@ abstract class _HijriModel implements HijriModel {
   @override
   String get year;
   @override
-  DesignationModel get designatio;
+  DesignationModel get designation;
   @override
   List<dynamic> get holidays;
   @override

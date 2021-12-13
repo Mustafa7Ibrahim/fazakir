@@ -6,6 +6,10 @@ class DioHelper {
   DioHelper({required this.dio});
 
   Future<Response> getData({required String url, Map<String, dynamic>? query}) {
-    return dio.get(url, queryParameters: query);
+    return dio.get(
+      url,
+      queryParameters: query,
+      options: Options(responseType: ResponseType.plain),
+    );
   }
 }

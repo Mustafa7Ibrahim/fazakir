@@ -24,7 +24,7 @@ class _$DataModelTearOff {
   _DataModel call(
       {required Timings timings,
       required DateModel date,
-      required Set<dynamic> meta}) {
+      required MetaModel meta}) {
     return _DataModel(
       timings: timings,
       date: date,
@@ -44,7 +44,7 @@ const $DataModel = _$DataModelTearOff();
 mixin _$DataModel {
   Timings get timings => throw _privateConstructorUsedError;
   DateModel get date => throw _privateConstructorUsedError;
-  Set<dynamic> get meta => throw _privateConstructorUsedError;
+  MetaModel get meta => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -56,10 +56,11 @@ mixin _$DataModel {
 abstract class $DataModelCopyWith<$Res> {
   factory $DataModelCopyWith(DataModel value, $Res Function(DataModel) then) =
       _$DataModelCopyWithImpl<$Res>;
-  $Res call({Timings timings, DateModel date, Set<dynamic> meta});
+  $Res call({Timings timings, DateModel date, MetaModel meta});
 
   $TimingsCopyWith<$Res> get timings;
   $DateModelCopyWith<$Res> get date;
+  $MetaModelCopyWith<$Res> get meta;
 }
 
 /// @nodoc
@@ -88,7 +89,7 @@ class _$DataModelCopyWithImpl<$Res> implements $DataModelCopyWith<$Res> {
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Set<dynamic>,
+              as MetaModel,
     ));
   }
 
@@ -105,6 +106,13 @@ class _$DataModelCopyWithImpl<$Res> implements $DataModelCopyWith<$Res> {
       return _then(_value.copyWith(date: value));
     });
   }
+
+  @override
+  $MetaModelCopyWith<$Res> get meta {
+    return $MetaModelCopyWith<$Res>(_value.meta, (value) {
+      return _then(_value.copyWith(meta: value));
+    });
+  }
 }
 
 /// @nodoc
@@ -113,12 +121,14 @@ abstract class _$DataModelCopyWith<$Res> implements $DataModelCopyWith<$Res> {
           _DataModel value, $Res Function(_DataModel) then) =
       __$DataModelCopyWithImpl<$Res>;
   @override
-  $Res call({Timings timings, DateModel date, Set<dynamic> meta});
+  $Res call({Timings timings, DateModel date, MetaModel meta});
 
   @override
   $TimingsCopyWith<$Res> get timings;
   @override
   $DateModelCopyWith<$Res> get date;
+  @override
+  $MetaModelCopyWith<$Res> get meta;
 }
 
 /// @nodoc
@@ -148,7 +158,7 @@ class __$DataModelCopyWithImpl<$Res> extends _$DataModelCopyWithImpl<$Res>
       meta: meta == freezed
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
-              as Set<dynamic>,
+              as MetaModel,
     ));
   }
 }
@@ -166,7 +176,7 @@ class _$_DataModel implements _DataModel {
   @override
   final DateModel date;
   @override
-  final Set<dynamic> meta;
+  final MetaModel meta;
 
   @override
   String toString() {
@@ -205,7 +215,7 @@ abstract class _DataModel implements DataModel {
   factory _DataModel(
       {required Timings timings,
       required DateModel date,
-      required Set<dynamic> meta}) = _$_DataModel;
+      required MetaModel meta}) = _$_DataModel;
 
   factory _DataModel.fromJson(Map<String, dynamic> json) =
       _$_DataModel.fromJson;
@@ -215,7 +225,7 @@ abstract class _DataModel implements DataModel {
   @override
   DateModel get date;
   @override
-  Set<dynamic> get meta;
+  MetaModel get meta;
   @override
   @JsonKey(ignore: true)
   _$DataModelCopyWith<_DataModel> get copyWith =>

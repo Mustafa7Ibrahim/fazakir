@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 
 class ThemeApp {
   static ThemeData lightTheme = ThemeData(
-    applyElevationOverlayColor: false,
     scaffoldBackgroundColor: const Color(0xffffffff),
     colorScheme: const ColorScheme(
       primary: Color(0xff2EB3AF),
@@ -23,10 +21,6 @@ class ThemeApp {
     appBarTheme: const AppBarTheme(
       centerTitle: true,
       elevation: 0.0,
-      systemOverlayStyle: SystemUiOverlayStyle(
-        statusBarColor: Colors.white,
-        statusBarIconBrightness: Brightness.dark,
-      ),
       backgroundColor: Color(0xffffffff),
       titleTextStyle: TextStyle(
         color: Color(0xFF000000),
@@ -100,10 +94,6 @@ class ThemeApp {
     appBarTheme: const AppBarTheme(
       centerTitle: true,
       elevation: 0.0,
-      systemOverlayStyle: SystemUiOverlayStyle(
-        statusBarColor: Color(0xff010313),
-        statusBarIconBrightness: Brightness.light,
-      ),
       backgroundColor: Color(0xff010313),
       titleTextStyle: TextStyle(
         color: Color(0xffffffff),

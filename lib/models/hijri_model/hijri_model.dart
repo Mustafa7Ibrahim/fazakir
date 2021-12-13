@@ -15,7 +15,7 @@ class HijriModel with _$HijriModel {
     required WeekdayModel weekday,
     required MonthModel month,
     required String year,
-    required DesignationModel designatio,
+    required DesignationModel designation,
     required List<dynamic> holidays,
   }) = _HijriModel;
   factory HijriModel.fromJson(Map<String, dynamic> json) => _$HijriModelFromJson(json);

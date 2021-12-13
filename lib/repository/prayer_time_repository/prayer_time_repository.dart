@@ -3,75 +3,60 @@ import 'dart:developer';
 
 import 'package:dio/dio.dart';
 import 'package:fazakir/core/constant/prayer_time_constant.dart';
+import 'package:fazakir/core/date/date_formatter.dart';
 import 'package:fazakir/core/location/location.dart';
-import 'package:fazakir/data_source/local/hive_helper.dart';
 import 'package:fazakir/data_source/remote/dio_helper.dart';
 import 'package:fazakir/models/data_model/data_model.dart';
 import 'package:fazakir/models/method_model/method_model.dart';
+import 'package:fazakir/repository/prayer_time_repository/save_prayer_time.dart';
 import 'package:geolocator/geolocator.dart';
-import 'package:hive_flutter/hive_flutter.dart';
-import 'package:intl/intl.dart';
 
 class PryaerTimeRepositiory {
-  final DioHelper helper;
-  final HiveHelper hiveHelper;
+  final DioHelper dioHelper;
+  final DateFormatter formatter;
+  final SavePrayerTimes savePrayerTimes;
 
-  PryaerTimeRepositiory({required this.helper, required this.hiveHelper});
+  PryaerTimeRepositiory({
+    required this.dioHelper,
+    required this.formatter,
+    required this.savePrayerTimes,
+  });
 
   Future<DataModel> getCurrentPrayerTimes() async {
-    final String currentTime = getCurrentDate();
-    final qoury = await loadQuery();
-    final Response response = await helper.getData(
+    final String currentTime = formatter.getCurrentDate();
+    final Map<String, dynamic> qoury = await loadQuery();
+    final Response response = await dioHelper.getData(
       url: "${PrayerTimeConstant.timings}$currentTime",
       query: qoury,
     );
-    final DataModel dataModel = DataModel.fromJson(jsonDecode(response.data['data']));
+    final DataModel dataModel = DataModel.fromJson(json.decode(response.data)["data"]);
+    savePrayerTimes.call(dataModel.meta);
     return dataModel;
   }
 
   Future<Map<String, dynamic>> loadQuery() async {
-    final int method = getUserSetting("method");
-    final String shafaq = getUserSetting("shafaq");
-    final int school = getUserSetting("school");
-    final int midnightMode = getUserSetting("midnightMode");
-    final String latitudeMethod = getUserSetting("latitudeAdjustmentMethod");
-    final Position currentLocation = await Location.getPosition();
     return {
-      "latitude": currentLocation.latitude,
-      "longitude": currentLocation.longitude,
-      "method": method,
-      "shafaq": shafaq,
-      "school": school,
-      "midnightMode": midnightMode,
-      "iso8601": true,
-      "latitudeAdjustmentMethod": latitudeMethod,
+      "latitude": savePrayerTimes.latitude,
+      "longitude": savePrayerTimes.longitude,
+      "method": savePrayerTimes.method,
+      "shafaq": savePrayerTimes.shafaq,
+      "school": savePrayerTimes.school,
+      "midnightMode": savePrayerTimes.midnightMode,
+      "iso8601": false,
+      "latitudeAdjustmentMethod": savePrayerTimes.latitudeAdjustmentMethod,
     };
   }
 
-  List<MethodModel> methodsFromJson(String str) {
-    return List<MethodModel>.from(json.decode(str).map((x) => MethodModel.fromJson(x)));
+  Future<Position> getPosition() async {
+    final Position position = await Location.getPosition();
+    savePrayerTimes.setLatitude = position.latitude;
+    savePrayerTimes.setlongitude = position.longitude;
+    return position;
   }
 
   Future<List<MethodModel>> getListOfMethod() async {
-    final Response response = await helper.getData(url: PrayerTimeConstant.methods);
+    final Response response = await dioHelper.getData(url: PrayerTimeConstant.methods);
     final List<MethodModel> methodsList = methodsFromJson(response.data['data']);
     return methodsList;
-  }
-
-  String getCurrentDate() {
-    final dateFormae = DateFormat("DD-MM-YYYY");
-    DateTime currntTime = dateFormae.parse(DateTime.now().toString());
-    log(currntTime.toString());
-    return currntTime.toString();
-  }
-
-  getUserSetting(String key) {
-    final prayerBox = Hive.box(prayerBoxName);
-    return prayerBox.get(key);
-  }
-
-  Future<void> putUserSetting(String key, String value) async {
-    final prayerBox = Hive.box(prayerBoxName);
-    return prayerBox.put(key, value);
   }
 }

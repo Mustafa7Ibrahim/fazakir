@@ -11,6 +11,8 @@ class PrayerInitial extends PrayerState {}
 
 class PrayerLoading extends PrayerState {}
 
+class PrayerFirstTime extends PrayerState {}
+
 class PrayerLoaded extends PrayerState {
   final DataModel dataModel;
 
@@ -27,14 +29,4 @@ class PrayerError extends PrayerState {
 
   @override
   List<Object> get props => [message];
-}
-
-class SettingsState extends PrayerState {
-  final PrayerSettingsModel settingsModel;
-  final List<MethodModel> methodModel;
-
-  const SettingsState({required this.settingsModel, required this.methodModel});
-
-  @override
-  List<Object> get props => [settingsModel, methodModel];
 }

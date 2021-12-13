@@ -1,4 +1,5 @@
 import 'package:fazakir/models/date_model/date_model.dart';
+import 'package:fazakir/models/meta_model/meta_model.dart';
 import 'package:fazakir/models/timings_model/timings_model.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
@@ -10,7 +11,7 @@ class DataModel with _$DataModel {
   factory DataModel({
     required Timings timings,
     required DateModel date,
-    required Set meta,
+    required MetaModel meta,
   }) = _DataModel;
 
   factory DataModel.fromJson(Map<String, dynamic> json) => _$DataModelFromJson(json);

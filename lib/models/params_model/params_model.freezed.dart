@@ -21,10 +21,10 @@ ParamsModel _$ParamsModelFromJson(Map<String, dynamic> json) {
 class _$ParamsModelTearOff {
   const _$ParamsModelTearOff();
 
-  _ParamsModel call({required double fajr, required double isha}) {
+  _ParamsModel call({required double Fajr, required double Isha}) {
     return _ParamsModel(
-      fajr: fajr,
-      isha: isha,
+      Fajr: Fajr,
+      Isha: Isha,
     );
   }
 
@@ -38,8 +38,8 @@ const $ParamsModel = _$ParamsModelTearOff();
 
 /// @nodoc
 mixin _$ParamsModel {
-  double get fajr => throw _privateConstructorUsedError;
-  double get isha => throw _privateConstructorUsedError;
+  double get Fajr => throw _privateConstructorUsedError;
+  double get Isha => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -52,7 +52,7 @@ abstract class $ParamsModelCopyWith<$Res> {
   factory $ParamsModelCopyWith(
           ParamsModel value, $Res Function(ParamsModel) then) =
       _$ParamsModelCopyWithImpl<$Res>;
-  $Res call({double fajr, double isha});
+  $Res call({double Fajr, double Isha});
 }
 
 /// @nodoc
@@ -65,17 +65,17 @@ class _$ParamsModelCopyWithImpl<$Res> implements $ParamsModelCopyWith<$Res> {
 
   @override
   $Res call({
-    Object? fajr = freezed,
-    Object? isha = freezed,
+    Object? Fajr = freezed,
+    Object? Isha = freezed,
   }) {
     return _then(_value.copyWith(
-      fajr: fajr == freezed
-          ? _value.fajr
-          : fajr // ignore: cast_nullable_to_non_nullable
+      Fajr: Fajr == freezed
+          ? _value.Fajr
+          : Fajr // ignore: cast_nullable_to_non_nullable
               as double,
-      isha: isha == freezed
-          ? _value.isha
-          : isha // ignore: cast_nullable_to_non_nullable
+      Isha: Isha == freezed
+          ? _value.Isha
+          : Isha // ignore: cast_nullable_to_non_nullable
               as double,
     ));
   }
@@ -88,7 +88,7 @@ abstract class _$ParamsModelCopyWith<$Res>
           _ParamsModel value, $Res Function(_ParamsModel) then) =
       __$ParamsModelCopyWithImpl<$Res>;
   @override
-  $Res call({double fajr, double isha});
+  $Res call({double Fajr, double Isha});
 }
 
 /// @nodoc
@@ -103,17 +103,17 @@ class __$ParamsModelCopyWithImpl<$Res> extends _$ParamsModelCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? fajr = freezed,
-    Object? isha = freezed,
+    Object? Fajr = freezed,
+    Object? Isha = freezed,
   }) {
     return _then(_ParamsModel(
-      fajr: fajr == freezed
-          ? _value.fajr
-          : fajr // ignore: cast_nullable_to_non_nullable
+      Fajr: Fajr == freezed
+          ? _value.Fajr
+          : Fajr // ignore: cast_nullable_to_non_nullable
               as double,
-      isha: isha == freezed
-          ? _value.isha
-          : isha // ignore: cast_nullable_to_non_nullable
+      Isha: Isha == freezed
+          ? _value.Isha
+          : Isha // ignore: cast_nullable_to_non_nullable
               as double,
     ));
   }
@@ -122,19 +122,19 @@ class __$ParamsModelCopyWithImpl<$Res> extends _$ParamsModelCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ParamsModel implements _ParamsModel {
-  _$_ParamsModel({required this.fajr, required this.isha});
+  _$_ParamsModel({required this.Fajr, required this.Isha});
 
   factory _$_ParamsModel.fromJson(Map<String, dynamic> json) =>
       _$$_ParamsModelFromJson(json);
 
   @override
-  final double fajr;
+  final double Fajr;
   @override
-  final double isha;
+  final double Isha;
 
   @override
   String toString() {
-    return 'ParamsModel(fajr: $fajr, isha: $isha)';
+    return 'ParamsModel(Fajr: $Fajr, Isha: $Isha)';
   }
 
   @override
@@ -142,15 +142,15 @@ class _$_ParamsModel implements _ParamsModel {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _ParamsModel &&
-            const DeepCollectionEquality().equals(other.fajr, fajr) &&
-            const DeepCollectionEquality().equals(other.isha, isha));
+            const DeepCollectionEquality().equals(other.Fajr, Fajr) &&
+            const DeepCollectionEquality().equals(other.Isha, Isha));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(fajr),
-      const DeepCollectionEquality().hash(isha));
+      const DeepCollectionEquality().hash(Fajr),
+      const DeepCollectionEquality().hash(Isha));
 
   @JsonKey(ignore: true)
   @override
@@ -164,16 +164,16 @@ class _$_ParamsModel implements _ParamsModel {
 }
 
 abstract class _ParamsModel implements ParamsModel {
-  factory _ParamsModel({required double fajr, required double isha}) =
+  factory _ParamsModel({required double Fajr, required double Isha}) =
       _$_ParamsModel;
 
   factory _ParamsModel.fromJson(Map<String, dynamic> json) =
       _$_ParamsModel.fromJson;
 
   @override
-  double get fajr;
+  double get Fajr;
   @override
-  double get isha;
+  double get Isha;
   @override
   @JsonKey(ignore: true)
   _$ParamsModelCopyWith<_ParamsModel> get copyWith =>

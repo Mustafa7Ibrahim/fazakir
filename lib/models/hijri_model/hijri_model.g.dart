@@ -14,8 +14,8 @@ _$_HijriModel _$$_HijriModelFromJson(Map<String, dynamic> json) =>
       weekday: WeekdayModel.fromJson(json['weekday'] as Map<String, dynamic>),
       month: MonthModel.fromJson(json['month'] as Map<String, dynamic>),
       year: json['year'] as String,
-      designatio:
-          DesignationModel.fromJson(json['designatio'] as Map<String, dynamic>),
+      designation: DesignationModel.fromJson(
+          json['designation'] as Map<String, dynamic>),
       holidays: json['holidays'] as List<dynamic>,
     );
 
@@ -27,6 +27,6 @@ Map<String, dynamic> _$$_HijriModelToJson(_$_HijriModel instance) =>
       'weekday': instance.weekday,
       'month': instance.month,
       'year': instance.year,
-      'designatio': instance.designatio,
+      'designation': instance.designation,
       'holidays': instance.holidays,
     };

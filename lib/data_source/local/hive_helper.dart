@@ -17,4 +17,14 @@ class HiveHelper {
   Future<void> closePrayerTimeBox() async {
     return await Hive.close();
   }
+
+  getData(String key) {
+    final prayerBox = Hive.box(prayerBoxName);
+    return prayerBox.get(key);
+  }
+
+  Future<void> putData(String key, dynamic value) async {
+    final prayerBox = Hive.box(prayerBoxName);
+    return prayerBox.put(key, value);
+  }
 }

@@ -20,7 +20,7 @@ class AzkarList extends StatelessWidget {
         title: Text(AppLocalizations.of(context)!.appTitle),
       ),
       body: BlocProvider(
-        create: (context) => AzkarCubit(azkarRepositiry: getIt<AzkarRepositiry>())..getAzkar(),
+        create: (context) => getIt<AzkarCubit>()..getAzkar(),
         child: BlocBuilder<AzkarCubit, AzkarState>(
           builder: (context, state) {
             if (state is AzkarLoading) {

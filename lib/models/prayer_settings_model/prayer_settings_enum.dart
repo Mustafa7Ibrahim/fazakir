@@ -6,7 +6,7 @@ enum Shafaq {
 
 enum School {
   shafi,
-  sanafi,
+  hanafi,
 }
 
 enum MidnightMode {
