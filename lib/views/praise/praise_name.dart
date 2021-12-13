@@ -1,8 +1,8 @@
-import 'dart:developer';
-
 import 'package:fazakir/bloc/praise_cubit/praise_cubit.dart';
 import 'package:fazakir/bloc/zekr_cubit/zekr_cubit.dart';
 import 'package:fazakir/models/praise_model.dart';
+import 'package:fazakir/views/praise/praise_info.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -22,20 +22,22 @@ class PraiseName extends StatelessWidget {
         listener: (context, state) {},
         builder: (context, state) {
           return InkWell(
-            borderRadius: BorderRadius.circular(25.0),
+            borderRadius: BorderRadius.circular(15.0),
             onTap: () {
               context.read<PraiseCubit>().praiseCount();
               context.read<ZekrCubit>().incrementWithoutMaxNumber();
             },
             child: Container(
               padding: const EdgeInsets.all(10.0),
-              margin: const EdgeInsets.only(top: 20.0),
               decoration: BoxDecoration(
                 color: Theme.of(context).colorScheme.surface,
                 borderRadius: BorderRadius.circular(25.0),
                 boxShadow: [
                   BoxShadow(
-                    color: Theme.of(context).colorScheme.secondary.withOpacity(0.3),
+                    color: Theme.of(context)
+                        .colorScheme
+                        .secondary
+                        .withOpacity(0.3),
                     blurRadius: 1,
                     offset: const Offset(0, 3),
                   ),
@@ -46,7 +48,14 @@ class PraiseName extends StatelessWidget {
                 children: [
                   InkWell(
                       onTap: () {
-                        log("mohamed");
+                        Navigator.push(
+                          context,
+                          CupertinoPageRoute(
+                            builder: (context) => PraiseInfo(
+                              praiseData: praiseData,
+                            ),
+                          ),
+                        );
                       },
                       child: const Icon(Icons.info_outline)),
                   Expanded(

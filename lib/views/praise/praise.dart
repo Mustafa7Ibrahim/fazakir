@@ -20,7 +20,9 @@ class Praise extends StatelessWidget {
         ),
       ),
       body: BlocProvider(
-        create: (context) => PraiseCubit(praiseRepositiry: getIt<PraiseRepositiry>())..getPraise(),
+        create: (context) =>
+            PraiseCubit(praiseRepositiry: getIt<PraiseRepositiry>())
+              ..getPraise(),
         child: BlocConsumer<PraiseCubit, PraiseState>(
           listener: (context, state) {
             if (state is PraiseError) {
@@ -41,10 +43,12 @@ class Praise extends StatelessWidget {
                       child: GridView.builder(
                         physics: const BouncingScrollPhysics(),
                         itemCount: 4,
-                        gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
+                        gridDelegate:
+                            const SliverGridDelegateWithMaxCrossAxisExtent(
                           maxCrossAxisExtent: 200,
                           childAspectRatio: 2 / 2,
                           crossAxisSpacing: 20,
+                          mainAxisSpacing: 20,
                         ),
                         itemBuilder: (context, index) {
                           return PraiseName(

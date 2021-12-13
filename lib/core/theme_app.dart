@@ -24,9 +24,8 @@ class ThemeApp {
       centerTitle: true,
       elevation: 0.0,
       systemOverlayStyle: SystemUiOverlayStyle(
-        statusBarColor: Colors.transparent,
-        systemNavigationBarColor: Colors.transparent,
-        systemNavigationBarDividerColor: Colors.transparent,
+        statusBarColor: Colors.white,
+        statusBarIconBrightness: Brightness.dark,
       ),
       backgroundColor: Color(0xffffffff),
       titleTextStyle: TextStyle(
@@ -101,7 +100,10 @@ class ThemeApp {
     appBarTheme: const AppBarTheme(
       centerTitle: true,
       elevation: 0.0,
-      systemOverlayStyle: SystemUiOverlayStyle.dark,
+      systemOverlayStyle: SystemUiOverlayStyle(
+        statusBarColor: Color(0xff010313),
+        statusBarIconBrightness: Brightness.light,
+      ),
       backgroundColor: Color(0xff010313),
       titleTextStyle: TextStyle(
         color: Color(0xffffffff),

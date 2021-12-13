@@ -13,8 +13,10 @@ class ZekrCubit extends Cubit<int> {
   }
 
   void incrementWithoutMaxNumber() {
+    if (state == 32 || state == 99) {
+      _haptic();
+    }
     emit(state + 1);
-    _haptic();
   }
 
   void _haptic() {
