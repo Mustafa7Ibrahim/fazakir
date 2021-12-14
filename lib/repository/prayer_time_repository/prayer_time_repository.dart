@@ -1,5 +1,4 @@
 import 'dart:convert';
-import 'dart:developer';
 
 import 'package:dio/dio.dart';
 import 'package:fazakir/core/constant/prayer_time_constant.dart';
@@ -42,7 +41,7 @@ class PryaerTimeRepositiory {
       "shafaq": savePrayerTimes.shafaq,
       "school": savePrayerTimes.school,
       "midnightMode": savePrayerTimes.midnightMode,
-      "iso8601": false,
+      "iso8601": true,
       "latitudeAdjustmentMethod": savePrayerTimes.latitudeAdjustmentMethod,
     };
   }
