@@ -2,6 +2,7 @@ import 'package:fazakir/core/constant.dart';
 import 'package:fazakir/views/azkar/azkar_list.dart';
 import 'package:fazakir/views/praise/praise.dart';
 import 'package:fazakir/views/prayer_times/prayer_times.dart';
+import 'package:fazakir/views/salah/salah.dart';
 import 'package:fazakir/widgets/costum_card.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -192,7 +193,7 @@ class _HomeState extends State<Home> {
                               Navigator.push(
                                 context,
                                 CupertinoPageRoute(
-                                  builder: (context) => const AzkarList(),
+                                  builder: (context) => const Salah(),
                                 ),
                               );
                             },

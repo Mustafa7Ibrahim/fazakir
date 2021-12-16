@@ -11,8 +11,10 @@ import 'package:fazakir/repository/azkar_repository/azkar_repository.dart';
 import 'package:fazakir/repository/praise_repository/praise_repository.dart';
 import 'package:fazakir/repository/prayer_time_repository/prayer_time_repository.dart';
 import 'package:fazakir/repository/prayer_time_repository/save_prayer_time.dart';
+import 'package:fazakir/repository/salah_repositroy/salah_repository.dart';
 import 'package:get_it/get_it.dart';
 
+import 'bloc/salah_cubit/salah_cubit.dart';
 import 'data_source/local/json_helper.dart';
 
 final getIt = GetIt.instance;
@@ -23,7 +25,9 @@ Future<void> init() async {
   getIt.registerFactory(() => AzkarCubit(azkarRepositiry: getIt()));
   getIt.registerFactory(() => PraiseCubit(praiseRepositiry: getIt()));
   getIt.registerFactory(() => ZekrCubit());
-  getIt.registerFactory(() => PrayerCubit(pryaerTimeRepositiory: getIt(), hiveHelper: getIt()));
+  getIt.registerFactory(
+      () => PrayerCubit(pryaerTimeRepositiory: getIt(), hiveHelper: getIt()));
+  getIt.registerFactory(() => SalahCubit(salahRepositiry: getIt()));
 
   // Use cases
 
@@ -38,6 +42,7 @@ Future<void> init() async {
     ),
   );
   getIt.registerLazySingleton(() => SavePrayerTimes(hiveHelper: getIt()));
+  getIt.registerLazySingleton(() => SalahRepositiry(jsonHelper: getIt()));
 
   // Data sources
   getIt.registerLazySingleton(() => JsonHelper());
