@@ -45,7 +45,6 @@ class MyApp extends StatelessWidget {
       theme: ThemeApp.lightTheme,
       darkTheme: ThemeApp.darkTheme,
       themeMode: ThemeMode.system,
-      home: const Home(),
       onGenerateRoute: (settings) {
         return CupertinoPageRoute(
           settings: settings,
