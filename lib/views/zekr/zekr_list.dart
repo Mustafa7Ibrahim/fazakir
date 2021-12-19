@@ -8,6 +8,7 @@ import 'zekr.dart';
 
 class ZekrList extends StatefulWidget {
   const ZekrList({Key? key, required this.azkarModel}) : super(key: key);
+  static const routeName = "/zekr";
 
   final AzkarModel azkarModel;
 
@@ -45,7 +46,8 @@ class _ZekrListState extends State<ZekrList> {
                   create: (context) => ZekrCubit(),
                   child: BlocListener<ZekrCubit, int>(
                     listener: (context, state) {
-                      if (state == int.parse(widget.azkarModel.content[index].count)) {
+                      if (state ==
+                          int.parse(widget.azkarModel.content[index].count)) {
                         pageController.animateToPage(
                           index + 1,
                           duration: const Duration(milliseconds: 400),

@@ -2,7 +2,9 @@ import 'package:fazakir/models/praise_model.dart';
 import 'package:flutter/material.dart';
 
 class PraiseInfo extends StatelessWidget {
+  static const routeName = "/praise_info";
   const PraiseInfo({Key? key, required this.praiseData}) : super(key: key);
+
   final PraiseData praiseData;
   @override
   Widget build(BuildContext context) {

@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 
 class SalahInfo extends StatelessWidget {
@@ -18,9 +16,8 @@ class SalahInfo extends StatelessWidget {
         Container(
           width: 20,
           height: 15,
-          decoration: BoxDecoration(
-              color: Theme.of(context).colorScheme.secondary,
-              shape: BoxShape.circle),
+          decoration:
+              BoxDecoration(color: Theme.of(context).colorScheme.secondary, shape: BoxShape.circle),
         ),
         Expanded(
             child: Padding(

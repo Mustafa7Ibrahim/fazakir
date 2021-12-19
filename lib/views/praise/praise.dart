@@ -10,6 +10,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 class Praise extends StatelessWidget {
   const Praise({Key? key}) : super(key: key);
 
+  static const routeName = "/praise";
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

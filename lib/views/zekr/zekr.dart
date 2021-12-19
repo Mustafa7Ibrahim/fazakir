@@ -40,7 +40,8 @@ class Zekr extends StatelessWidget {
           margin: const EdgeInsets.all(12.0),
           padding: const EdgeInsets.only(top: 12.0, right: 12.0, left: 12.0),
           child: InkWell(
-            onTap: () => context.read<ZekrCubit>().increment(int.parse(zekrModel.count)),
+            onTap: () =>
+                context.read<ZekrCubit>().increment(int.parse(zekrModel.count)),
             child: Column(
               children: [
                 Flexible(

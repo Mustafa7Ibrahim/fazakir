@@ -6,6 +6,8 @@ import 'ask_to_get_location.dart';
 class PrayerFirstTimeSet extends StatefulWidget {
   const PrayerFirstTimeSet({Key? key}) : super(key: key);
 
+  static const routeName = '/prayer_first_time_set';
+
   @override
   State<PrayerFirstTimeSet> createState() => _PrayerFirstTimeState();
 }
@@ -50,7 +52,9 @@ class _PrayerFirstTimeState extends State<PrayerFirstTimeSet> {
               controller: pageController,
               itemCount: 2,
               itemBuilder: (context, index) {
-                return index == 0 ? AskToGetCurrentLocation(size: size) : Container();
+                return index == 0
+                    ? AskToGetCurrentLocation(size: size)
+                    : Container();
               },
             ),
           ),

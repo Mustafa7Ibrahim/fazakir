@@ -1,10 +1,8 @@
-import 'package:fazakir/core/constant.dart';
 import 'package:fazakir/views/azkar/azkar_list.dart';
 import 'package:fazakir/views/praise/praise.dart';
 import 'package:fazakir/views/prayer_times/prayer_times.dart';
 import 'package:fazakir/views/salah/salah.dart';
 import 'package:fazakir/widgets/costum_card.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -12,6 +10,8 @@ import 'package:sinusoidal/wave.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
+
+  static const routeName = '/';
 
   @override
   State<Home> createState() => _HomeState();
@@ -132,12 +132,7 @@ class _HomeState extends State<Home> {
                           const SizedBox(height: 18.0),
                           CustomCard(
                             onTap: () {
-                              Navigator.push(
-                                context,
-                                CupertinoPageRoute(
-                                  builder: (context) => const AzkarList(),
-                                ),
-                              );
+                              Navigator.pushNamed(context, AzkarList.routeName);
                             },
                             size: size,
                             image: "assets/icons/doaa.svg",
@@ -150,9 +145,10 @@ class _HomeState extends State<Home> {
                           ),
                           const SizedBox(height: 18.0),
                           CustomCard(
-                            onTap: () {
-                              goTo(context, const PrayerTime());
-                            },
+                            onTap: () => Navigator.pushNamed(
+                              context,
+                              PrayerTime.routeName,
+                            ),
                             size: size,
                             image: "assets/icons/mosque2.svg",
                             title: "مواقيت الصلاة",
@@ -170,14 +166,10 @@ class _HomeState extends State<Home> {
                       child: Column(
                         children: [
                           CustomCard(
-                            onTap: () {
-                              Navigator.push(
-                                context,
-                                CupertinoPageRoute(
-                                  builder: (context) => const Praise(),
-                                ),
-                              );
-                            },
+                            onTap: () => Navigator.pushNamed(
+                              context,
+                              Praise.routeName,
+                            ),
                             size: size,
                             image: "assets/icons/memorize.svg",
                             title: "اذكر الله",
@@ -189,14 +181,10 @@ class _HomeState extends State<Home> {
                           ),
                           const SizedBox(height: 18.0),
                           CustomCard(
-                            onTap: () {
-                              Navigator.push(
-                                context,
-                                CupertinoPageRoute(
-                                  builder: (context) => const Salah(),
-                                ),
-                              );
-                            },
+                            onTap: () => Navigator.pushNamed(
+                              context,
+                              Salah.routeName,
+                            ),
                             size: size,
                             image: "assets/icons/salah.svg",
                             title: "صلاتي",
@@ -208,14 +196,10 @@ class _HomeState extends State<Home> {
                           ),
                           const SizedBox(height: 18.0),
                           CustomCard(
-                            onTap: () {
-                              Navigator.push(
-                                context,
-                                CupertinoPageRoute(
-                                  builder: (context) => const AzkarList(),
-                                ),
-                              );
-                            },
+                            onTap: () => Navigator.pushNamed(
+                              context,
+                              AzkarList.routeName,
+                            ),
                             size: size,
                             image: "assets/icons/kaaba.svg",
                             title: "الحج والعمره",

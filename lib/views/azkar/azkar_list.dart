@@ -1,5 +1,4 @@
 import 'package:fazakir/bloc/azkar_cubit/azkar_cubit.dart';
-import 'package:fazakir/core/constant.dart';
 import 'package:fazakir/injection_container.dart';
 import 'package:fazakir/views/zekr/zekr_list.dart';
 import 'package:flutter/material.dart';
@@ -9,6 +8,8 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 class AzkarList extends StatelessWidget {
   const AzkarList({Key? key}) : super(key: key);
+
+  static const routeName = '/azkar';
 
   @override
   Widget build(BuildContext context) {
@@ -32,8 +33,11 @@ class AzkarList extends StatelessWidget {
                 separatorBuilder: (context, index) => const Divider(),
                 itemBuilder: (context, index) {
                   return ListTile(
-                    onTap: () => goTo(
-                        context, ZekrList(azkarModel: state.azkarModel[index])),
+                    onTap: () => Navigator.pushNamed(
+                      context,
+                      ZekrList.routeName,
+                      arguments: state.azkarModel[index],
+                    ),
                     leading: SvgPicture.asset(
                       "assets/icons/doaa.svg",
                       height: size.width * 0.1,

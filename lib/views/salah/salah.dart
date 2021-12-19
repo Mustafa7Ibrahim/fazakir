@@ -10,6 +10,8 @@ import '../../injection_container.dart';
 class Salah extends StatelessWidget {
   const Salah({Key? key}) : super(key: key);
 
+  static const routeName = "/salah";
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

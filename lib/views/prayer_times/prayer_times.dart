@@ -10,6 +10,8 @@ import 'package:intl/intl.dart';
 class PrayerTime extends StatelessWidget {
   const PrayerTime({Key? key}) : super(key: key);
 
+  static const routeName = '/prayer_time';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -126,8 +128,6 @@ class PrayerTimeCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final format = DateFormat("hh:mm a");
-
     return Container(
       color: currentPray
           ? Theme.of(context).colorScheme.primary
