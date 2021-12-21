@@ -1,7 +1,7 @@
-import 'package:fazakir/bloc/prayer_cubit/prayer_cubit.dart';
-import 'package:fazakir/injection_container.dart';
-import 'package:fazakir/models/data_model/data_model.dart';
-import 'package:fazakir/views/prayer_times/prayer_first_time.dart';
+import '../../bloc/prayer_cubit/prayer_cubit.dart';
+import '../../injection_container.dart';
+import '../../models/data_model/data_model.dart';
+import 'prayer_first_time.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';

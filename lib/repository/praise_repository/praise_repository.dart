@@ -1,7 +1,7 @@
 import 'dart:convert';
 
-import 'package:fazakir/data_source/local/json_helper.dart';
-import 'package:fazakir/models/praise_model.dart';
+import '../../data_source/local/json_helper.dart';
+import '../../models/praise_model.dart';
 
 class PraiseRepositiry {
   final JsonHelper jsonHelper;

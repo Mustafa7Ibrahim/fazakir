@@ -1,6 +1,6 @@
-import 'package:fazakir/data_source/local/hive_helper.dart';
-import 'package:fazakir/models/meta_model/meta_model.dart';
-import 'package:fazakir/models/prayer_settings_model/prayer_settings_enum.dart';
+import '../../data_source/local/hive_helper.dart';
+import '../../models/meta_model/meta_model.dart';
+import '../../models/prayer_settings_model/prayer_settings_enum.dart';
 
 class SavePrayerTimes {
   final HiveHelper hiveHelper;
@@ -44,7 +44,8 @@ class SavePrayerTimes {
   String? get shafaq => hiveHelper.getData("shafaq");
   int? get school => hiveHelper.getData("school");
   int? get midnightMode => hiveHelper.getData("midnightMode");
-  int? get latitudeAdjustmentMethod => hiveHelper.getData("latitudeAdjustmentMethod");
+  int? get latitudeAdjustmentMethod =>
+      hiveHelper.getData("latitudeAdjustmentMethod");
   int? get method => hiveHelper.getData("method");
 
   void call(MetaModel metaModel) {

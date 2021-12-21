@@ -1,7 +1,7 @@
 import 'dart:convert';
 
-import 'package:fazakir/models/location_model/location_model.dart';
-import 'package:fazakir/models/params_model/params_model.dart';
+import '../location_model/location_model.dart';
+import '../params_model/params_model.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'method_model.freezed.dart';
@@ -16,9 +16,11 @@ class MethodModel with _$MethodModel {
     required LocationModel location,
   }) = _MethodModel;
 
-  factory MethodModel.fromJson(Map<String, dynamic> json) => _$MethodModelFromJson(json);
+  factory MethodModel.fromJson(Map<String, dynamic> json) =>
+      _$MethodModelFromJson(json);
 }
 
 List<MethodModel> methodsFromJson(String str) {
-  return List<MethodModel>.from(json.decode(str).map((x) => MethodModel.fromJson(x)));
+  return List<MethodModel>.from(
+      json.decode(str).map((x) => MethodModel.fromJson(x)));
 }

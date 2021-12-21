@@ -1,7 +1,8 @@
 import 'package:equatable/equatable.dart';
-import 'package:fazakir/models/azkar_model.dart';
-import 'package:fazakir/repository/azkar_repository/azkar_repository.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
+import '../../models/azkar_model.dart';
+import '../../repository/azkar_repository/azkar_repository.dart';
 
 part 'azkar_state.dart';
 

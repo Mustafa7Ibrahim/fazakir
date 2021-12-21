@@ -1,9 +1,9 @@
-import 'package:fazakir/bloc/praise_cubit/praise_cubit.dart';
-import 'package:fazakir/bloc/praise_cubit/praise_state.dart';
-import 'package:fazakir/injection_container.dart';
-import 'package:fazakir/repository/praise_repository/praise_repository.dart';
-import 'package:fazakir/views/praise/praise_count.dart';
-import 'package:fazakir/views/praise/praise_name.dart';
+import '../../bloc/praise_cubit/praise_cubit.dart';
+import '../../bloc/praise_cubit/praise_state.dart';
+import '../../injection_container.dart';
+import '../../repository/praise_repository/praise_repository.dart';
+import 'praise_count.dart';
+import 'praise_name.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

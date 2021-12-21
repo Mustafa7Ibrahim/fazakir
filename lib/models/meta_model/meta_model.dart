@@ -1,5 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:fazakir/models/method_model/method_model.dart';
+import '../method_model/method_model.dart';
 
 part 'meta_model.freezed.dart';
 part 'meta_model.g.dart';
@@ -16,5 +16,6 @@ class MetaModel with _$MetaModel {
     required String school,
     required Map<String, int> offset,
   }) = _MetaModel;
-  factory MetaModel.fromJson(Map<String, dynamic> json) => _$MetaModelFromJson(json);
+  factory MetaModel.fromJson(Map<String, dynamic> json) =>
+      _$MetaModelFromJson(json);
 }

@@ -1,6 +1,6 @@
-import 'package:fazakir/bloc/praise_cubit/praise_state.dart';
-import 'package:fazakir/models/praise_model.dart';
-import 'package:fazakir/repository/praise_repository/praise_repository.dart';
+import 'praise_state.dart';
+import '../../models/praise_model.dart';
+import '../../repository/praise_repository/praise_repository.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class PraiseCubit extends Cubit<PraiseState> {

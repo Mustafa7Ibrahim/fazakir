@@ -1,6 +1,6 @@
-import 'package:fazakir/models/date_model/date_model.dart';
-import 'package:fazakir/models/meta_model/meta_model.dart';
-import 'package:fazakir/models/timings_model/timings_model.dart';
+import '../date_model/date_model.dart';
+import '../meta_model/meta_model.dart';
+import '../timings_model/timings_model.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'data_model.freezed.dart';
@@ -14,5 +14,6 @@ class DataModel with _$DataModel {
     required MetaModel meta,
   }) = _DataModel;
 
-  factory DataModel.fromJson(Map<String, dynamic> json) => _$DataModelFromJson(json);
+  factory DataModel.fromJson(Map<String, dynamic> json) =>
+      _$DataModelFromJson(json);
 }

@@ -1,7 +1,7 @@
 import 'dart:convert';
 
-import 'package:fazakir/data_source/local/json_helper.dart';
-import 'package:fazakir/models/salah_model.dart';
+import '../../data_source/local/json_helper.dart';
+import '../../models/salah_model.dart';
 
 class SalahRepositiry {
   final JsonHelper jsonHelper;

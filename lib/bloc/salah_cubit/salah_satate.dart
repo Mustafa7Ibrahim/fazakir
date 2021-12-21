@@ -1,5 +1,6 @@
 import 'package:equatable/equatable.dart';
-import 'package:fazakir/models/salah_model.dart';
+
+import '../../models/salah_model.dart';
 
 abstract class SalahState extends Equatable {
   const SalahState();

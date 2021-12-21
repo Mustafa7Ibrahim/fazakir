@@ -1,6 +1,6 @@
-import 'package:fazakir/models/designation_model/designation_model.dart';
-import 'package:fazakir/models/month_model/month_model.dart';
-import 'package:fazakir/models/weekday_model/weekday_model.dart';
+import '../designation_model/designation_model.dart';
+import '../month_model/month_model.dart';
+import '../weekday_model/weekday_model.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'gregorian_model.freezed.dart';
@@ -18,5 +18,6 @@ class GregorianModel with _$GregorianModel {
     required DesignationModel designation,
   }) = _GregorianModel;
 
-  factory GregorianModel.fromJson(Map<String, dynamic> json) => _$GregorianModelFromJson(json);
+  factory GregorianModel.fromJson(Map<String, dynamic> json) =>
+      _$GregorianModelFromJson(json);
 }

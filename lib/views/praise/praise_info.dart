@@ -1,4 +1,4 @@
-import 'package:fazakir/models/praise_model.dart';
+import '../../models/praise_model.dart';
 import 'package:flutter/material.dart';
 
 class PraiseInfo extends StatelessWidget {

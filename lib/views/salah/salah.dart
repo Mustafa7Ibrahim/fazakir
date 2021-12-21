@@ -1,11 +1,11 @@
-import 'package:fazakir/bloc/salah_cubit/salah_cubit.dart';
-import 'package:fazakir/bloc/salah_cubit/salah_satate.dart';
-import 'package:fazakir/repository/salah_repositroy/salah_repository.dart';
-import 'package:fazakir/views/salah/salah_name.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../bloc/salah_cubit/salah_cubit.dart';
+import '../../bloc/salah_cubit/salah_satate.dart';
 import '../../injection_container.dart';
+import '../../repository/salah_repositroy/salah_repository.dart';
+import 'salah_name.dart';
 
 class Salah extends StatelessWidget {
   const Salah({Key? key}) : super(key: key);

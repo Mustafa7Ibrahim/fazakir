@@ -1,7 +1,7 @@
-import 'package:fazakir/models/salah_model.dart';
+import '../../models/salah_model.dart';
 import 'package:flutter/material.dart';
 
-import 'package:fazakir/views/salah/salah_info.dart';
+import 'salah_info.dart';
 
 class SalahList extends StatefulWidget {
   const SalahList({

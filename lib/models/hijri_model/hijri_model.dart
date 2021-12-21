@@ -1,6 +1,6 @@
-import 'package:fazakir/models/designation_model/designation_model.dart';
-import 'package:fazakir/models/month_model/month_model.dart';
-import 'package:fazakir/models/weekday_model/weekday_model.dart';
+import '../designation_model/designation_model.dart';
+import '../month_model/month_model.dart';
+import '../weekday_model/weekday_model.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'hijri_model.freezed.dart';
@@ -18,5 +18,6 @@ class HijriModel with _$HijriModel {
     required DesignationModel designation,
     required List<dynamic> holidays,
   }) = _HijriModel;
-  factory HijriModel.fromJson(Map<String, dynamic> json) => _$HijriModelFromJson(json);
+  factory HijriModel.fromJson(Map<String, dynamic> json) =>
+      _$HijriModelFromJson(json);
 }

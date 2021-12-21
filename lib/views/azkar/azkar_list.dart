@@ -1,6 +1,6 @@
-import 'package:fazakir/bloc/azkar_cubit/azkar_cubit.dart';
-import 'package:fazakir/injection_container.dart';
-import 'package:fazakir/views/zekr/zekr_list.dart';
+import '../../bloc/azkar_cubit/azkar_cubit.dart';
+import '../../injection_container.dart';
+import '../zekr/zekr_list.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';

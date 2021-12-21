@@ -1,5 +1,6 @@
 import 'package:equatable/equatable.dart';
-import 'package:fazakir/models/praise_model.dart';
+
+import '../../models/praise_model.dart';
 
 abstract class PraiseState extends Equatable {
   const PraiseState();

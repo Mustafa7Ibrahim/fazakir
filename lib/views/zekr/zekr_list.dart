@@ -1,5 +1,5 @@
-import 'package:fazakir/bloc/zekr_cubit/zekr_cubit.dart';
-import 'package:fazakir/models/azkar_model.dart';
+import '../../bloc/zekr_cubit/zekr_cubit.dart';
+import '../../models/azkar_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';

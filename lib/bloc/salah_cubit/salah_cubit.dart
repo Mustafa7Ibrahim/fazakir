@@ -1,6 +1,6 @@
-import 'package:fazakir/bloc/salah_cubit/salah_satate.dart';
-import 'package:fazakir/models/salah_model.dart';
-import 'package:fazakir/repository/salah_repositroy/salah_repository.dart';
+import 'salah_satate.dart';
+import '../../models/salah_model.dart';
+import '../../repository/salah_repositroy/salah_repository.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class SalahCubit extends Cubit<SalahState> {

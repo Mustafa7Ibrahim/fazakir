@@ -1,8 +1,8 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
-import 'package:fazakir/data_source/local/hive_helper.dart';
-import 'package:fazakir/models/data_model/data_model.dart';
-import 'package:fazakir/repository/prayer_time_repository/prayer_time_repository.dart';
+import '../../data_source/local/hive_helper.dart';
+import '../../models/data_model/data_model.dart';
+import '../../repository/prayer_time_repository/prayer_time_repository.dart';
 
 part 'prayer_state.dart';
 
@@ -21,7 +21,8 @@ class PrayerCubit extends Cubit<PrayerState> {
       emit(PrayerFirstTime());
     } else {
       try {
-        final DataModel data = await pryaerTimeRepositiory.getCurrentPrayerTimes();
+        final DataModel data =
+            await pryaerTimeRepositiory.getCurrentPrayerTimes();
         emit(PrayerLoaded(data));
       } catch (e) {
         emit(PrayerError(e.toString()));

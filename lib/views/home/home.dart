@@ -1,10 +1,12 @@
-import 'package:fazakir/views/azkar/azkar_list.dart';
-import 'package:fazakir/views/praise/praise.dart';
-import 'package:fazakir/views/prayer_times/prayer_times.dart';
-import 'package:fazakir/views/salah/salah.dart';
-import 'package:fazakir/widgets/costum_card.dart';
+import '../../core/notification/notification.dart';
+import '../azkar/azkar_list.dart';
+import '../praise/praise.dart';
+import '../prayer_times/prayer_times.dart';
+import '../salah/salah.dart';
+import '../../widgets/costum_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:sinusoidal/wave.dart';
 
@@ -18,6 +20,52 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  showNotification() {
+    AndroidNotificationDetails androidNotificationDetails =
+        const AndroidNotificationDetails(
+      "test chanele",
+      "jjj",
+      playSound: true,
+      channelDescription: 'your other channel description',
+      sound: RawResourceAndroidNotificationSound("fajir"),
+      enableVibration: true,
+    );
+    const iosNotificationDetails = IOSNotificationDetails();
+    NotificationDetails notificationDetails = NotificationDetails(
+      android: androidNotificationDetails,
+      iOS: iosNotificationDetails,
+    );
+    notificationsPlugin.show(
+      4454,
+      "title jndskfsnjd",
+      "bodhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhy",
+      notificationDetails,
+    );
+  }
+
+  shownew() {
+    AndroidNotificationDetails androidNotificationDetails =
+        const AndroidNotificationDetails(
+      "test chanele",
+      "jjj",
+      playSound: true,
+      styleInformation: MediaStyleInformation(),
+      channelDescription: 'your other channel description',
+      sound: RawResourceAndroidNotificationSound("fajir"),
+    );
+    const iosNotificationDetails = IOSNotificationDetails();
+    NotificationDetails notificationDetails = NotificationDetails(
+      android: androidNotificationDetails,
+      iOS: iosNotificationDetails,
+    );
+    notificationsPlugin.show(
+      4454,
+      "title jndskfsnjd",
+      "bodhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhy",
+      notificationDetails,
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     final height = MediaQuery.of(context).size.height;
@@ -119,7 +167,9 @@ class _HomeState extends State<Home> {
                       child: Column(
                         children: [
                           CustomCard(
-                            onTap: () {},
+                            onTap: () {
+                              shownew();
+                            },
                             size: size,
                             image: "assets/icons/quran.svg",
                             title: "القرآن الكريم",

@@ -1,4 +1,4 @@
-import 'package:fazakir/models/prayer_settings_model/prayer_settings_model.dart';
+import '../../models/prayer_settings_model/prayer_settings_model.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
 const String prayerBoxName = "PrayerTimes";
