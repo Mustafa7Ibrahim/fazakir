@@ -24,7 +24,10 @@ class PrayerTime extends StatelessWidget {
               return const Center(child: CircularProgressIndicator());
             }
             if (state is PrayerLoaded) {
-              return PrayerTimes(dataModel: state.dataModel);
+              return SingleChildScrollView(
+                child: Text(state.dataModel.toString()),
+              );
+              // return PrayerTimes(dataModel: state.dataModel);
             }
             if (state is PrayerError) {
               return Center(child: Text(state.message));

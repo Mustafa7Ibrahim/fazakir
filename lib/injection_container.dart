@@ -1,4 +1,5 @@
 import 'package:dio/dio.dart';
+import 'package:fazakir/use_cases/prayer_times_use_case/prayer_calendar_use_case.dart';
 import 'package:get_it/get_it.dart';
 
 import 'bloc/azkar_cubit/azkar_cubit.dart';
@@ -26,10 +27,12 @@ Future<void> init() async {
   getIt.registerFactory(() => PraiseCubit(praiseRepositiry: getIt()));
   getIt.registerFactory(() => ZekrCubit());
   getIt.registerFactory(
-      () => PrayerCubit(pryaerTimeRepositiory: getIt(), hiveHelper: getIt()));
+    () => PrayerCubit(
+      prayerCalenderUseCase: getIt(),
+      hiveHelper: getIt(),
+    ),
+  );
   getIt.registerFactory(() => SalahCubit(salahRepositiry: getIt()));
-
-  // Use cases
 
   // Repository
   getIt.registerLazySingleton(() => AzkarRepositiry(jsonHelper: getIt()));
@@ -47,6 +50,15 @@ Future<void> init() async {
   // Data sources
   getIt.registerLazySingleton(() => JsonHelper());
   getIt.registerLazySingleton(() => HiveHelper());
+
+  // user case
+  getIt.registerLazySingleton(
+    () => PrayerCalenderUseCase(
+      dioHelper: getIt(),
+      savePrayerTimes: getIt(),
+      hiveHelper: getIt(),
+    ),
+  );
 
   //! Core
   getIt.registerLazySingleton(() => DateFormatter());

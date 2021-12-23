@@ -1,18 +1,20 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
+import 'package:fazakir/use_cases/prayer_times_use_case/prayer_calendar_use_case.dart';
+
 import '../../data_source/local/hive_helper.dart';
 import '../../models/data_model/data_model.dart';
-import '../../repository/prayer_time_repository/prayer_time_repository.dart';
 
 part 'prayer_state.dart';
 
 class PrayerCubit extends Cubit<PrayerState> {
   PrayerCubit({
-    required this.pryaerTimeRepositiory,
+    required this.prayerCalenderUseCase,
     required this.hiveHelper,
   }) : super(PrayerInitial());
 
-  final PryaerTimeRepositiory pryaerTimeRepositiory;
+  // final PryaerTimeRepositiory pryaerTimeRepositiory;
+  final PrayerCalenderUseCase prayerCalenderUseCase;
   final HiveHelper hiveHelper;
 
   void getPrayerTimes() async {
@@ -21,9 +23,8 @@ class PrayerCubit extends Cubit<PrayerState> {
       emit(PrayerFirstTime());
     } else {
       try {
-        final DataModel data =
-            await pryaerTimeRepositiory.getCurrentPrayerTimes();
-        emit(PrayerLoaded(data));
+        final data = await prayerCalenderUseCase.getMonthOfPrayerCalender();
+        emit(PrayerLoaded(data.data));
       } catch (e) {
         emit(PrayerError(e.toString()));
         addError(e);

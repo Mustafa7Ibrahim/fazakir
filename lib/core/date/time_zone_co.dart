@@ -6,12 +6,24 @@ import 'package:timezone/data/latest_all.dart' as tz;
 import 'package:timezone/timezone.dart' as tz;
 
 class TimeZoneCo {
-  Future<void> configureLocalTimeZone() async {
+  static Future<void> configureLocalTimeZone() async {
     if (kIsWeb || Platform.isLinux) {
       return;
     }
     tz.initializeTimeZones();
     final String? timeZoneName = await FlutterNativeTimezone.getLocalTimezone();
     tz.setLocalLocation(tz.getLocation(timeZoneName!));
+  }
+
+  static getCurrentMonth() {
+    return tz.TZDateTime.now(tz.local).month;
+  }
+
+  static getCurrentYear() {
+    return tz.TZDateTime.now(tz.local).year;
+  }
+
+  static getCurrentDay() {
+    return tz.TZDateTime.now(tz.local).day;
   }
 }

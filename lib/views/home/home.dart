@@ -1,14 +1,16 @@
-import '../../core/notification/notification.dart';
-import '../azkar/azkar_list.dart';
-import '../praise/praise.dart';
-import '../prayer_times/prayer_times.dart';
-import '../salah/salah.dart';
-import '../../widgets/costum_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:sinusoidal/wave.dart';
+import 'package:timezone/timezone.dart' as tz;
+
+import '../../core/notification/notification.dart';
+import '../../widgets/costum_card.dart';
+import '../azkar/azkar_list.dart';
+import '../praise/praise.dart';
+import '../prayer_times/prayer_times.dart';
+import '../salah/salah.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -20,49 +22,46 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  showNotification() {
-    AndroidNotificationDetails androidNotificationDetails =
-        const AndroidNotificationDetails(
-      "test chanele",
-      "jjj",
-      playSound: true,
-      channelDescription: 'your other channel description',
-      sound: RawResourceAndroidNotificationSound("fajir"),
-      enableVibration: true,
+  tz.TZDateTime _nextInstanceOfTenAM() {
+    final tz.TZDateTime now = tz.TZDateTime.now(tz.local);
+    tz.TZDateTime scheduledDate = tz.TZDateTime(
+      tz.local,
+      now.year,
+      now.month,
+      now.day,
+      3,
+      29,
     );
-    const iosNotificationDetails = IOSNotificationDetails();
-    NotificationDetails notificationDetails = NotificationDetails(
-      android: androidNotificationDetails,
-      iOS: iosNotificationDetails,
-    );
-    notificationsPlugin.show(
-      4454,
-      "title jndskfsnjd",
-      "bodhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhy",
-      notificationDetails,
-    );
+    if (scheduledDate.isBefore(now)) {
+      scheduledDate = scheduledDate.add(const Duration(days: 1));
+    }
+    return scheduledDate;
   }
 
   shownew() {
-    AndroidNotificationDetails androidNotificationDetails =
-        const AndroidNotificationDetails(
-      "test chanele",
-      "jjj",
-      playSound: true,
-      styleInformation: MediaStyleInformation(),
-      channelDescription: 'your other channel description',
+    AndroidNotificationDetails androidNotifi = const AndroidNotificationDetails(
+      "PrayerID",
+      "Prayer Times",
+      channelDescription: 'this channal to play azan',
+      styleInformation: BigTextStyleInformation(
+        "Now is the time for prayer - 05:16 am",
+      ),
       sound: RawResourceAndroidNotificationSound("fajir"),
     );
-    const iosNotificationDetails = IOSNotificationDetails();
+
     NotificationDetails notificationDetails = NotificationDetails(
-      android: androidNotificationDetails,
-      iOS: iosNotificationDetails,
+      android: androidNotifi,
     );
-    notificationsPlugin.show(
-      4454,
-      "title jndskfsnjd",
-      "bodhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhy",
+    notificationsPlugin.zonedSchedule(
+      0,
+      "Fajir",
+      null,
+      _nextInstanceOfTenAM(),
       notificationDetails,
+      uiLocalNotificationDateInterpretation:
+          UILocalNotificationDateInterpretation.absoluteTime,
+      androidAllowWhileIdle: true,
+      matchDateTimeComponents: DateTimeComponents.dateAndTime,
     );
   }
 

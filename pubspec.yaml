@@ -22,7 +22,7 @@ dependencies:
   bloc: ^8.0.1
   flutter_bloc: ^8.0.0
   dio: ^4.0.4
-  flutter_svg: ^0.23.0+1
+  flutter_svg: ^1.0.0
   equatable: ^2.0.3
   dartz: ^0.10.1
   smooth_page_indicator: ^1.0.0+2
@@ -57,6 +57,7 @@ flutter:
     - assets/icons/
     - assets/json/
     - assets/fonts/
+    - assets/sounds/
 
 
   fonts:

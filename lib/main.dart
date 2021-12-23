@@ -1,4 +1,5 @@
 import 'package:bloc/bloc.dart';
+import 'package:fazakir/core/date/time_zone_co.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
@@ -13,6 +14,7 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await NotificationSet.init();
   await HiveHelper.init();
+  await TimeZoneCo.configureLocalTimeZone();
   await di.init();
   final String initialRoute = await NotificationSet.decideWhichRouteToLanch();
 
@@ -38,7 +40,7 @@ class MyApp extends StatelessWidget {
       onGenerateTitle: (context) => AppLocalizations.of(context)!.appTitle,
       theme: ThemeApp.lightTheme,
       darkTheme: ThemeApp.darkTheme,
-      themeMode: ThemeMode.system,
+      themeMode: ThemeMode.light,
       initialRoute: initRoute,
       onGenerateRoute: RouteConfig(context).generateRoute,
     );
