@@ -16,7 +16,11 @@ class Salah extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text("يوميات مسلم"),
+          title: const Text(
+            "يوميات مسلم",
+            style: TextStyle(
+                fontFamily: 'quran', fontSize: 30, fontWeight: FontWeight.w300),
+          ),
         ),
         body: BlocProvider(
           create: (context) =>
@@ -37,7 +41,7 @@ class Salah extends StatelessWidget {
                       physics: const BouncingScrollPhysics(),
                       itemBuilder: (context, index) {
                         return SalahList(
-                          sahalInfo: state.salahModel.salahData.first,
+                          sahalInfo: state.salahModel.salahData[index],
                         );
                       }),
                 );

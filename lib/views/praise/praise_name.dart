@@ -49,6 +49,7 @@ class PraiseName extends StatelessWidget {
                       onTap: () => Navigator.pushNamed(
                             context,
                             PraiseInfo.routeName,
+                            arguments: praiseData,
                           ),
                       child: const Icon(Icons.info_outline)),
                   Expanded(
