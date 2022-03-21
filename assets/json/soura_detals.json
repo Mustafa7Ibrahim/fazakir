@@ -1,0 +1,1092 @@
+{
+    
+    "soura":[
+    {
+        "place": "مكة",
+        "type": "مكية",
+        "count": 7,
+        "title": "Al-Fatiha",
+        "titleAr":"الفاتحة",
+        "index": "001",
+        "pages": 0
+  
+    },
+    {
+        "place": "المدينة",
+        "type": "مدنية",
+        "count": 286,
+        "title": "Al-Baqara",
+        "titleAr":"البقرة",
+        "index": "002",
+        "pages": 1
+    
+      
+    },
+    {
+        "place": "المدينة",
+        "type": "مدنية",
+        "count": 200,
+        "title": "Aal-Imran",
+        "titleAr":"آل عمران",
+        "index": "003",
+        "pages": 49
+       
+        
+    },
+    {
+        "place": "المدينة",
+        "type": "مدنية",
+        "count": 176,
+        "title": "An-Nisaa'",
+        "titleAr":"النساء",
+        "index": "004",
+        "pages": 76
+     
+    },
+    {
+        "place": "المدينة",
+        "type": "مدنية",
+        "count": 120,
+        "title": "Al-Ma'ida",
+        "titleAr":"المائدة",
+        "index": "005",
+        "pages": 105
+      
+    },
+    {
+        "place": "مكة",
+        "type": "مكية",
+        "count": 165,
+        "title": "Al-An'am",
+        "titleAr":"الأنعام",
+        "index": "006",
+        "pages":127       
+    },
+    {
+        "place": "مكة",
+        "type": "مكية",
+        "count": 206,
+        "title": "Al-A'raf",
+        "titleAr":"الأعراف",
+        "index": "007",
+        "pages": 150       
+    },
+    {
+        "place": "المدينة",
+        "type": "مدنية",
+        "count": 75,
+        "title": "Al-Anfal",
+        "titleAr":"الأنفال",
+        "index": "008",
+        "pages": 176    },
+    {
+        "place": "المدينة",
+        "type": "مدنية",
+        "count": 129,
+        "title": "Al-Tawba",
+        "titleAr":"التوبة",
+        "index": "009",
+        "pages": 186    },
+    {
+        "place": "مكة",
+        "type": "مكية",
+        "count": 109,
+        "title": "Yunus",
+        "titleAr":"يونس",
+        "index": "010",
+        "pages": 207    },
+    {
+        "place": "مكة",
+        "type": "مكية",
+        "count": 123,
+        "title": "Hud",
+        "titleAr":"هود",
+        "index": "011",
+        "pages": 220    },
+    {
+        "place": "مكة",
+        "type": "مكية",
+        "count": 111,
+        "title": "Yusuf",
+        "titleAr":"يوسف",
+        "index": "012",
+        "pages": 234    },
+    {
+        "place": "المدينة",
+        "type": "مدنية",
+        "count": 43,
+        "title": "Ar-Ra'd",
+        "titleAr":"الرعد",
+        "index": "013",
+        "pages": 248        
+    },
+    {
+        "place": "مكة",
+        "type": "مكية",
+        "count": 52,
+        "title": "Ibrahim",
+        "titleAr":"إبراهيم",
+        "index": "014",
+        "pages": 254        
+    },
+    {
+        "place": "مكة",
+        "type": "مكية",
+        "count": 99,
+        "title": "Al-Hijr",
+        "titleAr":"الحجر",
+        "index": "015",
+        "pages": 261        
+    },
+    {
+        "place": "مكة",
+        "type": "مكية",
+        "count": 128,
+        "title": "An-Nahl",
+        "titleAr":"النحل",
+        "index": "016",
+        "pages": 266    },
+    {
+        "place": "مكة",
+        "type": "مكية",
+        "count": 111,
+        "title": "Al-Israa",
+        "titleAr":"الإسراء",
+        "index": "017",
+        "pages":281    },
+    {
+        "place": "مكة",
+        "type": "مكية",
+        "count": 110,
+        "title": "Al-Kahf",
+        "titleAr":"الكهف",
+        "index": "018",
+        "pages": 292    },
+    {
+        "place": "مكة",
+        "type": "مكية",
+        "count": 98,
+        "title": "Maryam",
+        "titleAr":"مريم",
+        "index": "019",
+        "pages": 304        
+    },
+    {
+        "place": "مكة",
+        "type": "مكية",
+        "count": 135,
+        "title": "Ta-Ha",
+        "titleAr":"طه",
+        "index": "020",
+        "pages": 311   },
+    {
+        "place": "مكة",
+        "type": "مكية",
+        "count": 112,
+        "title": "Al-Anbiya",
+        "titleAr":"الأنبياء",
+        "index": "021",
+        "pages":321   },
+    {
+        "place": "المدينة",
+        "type": "مدنية",
+        "count": 78,
+        "title": "Al-Hajj",
+        "titleAr":"الحج",
+        "index": "022",
+        "pages": 331        
+    },
+    {
+        "place": "مكة",
+        "type": "مكية",
+        "count": 118,
+        "title": "Al-Muminun",
+        "titleAr":"المؤمنون",
+        "index": "023",
+        "pages": 341    },
+    {
+        "place": "المدينة",
+        "type": "مدنية",
+        "count": 64,
+        "title": "An-Nur",
+        "titleAr":"النور",
+        "index": "024",
+        "pages": 349    },
+    {
+        "place": "مكة",
+        "type": "مكية",
+        "count": 77,
+        "title": "Al-Furqan",
+        "titleAr":"الفرقان",
+        "index": "025",
+        "pages": 358  },
+    {
+        "place": "مكة",
+        "type": "مكية",
+        "count": 227,
+        "title": "Ash-Shuara",
+        "titleAr":"الشعراء",
+        "index": "026",
+        "pages": 366    },
+    {
+        "place": "مكة",
+        "type": "مكية",
+        "count": 93,
+        "title": "An-Naml",
+        "titleAr":"النمل",
+        "index": "027",
+        "pages": 376    },
+    {
+        "place": "مكة",
+        "type": "مكية",
+        "count": 88,
+        "title": "Al-Qasas",
+        "titleAr":"القصص",
+        "index": "028",
+        "pages": 384        
+    },
+    {
+        "place": "مكة",
+        "type": "مكية",
+        "count": 69,
+        "title": "Al-Ankabut",
+        "titleAr":"العنكبوت",
+        "index": "029",
+        "pages": 395   },
+    {
+        "place": "مكة",
+        "type": "مكية",
+        "count": 60,
+        "title": "Ar-Rum",
+        "titleAr":"الروم",
+        "index": "030",
+        "pages": 403
+        
+    },
+    {
+        "place": "مكة",
+        "type": "مكية",
+        "count": 34,
+        "title": "Luqman",
+        "titleAr":"لقمان",
+        "index": "031",
+        "pages": 410
+        
+    },
+    {
+        "place": "مكة",
+        "type": "مكية",
+        "count": 30,
+        "title": "As-Sajdah",
+        "titleAr":"السجدة",
+        "index": "032",
+        "pages":414
+        
+    },
+    {
+        "place": "المدينة",
+        "type": "مدنية",
+        "count": 73,
+        "title": "Al-Ahzab",
+        "titleAr":"الأحزاب",
+        "index": "033",
+        "pages": 417    },
+    {
+        "place": "مكة",
+        "type": "مكية",
+        "count": 54,
+        "title": "Saba",
+        "titleAr":"سبأ",
+        "index": "034",
+        "pages": 427
+        
+    },
+    {
+        "place": "مكة",
+        "type": "مكية",
+        "count": 45,
+        "title": "Fatir",
+        "titleAr":"فاطر",
+        "index": "035",
+        "pages": 433        
+    },
+    {
+        "place": "مكة",
+        "type": "مكية",
+        "count": 83,
+        "title": "Yasin",
+        "titleAr":"يس",
+        "index": "036",
+        "pages": 439    },
+    {
+        "place": "مكة",
+        "type": "مكية",
+        "count": 182,
+        "title": "As-Saffat",
+        "titleAr":"الصافات",
+        "index": "037",
+        "pages":445   },
+    {
+        "place": "مكة",
+        "type": "مكية",
+        "count": 88,
+        "title": "Sad",
+        "titleAr":"ص",
+        "index": "038",
+        "pages":452        
+    },
+    {
+        "place": "مكة",
+        "type": "مكية",
+        "count": 75,
+        "title": "Az-Zumar",
+        "titleAr":"الزمر",
+        "index": "039",
+        "pages": 457
+   },
+    {
+        "place": "مكة",
+        "type": "مكية",
+        "count": 85,
+        "title": "Ghafir",
+        "titleAr":"غافر",
+        "index": "040",
+        "pages":466
+        
+    },
+    {
+        "place": "مكة",
+        "type": "مكية",
+        "count": 54,
+        "title": "Fussilat",
+        "titleAr":"فصلت",
+        "index": "041",
+        "pages":476    },
+    {
+        "place": "مكة",
+        "type": "مكية",
+        "count": 53,
+        "title": "Ash-Shura",
+        "titleAr":"الشورى",
+        "index": "042",
+        "pages": 482
+        
+    },
+    {
+        "place": "مكة",
+        "type": "مكية",
+        "count": 89,
+        "title": "Az-Zukhruf",
+        "titleAr":"الزخرف",
+        "index": "043",
+        "pages": 488
+        
+    },
+    {
+        "place": "مكة",
+        "type": "مكية",
+        "count": 59,
+        "title": "Ad-Dukhan",
+        "titleAr":"الدخان",
+        "index": "044",
+        "pages":495
+        
+    },
+    {
+        "place": "مكة",
+        "type": "مكية",
+        "count": 37,
+        "title": "Al-Jathiya",
+        "titleAr":"الجاثية",
+        "index": "045",
+        "pages": 489
+    },
+    {
+        "place": "مكة",
+        "type": "مكية",
+        "count": 35,
+        "title": "Al-Ahqaf",
+        "titleAr":"الأحقاف",
+        "index": "046",
+        "pages":501
+        
+    },
+    {
+        "place": "المدينة",
+        "type": "مدنية",
+        "count": 38,
+        "title": "Muhammad",
+        "titleAr":"محمد",
+        "index": "047",
+        "pages": 506
+        
+    },
+    {
+        "place": "المدينة",
+        "type": "مدنية",
+        "count": 29,
+        "title": "Al-Fath",
+        "titleAr":"الفتح",
+        "index": "048",
+        "pages": 510
+        
+    },
+    {
+        "place": "المدينة",
+        "type": "مدنية",
+        "count": 18,
+        "title": "Al-Hujurat",
+        "titleAr":"الحجرات",
+        "index": "049",
+        "pages": 514
+        
+    },
+    {
+        "place": "مكة",
+        "type": "مكية",
+        "count": 45,
+        "title": "Qaf",
+        "titleAr":"ق",
+        "index": "050",
+        "pages": 517
+        
+    },
+    {
+        "place": "مكة",
+        "type": "مكية",
+        "count": 60,
+        "title": "Az-Zariyat",
+        "titleAr":"الذاريات",
+        "index": "051",
+        "pages": 519    },
+    {
+        "place": "مكة",
+        "type": "مكية",
+        "count": 49,
+        "title": "At-Tur",
+        "titleAr":"الطور",
+        "index": "052",
+        "pages": 522
+        
+    },
+    {
+        "place": "مكة",
+        "type": "مكية",
+        "count": 62,
+        "title": "An-Najm",
+        "titleAr":"النجم",
+        "index": "053",
+        "pages": 525
+        
+    },
+    {
+        "place": "مكة",
+        "type": "مكية",
+        "count": 55,
+        "title": "Al-Qamar",
+        "titleAr":"القمر",
+        "index": "054",
+        "pages":527
+        
+    },
+    {
+        "place": "المدينة",
+        "type": "مدنية",
+        "count": 78,
+        "title": "Ar-Rahman",
+        "titleAr":"الرحمن",
+        "index": "055",
+        "pages": 530
+        
+    },
+    {
+        "place": "مكة",
+        "type": "مكية",
+        "count": 96,
+        "title": "Al-Waqia",
+        "titleAr":"الواقعة",
+        "index": "056",
+        "pages":533
+        
+    },
+    {
+        "place": "المدينة",
+        "type": "مدنية",
+        "count": 29,
+        "title": "Al-Hadid",
+        "titleAr":"الحديد",
+        "index": "057",
+        "pages": 536
+        
+    },
+    {
+        "place": "المدينة",
+        "type": "مدنية",
+        "count": 22,
+        "title": "Al-Mujadilah",
+        "titleAr":"المجادلة",
+        "index": "058",
+        "pages": 541
+        
+    },
+    {
+        "place": "المدينة",
+        "type": "مدنية",
+        "count": 24,
+        "title": "Al-Hashr",
+        "titleAr":"الحشر",
+        "index": "059",
+        "pages": 544
+        
+    },
+    {
+        "place": "المدينة",
+        "type": "مدنية",
+        "count": 13,
+        "title": "Al-Mumtahinah",
+        "titleAr":"الممتحنة",
+        "index": "060",
+        "pages": 548
+        
+    },
+    {
+        "place": "المدينة",
+        "type": "مدنية",
+        "count": 14,
+        "title": "As-Saff",
+        "titleAr":"الصف",
+        "index": "061",
+        "pages": 550
+        
+    },
+    {
+        "place": "المدينة",
+        "type": "مدنية",
+        "count": 11,
+        "title": "Al-Jumu'ah",
+        "titleAr":"الجمعة",
+        "index": "062",
+        "pages": 552
+        
+    },
+    {
+        "place": "المدينة",
+        "type": "مدنية",
+        "count": 11,
+        "title": "Al-Munafiqun",
+        "titleAr":"المنافقون",
+        "index": "063",
+        "pages":553
+        
+    },
+    {
+        "place": "المدينة",
+        "type": "مدنية",
+        "count": 18,
+        "title": "At-Taghabun",
+        "titleAr":"التغابن",
+        "index": "064",
+        "pages": 555
+        
+    },
+    {
+        "place": "المدينة",
+        "type": "مدنية",
+        "count": 12,
+        "title": "At-Talaq",
+        "titleAr":"الطلاق",
+        "index": "065",
+        "pages": 557
+        
+    },
+    {
+        "place": "المدينة",
+        "type": "مدنية",
+        "count": 12,
+        "title": "At-Tahrim",
+        "titleAr":"التحريم",
+        "index": "066",
+        "pages":559
+        
+    },
+    {
+        "place": "مكة",
+        "type": "مكية",
+        "count": 30,
+        "title": "Al-Mulk",
+        "titleAr":"الملك",
+        "index": "067",
+        "pages": 561
+        
+    },
+    {
+        "place": "مكة",
+        "type": "مكية",
+        "count": 52,
+        "title": "Al-Qalam",
+        "titleAr":"القلم",
+        "index": "068",
+        "pages": 563
+        
+    },
+    {
+        "place": "مكة",
+        "type": "مكية",
+        "count": 52,
+        "title": "Al-Haqqah",
+        "titleAr":"الحاقة",
+        "index": "069",
+        "pages": 565
+        
+    },
+    {
+        "place": "مكة",
+        "type": "مكية",
+        "count": 44,
+        "title": "Al-Ma'arij",
+        "titleAr":"المعارج",
+        "index": "070",
+        "pages": 567
+        
+    },
+    {
+        "place": "مكة",
+        "type": "مكية",
+        "count": 28,
+        "title": "Nuh",
+        "titleAr":"نوح",
+        "index": "071",
+        "pages": 569
+        
+    },
+    {
+        "place": "مكة",
+        "type": "مكية",
+        "count": 28,
+        "title": "Al-Jinn",
+        "titleAr":"الجن",
+        "index": "072",
+        "pages": 571
+        
+    },
+    {
+        "place": "مكة",
+        "type": "مكية",
+        "count": 20,
+        "title": "Al-Muzzammil",
+        "titleAr":"المزمل",
+        "index": "073",
+        "pages": 573
+        
+    },
+    {
+        "place": "مكة",
+        "type": "مكية",
+        "count": 56,
+        "title": "Al-Muddaththir",
+        "titleAr":"المدثر",
+        "index": "074",
+        "pages": 574
+        
+    },
+    {
+        "place": "مكة",
+        "type": "مكية",
+        "count": 40,
+        "title": "Al-Qiyamah",
+        "titleAr":"القيامة",
+        "index": "075",
+        "pages": 576
+        
+    },
+    {
+        "place": "المدينة",
+        "type": "مدنية",
+        "count": 31,
+        "title": "Al-Insan",
+        "titleAr":"الإنسان",
+        "index": "076",
+        "pages":577
+        
+    },
+    {
+        "place": "مكة",
+        "type": "مكية",
+        "count": 50,
+        "title": "Al-Mursalat",
+        "titleAr":"المرسلات",
+        "index": "077",
+        "pages":579
+        
+    },
+    {
+        "place": "مكة",
+        "type": "مكية",
+        "count": 40,
+        "title": "An-Naba",
+        "titleAr":"النبأ",
+        "index": "078",
+        "pages": 581
+        
+    },
+    {
+        "place": "مكة",
+        "type": "مكية",
+        "count": 46,
+        "title": "An-Naziat",
+        "titleAr":"النازعات",
+        "index": "079",
+        "pages":582
+        
+    },
+    {
+        "place": "مكة",
+        "type": "مكية",
+        "count": 42,
+        "title": "Abasa",
+        "titleAr":"عبس",
+        "index": "080",
+        "pages":584
+        
+    },
+    {
+        "place": "مكة",
+        "type": "مكية",
+        "count": 29,
+        "title": "At-Takwir",
+        "titleAr":"التكوير",
+        "index": "081",
+        "pages":585
+        
+    },
+    {
+        "place": "مكة",
+        "type": "مكية",
+        "count": 19,
+        "title": "Al-Infitar",
+        "titleAr":"الإنفطار",
+        "index": "082",
+        "pages": 586
+        
+    },
+    {
+        "place": "مكة",
+        "type": "مكية",
+        "count": 36,
+        "title": "Al-Mutaffifin",
+        "titleAr":"المطففين",
+        "index": "083",
+        "pages": 586
+        
+    },
+    {
+        "place": "مكة",
+        "type": "مكية",
+        "count": 25,
+        "title": "Al-Inshiqaq",
+        "titleAr":"الإنشقاق",
+        "index": "084",
+        "pages": 588
+        
+    },
+    {
+        "place": "مكة",
+        "type": "مكية",
+        "count": 22,
+        "title": "Al-Buruj",
+        "titleAr":"البروج",
+        "index": "085",
+        "pages":589
+        
+    },
+    {
+        "place": "مكة",
+        "type": "مكية",
+        "count": 17,
+        "title": "At-Tariq",
+        "titleAr":"الطارق",
+        "index": "086",
+        "pages": 590
+        
+    },
+    {
+        "place": "مكة",
+        "type": "مكية",
+        "count": 19,
+        "title": "Al-Ala",
+        "titleAr":"الأعلى",
+        "index": "087",
+        "pages": 590
+        
+    },
+    {
+        "place": "مكة",
+        "type": "مكية",
+        "count": 26,
+        "title": "Al-Ghashiyah",
+        "titleAr":"الغاشية",
+        "index": "088",
+        "pages": 591
+        
+    },
+    {
+        "place": "مكة",
+        "type": "مكية",
+        "count": 30,
+        "title": "Al-Fajr",
+        "titleAr":"الفجر",
+        "index": "089",
+        "pages": 592
+        
+    },
+    {
+        "place": "مكة",
+        "type": "مكية",
+        "count": 20,
+        "title": "Al-Balad",
+        "titleAr":"البلد",
+        "index": "090",
+        "pages": 593
+        
+    },
+    {
+        "place": "مكة",
+        "type": "مكية",
+        "count": 15,
+        "title": "Ash-Shams",
+        "titleAr":"الشمس",
+        "index": "091",
+        "pages":594
+        
+    },
+    {
+        "place": "مكة",
+        "type": "مكية",
+        "count": 21,
+        "title": "Al-Lail",
+        "titleAr":"الليل",
+        "index": "092",
+        "pages": 594
+        
+    },
+    {
+        "place": "مكة",
+        "type": "مكية",
+        "count": 11,
+        "title": "Ad-Duha",
+        "titleAr":"الضحى",
+        "index": "093",
+        "pages": 595
+        
+    },
+    {
+        "place": "مكة",
+        "type": "مكية",
+        "count": 8,
+        "title": "Ash-Sharh",
+        "titleAr":"الشرح",
+        "index": "094",
+        "pages": 595
+    
+    },
+    {
+        "place": "مكة",
+        "type": "مكية",
+        "count": 8,
+        "title": "At-Tin",
+        "titleAr":"التين",
+        "index": "095",
+        "pages": 596
+    
+    },
+    {
+        "place": "مكة",
+        "type": "مكية",
+        "count": 19,
+        "title": "Al-Alaq",
+        "titleAr":"العلق",
+        "index": "096",
+        "pages": 596
+        
+    },
+    {
+        "place": "مكة",
+        "type": "مكية",
+        "count": 5,
+        "title": "Al-Qadr",
+        "titleAr":"القدر",
+        "index": "097",
+        "pages": 597
+    
+    },
+    {
+        "place": "المدينة",
+        "type": "مدنية",
+        "count": 8,
+        "title": "Al-Bayinah",
+        "titleAr":"البينة",
+        "index": "098",
+        "pages": 597
+    
+    },
+    {
+        "place": "المدينة",
+        "type": "مدنية",
+        "count": 8,
+        "title": "Az-Zalzalah",
+        "titleAr":"الزلزلة",
+        "index": "099",
+        "pages": 598
+    
+    },
+    {
+        "place": "مكة",
+        "type": "مكية",
+        "count": 11,
+        "title": "Al-Adiyat",
+        "titleAr":"العاديات",
+        "index": "100",
+        "pages": 598
+        
+    },
+    {
+        "place": "مكة",
+        "type": "مكية",
+        "count": 11,
+        "title": "Al-Qariah",
+        "titleAr":"القارعة",
+        "index": "101",
+        "pages": 599
+        
+    },
+    {
+        "place": "مكة",
+        "type": "مكية",
+        "count": 8,
+        "title": "Al-Takathur",
+        "titleAr":"التكاثر",
+        "index": "102",
+        "pages": 599
+    
+    },
+    {
+        "place": "مكة",
+        "type": "مكية",
+        "count": 3,
+        "title": "Al-Asr",
+        "titleAr":"العصر",
+        "index": "103",
+        "pages": 600
+    
+    },
+    {
+        "place": "مكة",
+        "type": "مكية",
+        "count": 9,
+        "title": "Al-Humazah",
+        "titleAr":"الهمزة",
+        "index": "104",
+        "pages": 600
+    
+    },
+    {
+        "place": "مكة",
+        "type": "مكية",
+        "count": 5,
+        "title": "Al-Fil",
+        "titleAr":"الفيل",
+        "index": "105",
+        "pages": 600
+    
+    },
+    {
+        "place": "مكة",
+        "type": "مكية",
+        "count": 4,
+        "title": "Quraish",
+        "titleAr":"قريش",
+        "index": "106",
+        "pages": 601
+    
+    },
+    {
+        "place": "مكة",
+        "type": "مكية",
+        "count": 7,
+        "title": "Al-Ma'un",
+        "titleAr":"الماعون",
+        "index": "107",
+        "pages":601
+    
+    },
+    {
+        "place": "مكة",
+        "type": "مكية",
+        "count": 3,
+        "title": "Al-Kauthar",
+        "titleAr":"الكوثر",
+        "index": "108",
+        "pages":601
+    
+    },
+    {
+        "place": "مكة",
+        "type": "مكية",
+        "count": 6,
+        "title": "Al-Kafirun",
+        "titleAr":"الكافرون",
+        "index": "109",
+        "pages": 602
+    
+    },
+    {
+        "place": "المدينة",
+        "type": "مدنية",
+        "count": 3,
+        "title": "An-Nasr",
+        "titleAr":"النصر",
+        "index": "110",
+        "pages": 602
+    
+    },
+    {
+        "place": "مكة",
+        "type": "مكية",
+        "count": 5,
+        "title": "Al-Masad",
+        "titleAr":"المسد",
+        "index": "111",
+        "pages": 602
+    
+    },
+    {
+        "place": "مكة",
+        "type": "مكية",
+        "count": 4,
+        "title": "Al-Ikhlas",
+        "titleAr":"الإخلاص",
+        "index": "112",
+        "pages": 603
+    
+    },
+    {
+        "place": "مكة",
+        "type": "مكية",
+        "count": 5,
+        "title": "Al-Falaq",
+        "titleAr":"الفلق",
+        "index": "113",
+        "pages": 603
+    
+    },
+    {
+        "place": "مكة",
+        "type": "مكية",
+        "count": 6,
+        "title": "An-Nas",
+        "titleAr":"الناس",
+        "index": "114",
+        "pages": 603
+    
+    }
+]}

@@ -5,6 +5,7 @@ import 'package:get_it/get_it.dart';
 import 'bloc/azkar_cubit/azkar_cubit.dart';
 import 'bloc/praise_cubit/praise_cubit.dart';
 import 'bloc/prayer_cubit/prayer_cubit.dart';
+import 'bloc/quran_cubit/quran_cubit.dart';
 import 'bloc/salah_cubit/salah_cubit.dart';
 import 'bloc/zekr_cubit/zekr_cubit.dart';
 import 'core/constant/prayer_time_constant.dart';
@@ -16,6 +17,7 @@ import 'repository/azkar_repository/azkar_repository.dart';
 import 'repository/praise_repository/praise_repository.dart';
 import 'repository/prayer_time_repository/prayer_time_repository.dart';
 import 'repository/prayer_time_repository/save_prayer_time.dart';
+import 'repository/quran_repository/quran_repository.dart';
 import 'repository/salah_repositroy/salah_repository.dart';
 
 final getIt = GetIt.instance;
@@ -33,6 +35,7 @@ Future<void> init() async {
     ),
   );
   getIt.registerFactory(() => SalahCubit(salahRepositiry: getIt()));
+  getIt.registerFactory(() => QuranCubit(quranRepository: getIt()));
 
   // Repository
   getIt.registerLazySingleton(() => AzkarRepositiry(jsonHelper: getIt()));
@@ -46,6 +49,7 @@ Future<void> init() async {
   );
   getIt.registerLazySingleton(() => SavePrayerTimes(hiveHelper: getIt()));
   getIt.registerLazySingleton(() => SalahRepositiry(jsonHelper: getIt()));
+  getIt.registerLazySingleton(() => QuranRepository(jsonHelper: getIt()));
 
   // Data sources
   getIt.registerLazySingleton(() => JsonHelper());
