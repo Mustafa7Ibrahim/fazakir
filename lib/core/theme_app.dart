@@ -86,7 +86,7 @@ class ThemeApp {
       error: Color(0xffEF4444),
       onPrimary: Color(0xffffffff),
       onSecondary: Color(0xff010313),
-      onSurface: Color(0xffffffff),
+      onSurface: Colors.white70,
       onBackground: Color(0xffffffff),
       onError: Color(0xffCF6679),
       brightness: Brightness.dark,

@@ -1,7 +1,7 @@
 class SouraModel {
   List<SouraContant> soura = [];
   SouraModel.fromjson(Map<String, dynamic> json) {
-    json['name'].forEach((e) {
+    json['soura'].forEach((e) {
       soura.add(SouraContant.fromjson(e));
     });
   }

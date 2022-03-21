@@ -1,3 +1,6 @@
+import 'package:fazakir/views/quran/quran_page.dart';
+import 'package:fazakir/views/quran/soura_list.dart';
+
 import '../../models/azkar_model.dart';
 import '../../models/praise_model.dart';
 import '../../views/azkar/azkar_list.dart';
@@ -41,6 +44,13 @@ class RouteConfig {
           case PraiseInfo.routeName:
             final PraiseData praiseData = settings.arguments as PraiseData;
             return PraiseInfo(praiseData: praiseData);
+          case SouraList.routeName:
+            return const SouraList();
+          case QuranPageScrean.routeName:
+            int? index;
+            return QuranPageScrean(
+              index: index,
+            );
 
           default:
             return const Home();

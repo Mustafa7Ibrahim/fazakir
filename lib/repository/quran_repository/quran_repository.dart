@@ -11,7 +11,7 @@ class QuranRepository {
   // Soura detals
   Future<SouraModel> getListOfSoura() async {
     final String data = await jsonHelper.convertJsonFileToList(
-        jsonFile: 'jsonfile/soura_detals.json');
+        jsonFile: 'assets/json/soura_detals.json');
     final list = json.decode(data);
     SouraModel souraModel = SouraModel.fromjson(list);
     return souraModel;
@@ -21,7 +21,7 @@ class QuranRepository {
 
   Future<QuranPageModel> getListOfQuranPage() async {
     final String data = await jsonHelper.convertJsonFileToList(
-        jsonFile: 'jsonfile/quran_page.json');
+        jsonFile: 'assets/json/quran_page.json');
     final list = json.decode(data);
     QuranPageModel quranPageModel = QuranPageModel.fromjson(list);
     return quranPageModel;

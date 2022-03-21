@@ -1,3 +1,4 @@
+import 'package:fazakir/views/quran/soura_list.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
@@ -167,7 +168,7 @@ class _HomeState extends State<Home> {
                         children: [
                           CustomCard(
                             onTap: () {
-                              shownew();
+                              Navigator.pushNamed(context, SouraList.routeName);
                             },
                             size: size,
                             image: "assets/icons/quran.svg",
