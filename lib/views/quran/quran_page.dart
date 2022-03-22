@@ -63,11 +63,6 @@ class _QuranPageScreanState extends State<QuranPageScrean> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: showAppBar
-          ? AppBar(
-              backgroundColor: Colors.transparent,
-            )
-          : null,
       body: BlocProvider(
         create: (context) => getIt<QuranCubit>()..getpage(),
         child: BlocConsumer<QuranCubit, QuranState>(
@@ -240,6 +235,43 @@ class _QuranPageScreanState extends State<QuranPageScrean> {
                                         ],
                                         begin: Alignment.centerLeft,
                                         end: Alignment.centerRight,
+                                      ),
+                                    ),
+                                  )
+                                : const SizedBox(),
+                            showAppBar
+                                ? Positioned(
+                                    child: Padding(
+                                      padding: const EdgeInsets.only(
+                                          right: 20.0, top: 10),
+                                      child: InkWell(
+                                        onTap: () =>
+                                            Navigator.of(context).pop(),
+                                        child: Container(
+                                          height: 40,
+                                          width: 45,
+                                          // padding:
+                                          //     const EdgeInsets.only(right: 5),
+                                          decoration: BoxDecoration(
+                                              color: Theme.of(context)
+                                                  .scaffoldBackgroundColor,
+                                              borderRadius:
+                                                  BorderRadius.circular(8),
+                                              boxShadow: const [
+                                                BoxShadow(
+                                                    color: Colors.black26,
+                                                    blurRadius: 3,
+                                                    offset: Offset(1, 3))
+                                              ]),
+                                          child: Center(
+                                              child: Icon(
+                                            Icons.arrow_back,
+                                            size: 20,
+                                            color: Theme.of(context)
+                                                .colorScheme
+                                                .onSurface,
+                                          )),
+                                        ),
                                       ),
                                     ),
                                   )
