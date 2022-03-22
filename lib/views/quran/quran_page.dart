@@ -76,53 +76,99 @@ class _QuranPageScreanState extends State<QuranPageScrean> {
                   controller: pageController,
                   itemCount: state.quranPageModel.page.length,
                   itemBuilder: (context, index) {
-                    return Column(
-                      children: [
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
-                          children: [
-                            Text(
-                              state.quranPageModel.page[index].name.toString(),
-                              style: const TextStyle(fontFamily: "Arabic"),
-                            ),
-                            Text(
-                              state.quranPageModel.page[index].jza.toString(),
-                              style: const TextStyle(fontFamily: "Arabic"),
-                            )
-                          ],
+                    return Container(
+                      padding: const EdgeInsets.all(10.0),
+                      margin: index % 2 == 0
+                          ? const EdgeInsets.only(right: 20)
+                          : const EdgeInsets.only(left: 20),
+                      decoration:
+                          BoxDecoration(color: Colors.white, boxShadow: [
+                        BoxShadow(
+                          color: Theme.of(context).colorScheme.onSurface,
+                          blurRadius: 0,
+                          offset: index % 2 == 0
+                              ? const Offset(9, 0)
+                              : const Offset(-9, 0),
                         ),
-                        const SizedBox(
-                          height: 1,
+                        BoxShadow(
+                          color: Colors.white,
+                          blurRadius: 0,
+                          offset: index % 2 == 0
+                              ? const Offset(8, 0)
+                              : const Offset(-8, 0),
                         ),
-                        Expanded(
-                          child: Container(
-                              // width: double.infinity,
-                              // height: MediaQuery.of(context).size.height,
-                              padding: const EdgeInsets.all(0.0),
-                              child: Image.asset(
-                                "assets/images/quran-images/${index + 1}.png",
-                                color: Theme.of(context).colorScheme.onSurface,
-                              )),
+                        BoxShadow(
+                          color: Theme.of(context).colorScheme.onSurface,
+                          blurRadius: 0,
+                          offset: index % 2 == 0
+                              ? const Offset(5, 0)
+                              : const Offset(-5, 0),
                         ),
-                        Center(
-                          child: Text(getVerseEndSymbol(index + 1).toString(),
-                              style: const TextStyle(
-                                  fontFamily: "Arabic", fontSize: 18)),
+                        BoxShadow(
+                          color: Colors.white,
+                          blurRadius: 0,
+                          offset: index % 2 == 0
+                              ? const Offset(4, 0)
+                              : const Offset(-4, 0),
                         ),
-                        Padding(
-                          padding: const EdgeInsets.only(right: 20.0),
-                          child: Align(
-                            alignment: Alignment.topRight,
-                            child: Text(
-                                "الحزب " +
-                                    getVerseEndSymbol(int.parse(state
-                                        .quranPageModel.page[index].haz
-                                        .toString())),
-                                style: const TextStyle(
-                                    fontFamily: "Arabic", fontSize: 16)),
-                          ),
+                        BoxShadow(
+                          color: Theme.of(context).colorScheme.onSurface,
+                          blurRadius: 0,
+                          offset: index % 2 == 0
+                              ? const Offset(1, 0)
+                              : const Offset(-1, 0),
                         )
-                      ],
+                      ]),
+                      child: Column(
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceAround,
+                            children: [
+                              Text(
+                                state.quranPageModel.page[index].name
+                                    .toString(),
+                                style: const TextStyle(fontFamily: "Arabic"),
+                              ),
+                              Text(
+                                state.quranPageModel.page[index].jza.toString(),
+                                style: const TextStyle(fontFamily: "Arabic"),
+                              )
+                            ],
+                          ),
+                          const SizedBox(
+                            height: 1,
+                          ),
+                          Expanded(
+                            child: Container(
+                                // width: double.infinity,
+                                // height: MediaQuery.of(context).size.height,
+                                padding: const EdgeInsets.all(0.0),
+                                child: Image.asset(
+                                  "assets/images/quran-images/page${index + 1}.png",
+                                  color:
+                                      Theme.of(context).colorScheme.onSurface,
+                                )),
+                          ),
+                          Center(
+                            child: Text(getVerseEndSymbol(index + 1).toString(),
+                                style: const TextStyle(
+                                    fontFamily: "Arabic", fontSize: 18)),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(right: 20.0),
+                            child: Align(
+                              alignment: Alignment.topRight,
+                              child: Text(
+                                  "الحزب " +
+                                      getVerseEndSymbol(int.parse(state
+                                          .quranPageModel.page[index].haz
+                                          .toString())),
+                                  style: const TextStyle(
+                                      fontFamily: "Arabic", fontSize: 16)),
+                            ),
+                          )
+                        ],
+                      ),
                     );
                   });
             }
