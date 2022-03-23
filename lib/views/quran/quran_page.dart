@@ -87,15 +87,30 @@ class _QuranPageScreanState extends State<QuranPageScrean> {
                         return Stack(
                           children: [
                             Container(
-                              padding: const EdgeInsets.all(10.0),
+                              padding:
+                                  const EdgeInsets.symmetric(vertical: 20.0),
                               margin: index % 2 == 0
-                                  ? const EdgeInsets.only(right: 18, bottom: 12)
-                                  : const EdgeInsets.only(left: 18, bottom: 12),
+                                  ? const EdgeInsets.only(
+                                      right: 3,
+                                    )
+                                  : const EdgeInsets.only(
+                                      left: 3,
+                                    ),
                               decoration: BoxDecoration(
                                   color: ThemeHandler().isDark()
                                       ? Theme.of(context)
                                           .scaffoldBackgroundColor
                                       : const Color(0xFFF5F5F5),
+                                  borderRadius: index % 2 != 0
+                                      ? const BorderRadius.only(
+                                          topRight: Radius.elliptical(100, 20),
+                                          bottomRight:
+                                              Radius.elliptical(100, 20))
+                                      : const BorderRadius.only(
+                                          topLeft: Radius.elliptical(100, 20),
+                                          bottomLeft:
+                                              Radius.elliptical(100, 20),
+                                        ),
                                   boxShadow: [
                                     BoxShadow(
                                       color: Theme.of(context)
@@ -112,44 +127,9 @@ class _QuranPageScreanState extends State<QuranPageScrean> {
                                           .onSurface,
                                       blurRadius: 1,
                                       offset: index % 2 == 0
-                                          ? const Offset(13, 1)
-                                          : const Offset(-13, 1),
+                                          ? const Offset(0, 1)
+                                          : const Offset(-0, 1),
                                     ),
-                                    BoxShadow(
-                                      color: Theme.of(context)
-                                          .scaffoldBackgroundColor,
-                                      blurRadius: 1,
-                                      offset: index % 2 == 0
-                                          ? const Offset(12, 0)
-                                          : const Offset(-12, 0),
-                                    ),
-                                    BoxShadow(
-                                      color: Theme.of(context)
-                                          .colorScheme
-                                          .onSurface,
-                                      blurRadius: 1,
-                                      offset: index % 2 == 0
-                                          ? const Offset(7, 0)
-                                          : const Offset(-7, 0),
-                                    ),
-                                    BoxShadow(
-                                      color: Theme.of(context)
-                                          .scaffoldBackgroundColor,
-                                      blurRadius: 1,
-                                      offset: index % 2 == 0
-                                          ? const Offset(6, 0)
-                                          : const Offset(-6, 0),
-                                    ),
-                                    BoxShadow(
-                                      color: Theme.of(context)
-                                          .colorScheme
-                                          .onSurface
-                                          .withOpacity(0.5),
-                                      blurRadius: 1,
-                                      offset: index % 2 == 0
-                                          ? const Offset(1, 0)
-                                          : const Offset(-1, 0),
-                                    )
                                   ]),
                               child: Column(
                                 children: [
@@ -176,15 +156,15 @@ class _QuranPageScreanState extends State<QuranPageScrean> {
                                   ),
                                   Expanded(
                                     child: Container(
-                                        // width: double.infinity,
-                                        // height: MediaQuery.of(context).size.height,
-                                        padding: const EdgeInsets.all(0.0),
-                                        child: Image.asset(
-                                          "assets/images/quran-images/page${index + 1}.png",
-                                          color: ThemeHandler().isDark()
-                                              ? const Color(0xFFF0EFEF)
-                                              : null,
-                                        )),
+                                      decoration: BoxDecoration(
+                                        image: DecorationImage(
+                                          invertColors: ThemeHandler().isDark(),
+                                          image: AssetImage(
+                                            "assets/images/quran-images/page${index + 1}.png",
+                                          ),
+                                        ),
+                                      ),
+                                    ),
                                   ),
                                   Center(
                                     child: Text(
@@ -276,6 +256,7 @@ class _QuranPageScreanState extends State<QuranPageScrean> {
                                     ),
                                   )
                                 : const SizedBox(),
+                            //
                           ],
                         );
                       }),
