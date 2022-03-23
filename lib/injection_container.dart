@@ -35,7 +35,8 @@ Future<void> init() async {
     ),
   );
   getIt.registerFactory(() => SalahCubit(salahRepositiry: getIt()));
-  getIt.registerFactory(() => QuranCubit(quranRepository: getIt()));
+  getIt.registerFactory(
+      () => QuranCubit(quranRepository: getIt(), hiveHelper: getIt()));
 
   // Repository
   getIt.registerLazySingleton(() => AzkarRepositiry(jsonHelper: getIt()));

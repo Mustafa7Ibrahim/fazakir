@@ -52,3 +52,35 @@ class QuranPageError extends QuranState {
   @override
   List<Object> get props => [message];
 }
+
+class SaveQuranPageLoading extends QuranState {}
+
+class SaveQuranPageScasses extends QuranState {}
+
+class SaveQuranPageError extends QuranState {
+  final String message;
+  const SaveQuranPageError({
+    required this.message,
+  });
+  @override
+  List<Object> get props => [message];
+}
+
+class GetQuranPageLoading extends QuranState {}
+
+class GetQuranPageScasses extends QuranState {
+  final dynamic value;
+
+  const GetQuranPageScasses(this.value);
+  @override
+  List<Object> get props => [value];
+}
+
+class GetQuranPageError extends QuranState {
+  final String message;
+  const GetQuranPageError({
+    required this.message,
+  });
+  @override
+  List<Object> get props => [message];
+}
