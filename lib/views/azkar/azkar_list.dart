@@ -43,7 +43,10 @@ class AzkarList extends StatelessWidget {
                       height: size.width * 0.1,
                       width: size.width * 0.1,
                     ),
-                    title: Text(state.azkarModel[index].title),
+                    title: Text(
+                      state.azkarModel[index].title,
+                      style: const TextStyle(fontFamily: "Arabic"),
+                    ),
                   );
                 },
               );

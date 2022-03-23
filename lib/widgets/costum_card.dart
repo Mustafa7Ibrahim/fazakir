@@ -59,16 +59,19 @@ class CustomCard extends StatelessWidget {
                     height: size.height * 0.12,
                     width: size.width * 0.12,
                   ),
-                  SizedBox(height: short ? size.height * 0.02 : size.height * 0.08),
+                  SizedBox(
+                      height: short ? size.height * 0.02 : size.height * 0.08),
                   Text(
                     title,
-                    style: const TextStyle(color: Colors.white),
+                    style: const TextStyle(
+                        color: Colors.white, fontFamily: "Arabic"),
                   ),
                   Row(
                     children: const [
                       Text(
                         "اذهب الي",
-                        style: TextStyle(color: Colors.white54),
+                        style: TextStyle(
+                            color: Colors.white54, fontFamily: "Arabic"),
                       ),
                       Icon(
                         Icons.arrow_forward_ios_rounded,

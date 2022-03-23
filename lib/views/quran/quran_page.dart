@@ -1,6 +1,7 @@
 import 'package:fazakir/bloc/quran_cubit/quran_cubit.dart';
 import 'package:fazakir/bloc/quran_cubit/quran_state.dart';
 import 'package:fazakir/core/them_helper.dart';
+import 'package:fazakir/data_source/local/hive_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -81,6 +82,11 @@ class _QuranPageScreanState extends State<QuranPageScrean> {
                     });
                   },
                   child: PageView.builder(
+                      onPageChanged: (value) {
+                        HiveHelper().putData("quranPageNumber", value);
+                        HiveHelper().putData(
+                            "nameSoura", state.quranPageModel.page[value].name);
+                      },
                       controller: pageController,
                       itemCount: state.quranPageModel.page.length,
                       itemBuilder: (context, index) {
