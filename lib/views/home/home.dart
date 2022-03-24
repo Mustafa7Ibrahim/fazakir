@@ -144,7 +144,7 @@ class _HomeState extends State<Home> {
                                             color: Colors.white54,
                                             fontFamily: "Arabic"),
                                       ),
-                                      const SizedBox(height: 12.0),
+                                      SizedBox(height: 12.0),
                                       Text(
                                         cubit.nameSoura ?? "الفاتحة",
                                         style: const TextStyle(
