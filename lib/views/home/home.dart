@@ -90,7 +90,7 @@ class _HomeState extends State<Home> {
                   context,
                   MaterialPageRoute<void>(
                     builder: (BuildContext context) => QuranPageScrean(
-                      index: cubit.noQuranPage,
+                      index: cubit.noQuranPage ?? 0,
                     ),
                   ),
                 ),
