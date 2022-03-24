@@ -7,6 +7,7 @@ import 'bloc/praise_cubit/praise_cubit.dart';
 import 'bloc/prayer_cubit/prayer_cubit.dart';
 import 'bloc/quran_cubit/quran_cubit.dart';
 import 'bloc/salah_cubit/salah_cubit.dart';
+import 'bloc/save_quran_page_cubit/save_quran_page_cubit.dart';
 import 'bloc/zekr_cubit/zekr_cubit.dart';
 import 'core/constant/prayer_time_constant.dart';
 import 'core/date/date_formatter.dart';
@@ -35,8 +36,8 @@ Future<void> init() async {
     ),
   );
   getIt.registerFactory(() => SalahCubit(salahRepositiry: getIt()));
-  getIt.registerFactory(
-      () => QuranCubit(quranRepository: getIt(), hiveHelper: getIt()));
+  getIt.registerFactory(() => QuranCubit(quranRepository: getIt()));
+  getIt.registerFactory(() => SaveQuranPageCubit(hiveHelper: getIt()));
 
   // Repository
   getIt.registerLazySingleton(() => AzkarRepositiry(jsonHelper: getIt()));

@@ -1,13 +1,17 @@
 import 'package:bloc/bloc.dart';
 import 'package:fazakir/core/date/time_zone_co.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
+import 'bloc/quran_cubit/quran_cubit.dart';
+import 'bloc/save_quran_page_cubit/save_quran_page_cubit.dart';
 import 'core/notification/notification.dart';
 import 'core/route_config/route_config.dart';
 import 'core/theme_app.dart';
 import 'data_source/local/hive_helper.dart';
 import 'injection_container.dart' as di;
+import 'injection_container.dart';
 import 'myobserver.dart';
 
 void main() async {
@@ -31,18 +35,25 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      restorationScopeId: 'app',
-      localizationsDelegates: AppLocalizations.localizationsDelegates,
-      supportedLocales: AppLocalizations.supportedLocales,
-      locale: const Locale("ar"),
-      onGenerateTitle: (context) => AppLocalizations.of(context)!.appTitle,
-      theme: ThemeApp.lightTheme,
-      darkTheme: ThemeApp.darkTheme,
-      themeMode: ThemeMode.system,
-      initialRoute: initRoute,
-      onGenerateRoute: RouteConfig(context).generateRoute,
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider<QuranCubit>(create: (context) => getIt<QuranCubit>()),
+        BlocProvider<SaveQuranPageCubit>(
+            create: (context) => getIt<SaveQuranPageCubit>()..getQuranPage()),
+      ],
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        restorationScopeId: 'app',
+        localizationsDelegates: AppLocalizations.localizationsDelegates,
+        supportedLocales: AppLocalizations.supportedLocales,
+        locale: const Locale("ar"),
+        onGenerateTitle: (context) => AppLocalizations.of(context)!.appTitle,
+        theme: ThemeApp.lightTheme,
+        darkTheme: ThemeApp.darkTheme,
+        themeMode: ThemeMode.system,
+        initialRoute: initRoute,
+        onGenerateRoute: RouteConfig(context).generateRoute,
+      ),
     );
   }
 }
