@@ -3,6 +3,7 @@ import 'package:fazakir/use_cases/prayer_times_use_case/prayer_calendar_use_case
 import 'package:get_it/get_it.dart';
 
 import 'bloc/azkar_cubit/azkar_cubit.dart';
+import 'bloc/hug_cubit/hug_cubit.dart';
 import 'bloc/praise_cubit/praise_cubit.dart';
 import 'bloc/prayer_cubit/prayer_cubit.dart';
 import 'bloc/quran_cubit/quran_cubit.dart';
@@ -15,6 +16,7 @@ import 'data_source/local/hive_helper.dart';
 import 'data_source/local/json_helper.dart';
 import 'data_source/remote/dio_helper.dart';
 import 'repository/azkar_repository/azkar_repository.dart';
+import 'repository/hug_repository/hug_repository.dart';
 import 'repository/praise_repository/praise_repository.dart';
 import 'repository/prayer_time_repository/prayer_time_repository.dart';
 import 'repository/prayer_time_repository/save_prayer_time.dart';
@@ -38,6 +40,7 @@ Future<void> init() async {
   getIt.registerFactory(() => SalahCubit(salahRepositiry: getIt()));
   getIt.registerFactory(() => QuranCubit(quranRepository: getIt()));
   getIt.registerFactory(() => SaveQuranPageCubit(hiveHelper: getIt()));
+  getIt.registerFactory(() => HugCubit(hugRepositiry: getIt()));
 
   // Repository
   getIt.registerLazySingleton(() => AzkarRepositiry(jsonHelper: getIt()));
@@ -52,6 +55,7 @@ Future<void> init() async {
   getIt.registerLazySingleton(() => SavePrayerTimes(hiveHelper: getIt()));
   getIt.registerLazySingleton(() => SalahRepositiry(jsonHelper: getIt()));
   getIt.registerLazySingleton(() => QuranRepository(jsonHelper: getIt()));
+  getIt.registerLazySingleton(() => HugRepositiry(jsonHelper: getIt()));
 
   // Data sources
   getIt.registerLazySingleton(() => JsonHelper());

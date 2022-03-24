@@ -1,6 +1,7 @@
 import 'package:fazakir/bloc/save_quran_page_cubit/save_quran_page_cubit.dart';
 import 'package:fazakir/bloc/save_quran_page_cubit/save_quran_page_state.dart';
 import 'package:fazakir/data_source/local/hive_helper.dart';
+import 'package:fazakir/views/hug/hug_view.dart';
 import 'package:fazakir/views/quran/quran_page.dart';
 import 'package:fazakir/views/quran/soura_list.dart';
 import 'package:flutter/material.dart';
@@ -275,9 +276,12 @@ class _HomeState extends State<Home> {
                                 ),
                                 const SizedBox(height: 18.0),
                                 CustomCard(
-                                  onTap: () => Navigator.pushNamed(
+                                  onTap: () => Navigator.push(
                                     context,
-                                    AzkarList.routeName,
+                                    MaterialPageRoute<void>(
+                                      builder: (BuildContext context) =>
+                                          const HugView(),
+                                    ),
                                   ),
                                   size: size,
                                   image: "assets/icons/kaaba.svg",
