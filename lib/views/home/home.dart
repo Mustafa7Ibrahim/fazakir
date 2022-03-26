@@ -266,7 +266,7 @@ class _HomeState extends State<Home> {
                                   ),
                                   size: size,
                                   image: "assets/icons/salah.svg",
-                                  title: "صلاتي",
+                                  title: "يوميات مسلم",
                                   colors: const [
                                     Color(0xff041C32),
                                     Color(0xff064663),
