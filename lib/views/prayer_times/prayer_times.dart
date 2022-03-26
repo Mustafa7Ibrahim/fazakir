@@ -24,10 +24,7 @@ class PrayerTime extends StatelessWidget {
               return const Center(child: CircularProgressIndicator());
             }
             if (state is PrayerLoaded) {
-              return SingleChildScrollView(
-                child: Text(state.dataModel.toString()),
-              );
-              // return PrayerTimes(dataModel: state.dataModel);
+              return PrayerTimes(dataModel: state.dataModel);
             }
             if (state is PrayerError) {
               return Center(child: Text(state.message));
@@ -134,7 +131,7 @@ class PrayerTimeCard extends StatelessWidget {
     return Container(
       color: currentPray
           ? Theme.of(context).colorScheme.primary
-          : Theme.of(context).colorScheme.onPrimary,
+          : Theme.of(context).colorScheme.secondary,
       padding: const EdgeInsets.all(24.0),
       child: Row(
         children: [
