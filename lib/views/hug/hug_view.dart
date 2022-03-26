@@ -12,7 +12,7 @@ class HugView extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          "مناسك الحج",
+          " مناسك الحج و العمرة",
           style: TextStyle(fontFamily: "Arabic"),
         ),
       ),
