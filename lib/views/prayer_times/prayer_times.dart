@@ -134,7 +134,7 @@ class PrayerTimeCard extends StatelessWidget {
     return Container(
       color: currentPray
           ? Theme.of(context).colorScheme.primary
-          : Theme.of(context).colorScheme.primaryVariant,
+          : Theme.of(context).colorScheme.onPrimary,
       padding: const EdgeInsets.all(24.0),
       child: Row(
         children: [

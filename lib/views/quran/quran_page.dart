@@ -2,11 +2,8 @@ import 'package:fazakir/bloc/quran_cubit/quran_cubit.dart';
 import 'package:fazakir/bloc/quran_cubit/quran_state.dart';
 import 'package:fazakir/bloc/save_quran_page_cubit/save_quran_page_cubit.dart';
 import 'package:fazakir/core/them_helper.dart';
-import 'package:fazakir/data_source/local/hive_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
-import '../../injection_container.dart';
 
 class QuranPageScrean extends StatefulWidget {
   const QuranPageScrean({Key? key, this.index = 0}) : super(key: key);
