@@ -30,84 +30,68 @@ class HugView extends StatelessWidget {
               return ListView.builder(
                   itemCount: state.hugModel.hugData.length,
                   itemBuilder: (_, index) {
-                    return Column(
-                      mainAxisSize: MainAxisSize.min,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        const SizedBox(
-                          height: 36.0,
-                          child: Divider(
-                            indent: 10.0,
-                            thickness: 0.8,
-                            endIndent: 10.0,
-                          ),
-                        ),
-                        SizedBox(
-                          height: MediaQuery.of(context).size.height * 0.6,
-                          child: Stack(
+                    return Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Padding(
-                                padding: const EdgeInsets.only(right: 9.0),
-                                child: Container(
-                                  width: 2.0,
-                                  height:
-                                      MediaQuery.of(context).size.height * 0.6,
-                                  color: Theme.of(context)
-                                      .colorScheme
-                                      .secondary
-                                      .withOpacity(0.3),
-                                ),
+                              Container(
+                                width: 20,
+                                height: 15,
+                                decoration: BoxDecoration(
+                                    color:
+                                        Theme.of(context).colorScheme.secondary,
+                                    shape: BoxShape.circle),
                               ),
-                              ListView.builder(
-                                physics: const BouncingScrollPhysics(),
-                                itemCount:
-                                    state.hugModel.hugData[index].info!.length,
-                                shrinkWrap: true,
-                                itemBuilder: (context, index) {
-                                  return Row(
-                                    mainAxisAlignment: MainAxisAlignment.start,
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Container(
-                                        width: 20,
-                                        height: 15,
-                                        decoration: BoxDecoration(
-                                            color: Theme.of(context)
-                                                .colorScheme
-                                                .secondary,
-                                            shape: BoxShape.circle),
+                              Flexible(
+                                  child: Padding(
+                                      padding: const EdgeInsets.only(
+                                        bottom: 30.0,
+                                        right: 10.0,
                                       ),
-                                      Expanded(
-                                          child: Padding(
-                                              padding: const EdgeInsets.only(
-                                                bottom: 30.0,
-                                                right: 10.0,
-                                              ),
-                                              child: Column(
-                                                children: [
-                                                  Text(state.hugModel
-                                                      .hugData[index].name
-                                                      .toString()),
-                                                  Column(
-                                                    children: [
-                                                      ...state.hugModel
-                                                          .hugData[index].info!
-                                                          .map((e) => Text(e))
-                                                    ],
-                                                  )
-                                                ],
-                                              )))
-                                    ],
-                                  );
-                                },
-                              ),
+                                      child: Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          Text(
+                                            state.hugModel.hugData[index].name
+                                                    .toString() +
+                                                "\n",
+                                            style: const TextStyle(
+                                                fontFamily: "Arabic",
+                                                fontWeight: FontWeight.bold),
+                                          ),
+                                          Column(
+                                            children: [
+                                              ...state
+                                                  .hugModel.hugData[index].info!
+                                                  .map((e) => Text(
+                                                        e + "\n",
+                                                        style: const TextStyle(
+                                                            fontFamily:
+                                                                "Arabic"),
+                                                      ))
+                                            ],
+                                          )
+                                        ],
+                                      )))
                             ],
                           ),
-                        ),
-                        const SizedBox(height: 16),
-                      ],
+                          Divider(
+                            color: Theme.of(context).colorScheme.secondary,
+                            endIndent:
+                                MediaQuery.of(context).size.height * 0.08,
+                            indent: MediaQuery.of(context).size.height * 0.08,
+                          ),
+                          // const SizedBox(height: 16),
+                        ],
+                      ),
                     );
                   });
             }
