@@ -171,9 +171,9 @@ class _HomeState extends State<Home> {
                     size: size,
                     image: "assets/icons/doaa.svg",
                     title: "حصن المسلم",
-                    colors: const [
-                      Color(0xffA582DB),
-                      Color(0xffBD84CA),
+                    colors: [
+                      Theme.of(context).colorScheme.secondary,
+                      const Color(0xffBD84CA),
                     ],
                   ),
                   CustomCard(
@@ -184,9 +184,9 @@ class _HomeState extends State<Home> {
                     size: size,
                     image: "assets/icons/memorize.svg",
                     title: "اذكر الله",
-                    colors: const [
-                      Color(0xffD077A5),
-                      Color(0xffCB82BB),
+                    colors: [
+                      Theme.of(context).colorScheme.secondary,
+                      const Color(0xffCB82BB),
                     ],
                   ),
                   CustomCard(
@@ -197,9 +197,9 @@ class _HomeState extends State<Home> {
                     size: size,
                     image: "assets/icons/salah.svg",
                     title: "يوميات مسلم",
-                    colors: const [
-                      Color(0xff041C32),
-                      Color(0xff064663),
+                    colors: [
+                      Theme.of(context).colorScheme.secondary,
+                      const Color(0xff064663),
                     ],
                   ),
                   CustomCard(
@@ -210,9 +210,9 @@ class _HomeState extends State<Home> {
                     size: size,
                     image: "assets/icons/kaaba.svg",
                     title: "الحج والعمره",
-                    colors: const [
-                      Color(0xff7DA7E8),
-                      Color(0xff8DA5E8),
+                    colors: [
+                      Theme.of(context).colorScheme.secondary,
+                      const Color(0xff8DA5E8),
                     ],
                   ),
                 ],
