@@ -14,8 +14,6 @@ dependencies:
     sdk: flutter
   flutter_localizations:
     sdk: flutter
-  sinusoidal:
-    path: ./packages/sinusoidal
 
   shared_preferences: ^2.0.13
   get_it: ^7.2.0

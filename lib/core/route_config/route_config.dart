@@ -1,3 +1,4 @@
+import 'package:fazakir/nav_bar.dart';
 import 'package:fazakir/views/quran/quran_page.dart';
 import 'package:fazakir/views/quran/soura_list.dart';
 
@@ -24,6 +25,8 @@ class RouteConfig {
       settings: settings,
       builder: (context) {
         switch (settings.name) {
+          case NavBar.routeName:
+            return const NavBar();
           case Home.routeName:
             return const Home();
           case AzkarList.routeName:
@@ -53,7 +56,7 @@ class RouteConfig {
             );
 
           default:
-            return const Home();
+            return const NavBar();
         }
       },
     );

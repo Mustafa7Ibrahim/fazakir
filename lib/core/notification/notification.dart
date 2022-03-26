@@ -1,10 +1,11 @@
 import 'dart:io';
 
-import '../../views/home/home.dart';
-import '../../views/prayer_times/prayer_times.dart';
+import 'package:fazakir/nav_bar.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
+
+import '../../views/prayer_times/prayer_times.dart';
 
 final FlutterLocalNotificationsPlugin notificationsPlugin =
     FlutterLocalNotificationsPlugin();
@@ -56,7 +57,7 @@ class NotificationSet {
 
   static Future<String> decideWhichRouteToLanch() async {
     final appLaunchDetails = await _notificationAppLanch();
-    String initialRoute = Home.routeName;
+    String initialRoute = NavBar.routeName;
 
     if (appLaunchDetails?.didNotificationLaunchApp ?? false) {
       selectedNotificationPayload = appLaunchDetails!.payload;
