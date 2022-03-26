@@ -1,5 +1,4 @@
 import '../../data_source/local/hive_helper.dart';
-import '../../models/meta_model/meta_model.dart';
 import '../../models/prayer_settings_model/prayer_settings_enum.dart';
 
 class SavePrayerTimes {
@@ -47,15 +46,6 @@ class SavePrayerTimes {
   int? get latitudeAdjustmentMethod =>
       hiveHelper.getData("latitudeAdjustmentMethod");
   int? get method => hiveHelper.getData("method");
-
-  void call(MetaModel metaModel) {
-    setLatitude = metaModel.latitude;
-    setlongitude = metaModel.longitude;
-    setLatitudeAdjustmentMethod = metaModel.latitudeAdjustmentMethod;
-    setMethod = metaModel.method.id;
-    setSchool = metaModel.school;
-    setMidnightMode = metaModel.midnightMode;
-  }
 
   void _determineLatitudeAdjustmentMethod(String latitudeAdjustmentMethod) {
     if (latitudeAdjustmentMethod == "ANGLE_BASED") {

@@ -9,7 +9,7 @@ class PrayerResponce with _$PrayerResponce {
   factory PrayerResponce({
     required int code,
     required String status,
-    required List<DataModel> data,
+    required DataModel data,
   }) = _PrayerResponce;
 
   factory PrayerResponce.fromJson(Map<String, dynamic> json) =>

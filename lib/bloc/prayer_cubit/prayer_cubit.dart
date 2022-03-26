@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:fazakir/use_cases/prayer_times_use_case/prayer_calendar_use_case.dart';
@@ -24,6 +26,7 @@ class PrayerCubit extends Cubit<PrayerState> {
     } else {
       try {
         final data = await prayerCalenderUseCase.getMonthOfPrayerCalender();
+        log(data.toString());
         emit(PrayerLoaded(data.data));
       } catch (e) {
         emit(PrayerError(e.toString()));

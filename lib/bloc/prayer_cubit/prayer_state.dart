@@ -14,7 +14,7 @@ class PrayerLoading extends PrayerState {}
 class PrayerFirstTime extends PrayerState {}
 
 class PrayerLoaded extends PrayerState {
-  final List<DataModel> dataModel;
+  final DataModel dataModel;
 
   const PrayerLoaded(this.dataModel);
 

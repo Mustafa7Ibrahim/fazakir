@@ -66,7 +66,6 @@ Future<void> init() async {
     () => PrayerCalenderUseCase(
       dioHelper: getIt(),
       savePrayerTimes: getIt(),
-      hiveHelper: getIt(),
     ),
   );
 

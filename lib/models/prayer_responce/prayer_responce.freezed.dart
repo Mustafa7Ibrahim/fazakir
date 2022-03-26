@@ -1,5 +1,6 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'prayer_responce.dart';
@@ -22,9 +23,7 @@ class _$PrayerResponceTearOff {
   const _$PrayerResponceTearOff();
 
   _PrayerResponce call(
-      {required int code,
-      required String status,
-      required List<DataModel> data}) {
+      {required int code, required String status, required DataModel data}) {
     return _PrayerResponce(
       code: code,
       status: status,
@@ -44,7 +43,7 @@ const $PrayerResponce = _$PrayerResponceTearOff();
 mixin _$PrayerResponce {
   int get code => throw _privateConstructorUsedError;
   String get status => throw _privateConstructorUsedError;
-  List<DataModel> get data => throw _privateConstructorUsedError;
+  DataModel get data => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -57,7 +56,9 @@ abstract class $PrayerResponceCopyWith<$Res> {
   factory $PrayerResponceCopyWith(
           PrayerResponce value, $Res Function(PrayerResponce) then) =
       _$PrayerResponceCopyWithImpl<$Res>;
-  $Res call({int code, String status, List<DataModel> data});
+  $Res call({int code, String status, DataModel data});
+
+  $DataModelCopyWith<$Res> get data;
 }
 
 /// @nodoc
@@ -87,8 +88,15 @@ class _$PrayerResponceCopyWithImpl<$Res>
       data: data == freezed
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
-              as List<DataModel>,
+              as DataModel,
     ));
+  }
+
+  @override
+  $DataModelCopyWith<$Res> get data {
+    return $DataModelCopyWith<$Res>(_value.data, (value) {
+      return _then(_value.copyWith(data: value));
+    });
   }
 }
 
@@ -99,7 +107,10 @@ abstract class _$PrayerResponceCopyWith<$Res>
           _PrayerResponce value, $Res Function(_PrayerResponce) then) =
       __$PrayerResponceCopyWithImpl<$Res>;
   @override
-  $Res call({int code, String status, List<DataModel> data});
+  $Res call({int code, String status, DataModel data});
+
+  @override
+  $DataModelCopyWith<$Res> get data;
 }
 
 /// @nodoc
@@ -131,7 +142,7 @@ class __$PrayerResponceCopyWithImpl<$Res>
       data: data == freezed
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
-              as List<DataModel>,
+              as DataModel,
     ));
   }
 }
@@ -150,7 +161,7 @@ class _$_PrayerResponce implements _PrayerResponce {
   @override
   final String status;
   @override
-  final List<DataModel> data;
+  final DataModel data;
 
   @override
   String toString() {
@@ -189,7 +200,7 @@ abstract class _PrayerResponce implements PrayerResponce {
   factory _PrayerResponce(
       {required int code,
       required String status,
-      required List<DataModel> data}) = _$_PrayerResponce;
+      required DataModel data}) = _$_PrayerResponce;
 
   factory _PrayerResponce.fromJson(Map<String, dynamic> json) =
       _$_PrayerResponce.fromJson;
@@ -199,7 +210,7 @@ abstract class _PrayerResponce implements PrayerResponce {
   @override
   String get status;
   @override
-  List<DataModel> get data;
+  DataModel get data;
   @override
   @JsonKey(ignore: true)
   _$PrayerResponceCopyWith<_PrayerResponce> get copyWith =>

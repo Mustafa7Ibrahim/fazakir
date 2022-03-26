@@ -10,9 +10,7 @@ _$_PrayerResponce _$$_PrayerResponceFromJson(Map<String, dynamic> json) =>
     _$_PrayerResponce(
       code: json['code'] as int,
       status: json['status'] as String,
-      data: (json['data'] as List<dynamic>)
-          .map((e) => DataModel.fromJson(e as Map<String, dynamic>))
-          .toList(),
+      data: DataModel.fromJson(json['data'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$_PrayerResponceToJson(_$_PrayerResponce instance) =>

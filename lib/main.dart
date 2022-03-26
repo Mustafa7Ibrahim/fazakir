@@ -49,7 +49,7 @@ class MyApp extends StatelessWidget {
         onGenerateTitle: (context) => AppLocalizations.of(context)!.appTitle,
         theme: ThemeApp.lightTheme,
         darkTheme: ThemeApp.darkTheme,
-        themeMode: ThemeMode.system,
+        themeMode: ThemeMode.light,
         initialRoute: initRoute,
         onGenerateRoute: RouteConfig(context).generateRoute,
       ),

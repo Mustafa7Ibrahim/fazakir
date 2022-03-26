@@ -30,7 +30,6 @@ class PryaerTimeRepositiory {
     );
     final DataModel dataModel =
         DataModel.fromJson(json.decode(response.data)["data"]);
-    savePrayerTimes.call(dataModel.meta);
     return dataModel;
   }
 
