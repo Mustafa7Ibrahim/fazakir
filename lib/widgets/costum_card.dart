@@ -8,23 +8,20 @@ class CustomCard extends StatelessWidget {
     required this.image,
     required this.title,
     required this.onTap,
+    required this.colors,
   }) : super(key: key);
 
   final Size size;
   final String image;
   final String title;
   final VoidCallback onTap;
+  final List<Color> colors;
 
   @override
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        gradient: LinearGradient(
-          colors: [
-            Theme.of(context).colorScheme.secondary,
-            Theme.of(context).colorScheme.primary,
-          ],
-        ),
+        gradient: LinearGradient(colors: colors),
         borderRadius: BorderRadius.circular(18.0),
       ),
       padding: const EdgeInsets.all(12.0),
@@ -32,7 +29,7 @@ class CustomCard extends StatelessWidget {
       child: InkWell(
         onTap: onTap,
         child: Padding(
-          padding: const EdgeInsets.all(18.0),
+          padding: const EdgeInsets.all(10.0),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.end,
             crossAxisAlignment: CrossAxisAlignment.end,
@@ -71,7 +68,7 @@ class CustomCard extends StatelessWidget {
               const Spacer(),
               SvgPicture.asset(
                 image,
-                height: size.height * 0.10,
+                height: size.height * 0.08,
                 width: size.width * 0.10,
               ),
             ],

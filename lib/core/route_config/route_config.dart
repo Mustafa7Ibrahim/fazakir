@@ -1,7 +1,10 @@
 import 'package:fazakir/nav_bar.dart';
+import 'package:fazakir/views/hug/hug_view.dart';
 import 'package:fazakir/views/quran/quran_page.dart';
 import 'package:fazakir/views/quran/soura_list.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../bloc/save_quran_page_cubit/save_quran_page_cubit.dart';
 import '../../models/azkar_model.dart';
 import '../../models/praise_model.dart';
 import '../../views/azkar/azkar_list.dart';
@@ -50,10 +53,13 @@ class RouteConfig {
           case SouraList.routeName:
             return const SouraList();
           case QuranPageScrean.routeName:
-            int? index;
+            int? index =
+                BlocProvider.of<SaveQuranPageCubit>(context).noQuranPage ?? 0;
             return QuranPageScrean(
               index: index,
             );
+          case HugView.routeName:
+            return const HugView();
 
           default:
             return const NavBar();

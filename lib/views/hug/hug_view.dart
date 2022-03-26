@@ -6,6 +6,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 class HugView extends StatelessWidget {
   const HugView({Key? key}) : super(key: key);
+  static const routeName = "/Hug";
 
   @override
   Widget build(BuildContext context) {
@@ -68,6 +69,8 @@ class HugView extends StatelessWidget {
                                                 fontWeight: FontWeight.bold),
                                           ),
                                           Column(
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
                                             children: [
                                               ...state
                                                   .hugModel.hugData[index].info!
