@@ -19,8 +19,8 @@ dependencies:
 
   shared_preferences: ^2.0.9
   get_it: ^7.2.0
-  bloc: ^8.0.1
-  flutter_bloc: ^8.0.0
+  bloc: ^8.0.3
+  flutter_bloc: ^8.0.1
   dio: ^4.0.4
   flutter_svg: ^1.0.0
   equatable: ^2.0.3
