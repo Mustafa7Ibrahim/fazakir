@@ -1,6 +1,5 @@
 import 'package:fazakir/bloc/save_quran_page_cubit/save_quran_page_cubit.dart';
 import 'package:fazakir/bloc/save_quran_page_cubit/save_quran_page_state.dart';
-import 'package:fazakir/data_source/local/hive_helper.dart';
 import 'package:fazakir/views/hug/hug_view.dart';
 import 'package:fazakir/views/quran/quran_page.dart';
 import 'package:fazakir/views/quran/soura_list.dart';
@@ -145,7 +144,7 @@ class _HomeState extends State<Home> {
                                             color: Colors.white54,
                                             fontFamily: "Arabic"),
                                       ),
-                                      SizedBox(height: 12.0),
+                                      const SizedBox(height: 12.0),
                                       Text(
                                         cubit.nameSoura ?? "الفاتحة",
                                         style: const TextStyle(
