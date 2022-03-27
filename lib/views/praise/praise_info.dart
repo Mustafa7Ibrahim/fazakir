@@ -34,11 +34,11 @@ class PraiseInfo extends StatelessWidget {
           children: [
             Text(
               "${praiseData.info}",
-              style: Theme.of(context).textTheme.headline5,
+              style: const TextStyle(fontFamily: "Arabic"),
             ),
             const Divider(),
             Text("${praiseData.mening}",
-                style: Theme.of(context).textTheme.headline5),
+                style: const TextStyle(fontFamily: "Arabic")),
           ],
         ),
       ),

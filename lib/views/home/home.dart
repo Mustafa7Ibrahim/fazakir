@@ -169,7 +169,7 @@ class _HomeState extends State<Home> {
                       Navigator.pushNamed(context, AzkarList.routeName);
                     },
                     size: size,
-                    image: "assets/icons/doaa.svg",
+                    image: "assets/icons/memorize.svg",
                     title: "حصن المسلم",
                     colors: [
                       Theme.of(context).colorScheme.secondary,
@@ -182,7 +182,7 @@ class _HomeState extends State<Home> {
                       Praise.routeName,
                     ),
                     size: size,
-                    image: "assets/icons/memorize.svg",
+                    image: "assets/icons/doaa.svg",
                     title: "اذكر الله",
                     colors: [
                       Theme.of(context).colorScheme.secondary,
@@ -196,7 +196,7 @@ class _HomeState extends State<Home> {
                     ),
                     size: size,
                     image: "assets/icons/salah.svg",
-                    title: "يوميات مسلم",
+                    title: "صلاتي",
                     colors: [
                       Theme.of(context).colorScheme.secondary,
                       const Color(0xff064663),

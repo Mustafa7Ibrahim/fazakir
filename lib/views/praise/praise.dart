@@ -44,7 +44,7 @@ class Praise extends StatelessWidget {
                       padding: const EdgeInsets.all(12.0),
                       child: GridView.builder(
                         physics: const BouncingScrollPhysics(),
-                        itemCount: 4,
+                        itemCount: cubit.praiseModel!.praise.length,
                         gridDelegate:
                             const SliverGridDelegateWithMaxCrossAxisExtent(
                           maxCrossAxisExtent: 200,

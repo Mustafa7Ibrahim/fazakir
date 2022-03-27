@@ -17,7 +17,7 @@ class Salah extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           title: const Text(
-            "يوميات مسلم",
+            "صلاتي",
             style: TextStyle(
                 fontFamily: 'quran', fontSize: 30, fontWeight: FontWeight.w300),
           ),
