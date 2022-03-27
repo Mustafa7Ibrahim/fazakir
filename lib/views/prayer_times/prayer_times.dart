@@ -55,7 +55,7 @@ class PrayerTimes extends StatelessWidget {
       ),
       body: Column(
         children: [
-          const SizedBox(height: 24.0),
+          const SizedBox(height: 10),
           const Spacer(),
           SvgPicture.asset(
             "assets/icons/mosque2.svg",
@@ -132,7 +132,7 @@ class PrayerTimeCard extends StatelessWidget {
       color: currentPray
           ? Theme.of(context).colorScheme.primary
           : Theme.of(context).colorScheme.secondary,
-      padding: const EdgeInsets.all(24.0),
+      padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 10),
       child: Row(
         children: [
           Text(

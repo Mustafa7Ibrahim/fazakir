@@ -28,18 +28,18 @@ class RouteConfig {
       settings: settings,
       builder: (context) {
         switch (settings.name) {
-          case NavBar.routeName:
-            return const NavBar();
-          case Home.routeName:
-            return const Home();
+          // case NavBar.routeName:
+          //   return const NavBar();
+          // case Home.routeName:
+          //   return const Home();
           case AzkarList.routeName:
             return const AzkarList();
-          case PrayerTime.routeName:
-            return const PrayerTime();
-          case PrayerFirstTimeSet.routeName:
-            return const PrayerFirstTimeSet();
-          case PrayerSettings.routeName:
-            return const PrayerSettings();
+          // case PrayerTime.routeName:
+          //   return const PrayerTime();
+          // case PrayerFirstTimeSet.routeName:
+          //   return const PrayerFirstTimeSet();
+          // case PrayerSettings.routeName:
+          //   return const PrayerSettings();
           case ZekrList.routeName:
             final AzkarModel azkarModel = settings.arguments as AzkarModel;
             return ZekrList(azkarModel: azkarModel);
@@ -50,8 +50,8 @@ class RouteConfig {
           case PraiseInfo.routeName:
             final PraiseData praiseData = settings.arguments as PraiseData;
             return PraiseInfo(praiseData: praiseData);
-          case SouraList.routeName:
-            return const SouraList();
+          // case SouraList.routeName:
+          //   return const SouraList();
           case QuranPageScrean.routeName:
             int? index =
                 BlocProvider.of<SaveQuranPageCubit>(context).noQuranPage ?? 0;

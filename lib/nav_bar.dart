@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 
 class NavBar extends StatefulWidget {
   const NavBar({Key? key}) : super(key: key);
-  static const routeName = '/NavBar';
+  static const routeName = '/';
 
   @override
   State<NavBar> createState() => _NavBarState();
@@ -22,55 +22,60 @@ class _NavBarState extends State<NavBar> {
   ];
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: IndexedStack(children: screens, index: index),
-      bottomNavigationBar: NavigationBarTheme(
-        data: NavigationBarThemeData(
-          indicatorColor: Theme.of(context).colorScheme.primary,
-          labelTextStyle: MaterialStateProperty.all(
-            const TextStyle(fontSize: 14.0),
+    return WillPopScope(
+      onWillPop: () async {
+        return false;
+      },
+      child: Scaffold(
+        body: IndexedStack(children: screens, index: index),
+        bottomNavigationBar: NavigationBarTheme(
+          data: NavigationBarThemeData(
+            indicatorColor: Theme.of(context).colorScheme.primary,
+            labelTextStyle: MaterialStateProperty.all(
+              const TextStyle(fontSize: 14.0),
+            ),
           ),
-        ),
-        child: NavigationBar(
-          selectedIndex: index,
-          onDestinationSelected: (currentIndex) => setState(
-            () => index = currentIndex,
+          child: NavigationBar(
+            selectedIndex: index,
+            onDestinationSelected: (currentIndex) => setState(
+              () => index = currentIndex,
+            ),
+            backgroundColor: Theme.of(context).colorScheme.surface,
+            destinations: const [
+              NavigationDestination(
+                icon: Icon(Icons.home_outlined),
+                selectedIcon: Icon(
+                  Icons.home,
+                  color: Colors.white,
+                ),
+                label: "فذكر",
+              ),
+              NavigationDestination(
+                icon: Icon(Icons.menu_book_rounded),
+                selectedIcon: Icon(
+                  Icons.menu_book_rounded,
+                  color: Colors.white,
+                ),
+                label: "القرءان",
+              ),
+              NavigationDestination(
+                icon: Icon(Icons.mosque_outlined),
+                selectedIcon: Icon(
+                  Icons.mosque,
+                  color: Colors.white,
+                ),
+                label: "الأذان",
+              ),
+              NavigationDestination(
+                icon: Icon(Icons.settings_outlined),
+                selectedIcon: Icon(
+                  Icons.settings,
+                  color: Colors.white,
+                ),
+                label: "الأعدادات",
+              ),
+            ],
           ),
-          backgroundColor: Theme.of(context).colorScheme.surface,
-          destinations: const [
-            NavigationDestination(
-              icon: Icon(Icons.home_outlined),
-              selectedIcon: Icon(
-                Icons.home,
-                color: Colors.white,
-              ),
-              label: "فذكر",
-            ),
-            NavigationDestination(
-              icon: Icon(Icons.menu_book_rounded),
-              selectedIcon: Icon(
-                Icons.menu_book_rounded,
-                color: Colors.white,
-              ),
-              label: "القرءان",
-            ),
-            NavigationDestination(
-              icon: Icon(Icons.mosque_outlined),
-              selectedIcon: Icon(
-                Icons.mosque,
-                color: Colors.white,
-              ),
-              label: "الأذان",
-            ),
-            NavigationDestination(
-              icon: Icon(Icons.settings_outlined),
-              selectedIcon: Icon(
-                Icons.settings,
-                color: Colors.white,
-              ),
-              label: "الأعدادات",
-            ),
-          ],
         ),
       ),
     );
