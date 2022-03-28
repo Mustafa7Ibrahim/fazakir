@@ -24,48 +24,48 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  tz.TZDateTime _nextInstanceOfTenAM() {
-    final tz.TZDateTime now = tz.TZDateTime.now(tz.local);
-    tz.TZDateTime scheduledDate = tz.TZDateTime(
-      tz.local,
-      now.year,
-      now.month,
-      now.day,
-      3,
-      29,
-    );
-    if (scheduledDate.isBefore(now)) {
-      scheduledDate = scheduledDate.add(const Duration(days: 1));
-    }
-    return scheduledDate;
-  }
+  // tz.TZDateTime _nextInstanceOfTenAM() {
+  //   final tz.TZDateTime now = tz.TZDateTime.now(tz.local);
+  //   tz.TZDateTime scheduledDate = tz.TZDateTime(
+  //     tz.local,
+  //     now.year,
+  //     now.month,
+  //     now.day,
+  //     3,
+  //     29,
+  //   );
+  //   if (scheduledDate.isBefore(now)) {
+  //     scheduledDate = scheduledDate.add(const Duration(days: 1));
+  //   }
+  //   return scheduledDate;
+  // }
 
-  shownew() {
-    AndroidNotificationDetails androidNotifi = const AndroidNotificationDetails(
-      "PrayerID",
-      "Prayer Times",
-      channelDescription: 'this channal to play azan',
-      styleInformation: BigTextStyleInformation(
-        "Now is the time for prayer - 05:16 am",
-      ),
-      sound: RawResourceAndroidNotificationSound("fajir"),
-    );
+  // shownew() {
+  //   AndroidNotificationDetails androidNotifi = const AndroidNotificationDetails(
+  //     "PrayerID",
+  //     "Prayer Times",
+  //     channelDescription: 'this channal to play azan',
+  //     styleInformation: BigTextStyleInformation(
+  //       "Now is the time for prayer - 05:16 am",
+  //     ),
+  //     sound: RawResourceAndroidNotificationSound("fajir"),
+  //   );
 
-    NotificationDetails notificationDetails = NotificationDetails(
-      android: androidNotifi,
-    );
-    notificationsPlugin.zonedSchedule(
-      0,
-      "Fajir",
-      null,
-      _nextInstanceOfTenAM(),
-      notificationDetails,
-      uiLocalNotificationDateInterpretation:
-          UILocalNotificationDateInterpretation.absoluteTime,
-      androidAllowWhileIdle: true,
-      matchDateTimeComponents: DateTimeComponents.dateAndTime,
-    );
-  }
+  //   NotificationDetails notificationDetails = NotificationDetails(
+  //     android: androidNotifi,
+  //   );
+  //   notificationsPlugin.zonedSchedule(
+  //     0,
+  //     "Fajir",
+  //     null,
+  //     _nextInstanceOfTenAM(),
+  //     notificationDetails,
+  //     uiLocalNotificationDateInterpretation:
+  //         UILocalNotificationDateInterpretation.absoluteTime,
+  //     androidAllowWhileIdle: true,
+  //     matchDateTimeComponents: DateTimeComponents.dateAndTime,
+  //   );
+  // }
 
   @override
   Widget build(BuildContext context) {

@@ -54,10 +54,12 @@ class PraiseName extends StatelessWidget {
                       child: const Icon(Icons.info_outline)),
                   Expanded(
                     child: Center(
-                      child: Text(
-                        "${praiseData.name}",
-                        style: Theme.of(context).textTheme.bodyText2,
-                        textAlign: TextAlign.center,
+                      child: FittedBox(
+                        child: Text(
+                          "${praiseData.name}",
+                          style: Theme.of(context).textTheme.bodyText2,
+                          textAlign: TextAlign.center,
+                        ),
                       ),
                     ),
                   ),
