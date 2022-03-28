@@ -1,6 +1,7 @@
 import 'package:fazakir/views/home/home.dart';
 import 'package:fazakir/views/prayer_times/prayer_times.dart';
 import 'package:fazakir/views/quran/soura_list.dart';
+import 'package:fazakir/views/settings/settings.dart';
 import 'package:flutter/material.dart';
 
 class NavBar extends StatefulWidget {
@@ -18,7 +19,7 @@ class _NavBarState extends State<NavBar> {
     const Home(),
     const SouraList(),
     const PrayerTime(),
-    Container(),
+    const Settings(),
   ];
   @override
   Widget build(BuildContext context) {

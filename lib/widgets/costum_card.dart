@@ -5,14 +5,14 @@ class CustomCard extends StatelessWidget {
   const CustomCard({
     Key? key,
     required this.size,
-    required this.image,
+    this.image,
     required this.title,
     required this.onTap,
     required this.colors,
   }) : super(key: key);
 
   final Size size;
-  final String image;
+  final String? image;
   final String title;
   final VoidCallback onTap;
   final List<Color> colors;
@@ -47,8 +47,8 @@ class CustomCard extends StatelessWidget {
                     ),
                   ),
                   Row(
-                    children: const [
-                      Text(
+                    children: [
+                      const Text(
                         "اذهب الي",
                         style: TextStyle(
                           color: Colors.white54,
@@ -56,21 +56,29 @@ class CustomCard extends StatelessWidget {
                           fontFamily: "Arabic",
                         ),
                       ),
-                      Icon(
-                        Icons.arrow_forward_ios_rounded,
-                        size: 18.0,
-                        color: Colors.white54,
-                      ),
+                      image != null
+                          ? const Icon(
+                              Icons.arrow_forward_ios_rounded,
+                              size: 18.0,
+                              color: Colors.white54,
+                            )
+                          : const SizedBox(),
                     ],
                   ),
                 ],
               ),
               const Spacer(),
-              SvgPicture.asset(
-                image,
-                height: size.height * 0.08,
-                width: size.width * 0.10,
-              ),
+              image != null
+                  ? SvgPicture.asset(
+                      image!,
+                      height: size.height * 0.08,
+                      width: size.width * 0.10,
+                    )
+                  : const Icon(
+                      Icons.arrow_forward_ios_rounded,
+                      size: 24.0,
+                      color: Colors.white54,
+                    ),
             ],
           ),
         ),

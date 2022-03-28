@@ -1,22 +1,20 @@
 import 'package:fazakir/nav_bar.dart';
 import 'package:fazakir/views/hug/hug_view.dart';
 import 'package:fazakir/views/quran/quran_page.dart';
-import 'package:fazakir/views/quran/soura_list.dart';
+import 'package:fazakir/views/settings/privacy_policy/privacy_policy.dart';
+import 'package:fazakir/views/settings/settings.dart';
+import 'package:fazakir/views/settings/terms_and_conditions/terms_and_conditions.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../bloc/save_quran_page_cubit/save_quran_page_cubit.dart';
 import '../../models/azkar_model.dart';
 import '../../models/praise_model.dart';
 import '../../views/azkar/azkar_list.dart';
-import '../../views/home/home.dart';
 import '../../views/praise/praise.dart';
 import '../../views/praise/praise_info.dart';
-import '../../views/prayer_times/prayer_first_time.dart';
-import '../../views/prayer_times/prayer_settings.dart';
-import '../../views/prayer_times/prayer_times.dart';
 import '../../views/salah/salah.dart';
 import '../../views/zekr/zekr_list.dart';
-import 'package:flutter/cupertino.dart';
 
 class RouteConfig {
   RouteConfig(this.context);
@@ -40,6 +38,12 @@ class RouteConfig {
           //   return const PrayerFirstTimeSet();
           // case PrayerSettings.routeName:
           //   return const PrayerSettings();
+          case PrivacyPolicy.routeName:
+            return const PrivacyPolicy();
+          case TermsAndConditions.routeName:
+            return const TermsAndConditions();
+          case Settings.routeName:
+            return const Settings();
           case ZekrList.routeName:
             final AzkarModel azkarModel = settings.arguments as AzkarModel;
             return ZekrList(azkarModel: azkarModel);
