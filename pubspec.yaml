@@ -53,6 +53,7 @@ flutter:
   assets:
     # Add assets from the images directory to the application.
     - assets/images/quran-images/
+    - assets/images/
     - assets/icons/
     - assets/json/
     - assets/fonts/
@@ -61,18 +62,6 @@ flutter:
 
 
   fonts:
-    - family: Rika
-      fonts:
-        - asset: assets/fonts/Rika.ttf
-    - family: Othmani
-      fonts:
-        - asset: assets/fonts/Othmani.ttf
-    - family: quran
-      fonts:
-        - asset: assets/fonts/quran.ttf
-    - family: Uthmanic
-      fonts:
-        - asset: assets/fonts/Uthmanic.otf
     - family: Arabic
       fonts:
         - asset: assets/fonts/UthmanTN1Ver10.otf

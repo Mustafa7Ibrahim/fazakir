@@ -171,8 +171,9 @@ class _QuranPageScreanState extends State<QuranPageScrean> {
                                 Center(
                                   child: Text(
                                       getVerseEndSymbol(index + 1).toString(),
-                                      style: const TextStyle(
-                                          fontFamily: "Arabic", fontSize: 18)),
+                                      style: Theme.of(context)
+                                          .textTheme
+                                          .bodyText2),
                                 ),
                                 Padding(
                                   padding: const EdgeInsets.only(right: 20.0),
@@ -183,9 +184,9 @@ class _QuranPageScreanState extends State<QuranPageScrean> {
                                             getVerseEndSymbol(int.parse(state
                                                 .quranPageModel.page[index].haz
                                                 .toString())),
-                                        style: const TextStyle(
-                                            fontFamily: "Arabic",
-                                            fontSize: 16)),
+                                        style: Theme.of(context)
+                                            .textTheme
+                                            .bodyText2),
                                   ),
                                 )
                               ],

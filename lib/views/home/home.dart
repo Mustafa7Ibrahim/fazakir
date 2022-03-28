@@ -3,7 +3,6 @@ import 'package:fazakir/bloc/save_quran_page_cubit/save_quran_page_state.dart';
 import 'package:fazakir/views/hug/hug_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:timezone/timezone.dart' as tz;
@@ -81,10 +80,21 @@ class _HomeState extends State<Home> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 mainAxisSize: MainAxisSize.max,
                 children: [
-                  Text(
-                    AppLocalizations.of(context)!.appTitle,
-                    style: Theme.of(context).textTheme.displaySmall,
+                  SizedBox(
+                    width: 100,
+                    height: 100,
+                    child: FittedBox(
+                      fit: BoxFit.none,
+                      child: Image.asset(
+                        "assets/images/logo.png",
+                        height: size.height * 0.2,
+                      ),
+                    ),
                   ),
+                  // Text(
+                  //   AppLocalizations.of(context)!.appTitle,
+                  //   style: Theme.of(context).textTheme.displaySmall,
+                  // ),
                   const SizedBox(height: 18.0),
                   BlocBuilder<SaveQuranPageCubit, SaveQuranPageState>(
                     builder: (context, state) {

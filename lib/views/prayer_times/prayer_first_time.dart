@@ -50,11 +50,9 @@ class _PrayerFirstTimeState extends State<PrayerFirstTimeSet> {
             flex: 9,
             child: PageView.builder(
               controller: pageController,
-              itemCount: 2,
+              itemCount: 1,
               itemBuilder: (context, index) {
-                return index == 0
-                    ? AskToGetCurrentLocation(size: size)
-                    : Container();
+                return AskToGetCurrentLocation(size: size);
               },
             ),
           ),

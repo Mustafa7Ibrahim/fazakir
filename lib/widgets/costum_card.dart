@@ -29,7 +29,7 @@ class CustomCard extends StatelessWidget {
       child: InkWell(
         onTap: onTap,
         child: Padding(
-          padding: const EdgeInsets.all(10.0),
+          padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.end,
             crossAxisAlignment: CrossAxisAlignment.end,
@@ -40,21 +40,19 @@ class CustomCard extends StatelessWidget {
                 children: [
                   Text(
                     title,
-                    style: const TextStyle(
-                      color: Colors.white,
-                      fontSize: 24.0,
-                      fontFamily: "Arabic",
-                    ),
+                    style: Theme.of(context)
+                        .textTheme
+                        .headline5!
+                        .copyWith(fontSize: 24, color: Colors.white),
                   ),
                   Row(
                     children: [
-                      const Text(
+                      Text(
                         "اذهب الي",
-                        style: TextStyle(
-                          color: Colors.white54,
-                          fontSize: 18.0,
-                          fontFamily: "Arabic",
-                        ),
+                        style: Theme.of(context)
+                            .textTheme
+                            .bodyText2!
+                            .copyWith(fontSize: 18, color: Colors.white38),
                       ),
                       image != null
                           ? const Icon(

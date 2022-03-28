@@ -45,7 +45,7 @@ class AzkarList extends StatelessWidget {
                     ),
                     title: Text(
                       state.azkarModel[index].title,
-                      style: const TextStyle(fontFamily: "Arabic"),
+                      style: Theme.of(context).textTheme.bodyText2,
                     ),
                   );
                 },

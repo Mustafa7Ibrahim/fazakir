@@ -14,7 +14,6 @@ class HugView extends StatelessWidget {
       appBar: AppBar(
         title: const Text(
           " مناسك الحج و العمرة",
-          style: TextStyle(fontFamily: "Arabic"),
         ),
       ),
       body: BlocProvider(
@@ -64,9 +63,9 @@ class HugView extends StatelessWidget {
                                             state.hugModel.hugData[index].name
                                                     .toString() +
                                                 "\n",
-                                            style: const TextStyle(
-                                                fontFamily: "Arabic",
-                                                fontWeight: FontWeight.bold),
+                                            style: Theme.of(context)
+                                                .textTheme
+                                                .headline6,
                                           ),
                                           Column(
                                             crossAxisAlignment:
@@ -76,9 +75,9 @@ class HugView extends StatelessWidget {
                                                   .hugModel.hugData[index].info!
                                                   .map((e) => Text(
                                                         e + "\n",
-                                                        style: const TextStyle(
-                                                            fontFamily:
-                                                                "Arabic"),
+                                                        style: Theme.of(context)
+                                                            .textTheme
+                                                            .bodyText2,
                                                       ))
                                             ],
                                           )

@@ -18,8 +18,6 @@ class Salah extends StatelessWidget {
         appBar: AppBar(
           title: const Text(
             "صلاتي",
-            style: TextStyle(
-                fontFamily: 'quran', fontSize: 30, fontWeight: FontWeight.w300),
           ),
         ),
         body: BlocProvider(

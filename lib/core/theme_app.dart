@@ -21,11 +21,11 @@ class ThemeApp {
       elevation: 0.0,
       backgroundColor: Color(0xffffffff),
       titleTextStyle: TextStyle(
-        color: Color(0xFF000000),
-        fontWeight: FontWeight.bold,
-        fontSize: 20.0,
-        letterSpacing: 0.15,
-      ),
+          color: Color(0xFF000000),
+          fontWeight: FontWeight.bold,
+          fontSize: 20.0,
+          letterSpacing: 0.15,
+          fontFamily: "Arabic"),
       iconTheme: IconThemeData(color: Color(0xFF000000)),
     ),
     bottomNavigationBarTheme: const BottomNavigationBarThemeData(
@@ -40,32 +40,38 @@ class ThemeApp {
     ),
     textTheme: const TextTheme(
       headline5: TextStyle(
-        fontFamily: "quran",
+        fontFamily: "Arabic",
         letterSpacing: 0.15,
         fontSize: 20,
       ),
       headline6: TextStyle(
-        fontFamily: "Othmani",
+        fontFamily: "Arabic",
         letterSpacing: 0.15,
       ),
       caption: TextStyle(
-        fontFamily: "Othmani",
+        fontFamily: "Arabic",
         letterSpacing: 0.4,
       ),
       button: TextStyle(
-        fontFamily: "Othmani",
+        fontFamily: "Arabic",
         letterSpacing: 1.25,
       ),
+      bodyText1: TextStyle(
+        fontFamily: "Arabic",
+      ),
+      bodyText2: TextStyle(
+        fontFamily: "Arabic",
+      ),
       overline: TextStyle(
-        fontFamily: "Othmani",
+        fontFamily: "Arabic",
         letterSpacing: 1.5,
       ),
       subtitle1: TextStyle(
-        fontFamily: "Othmani",
+        fontFamily: "Arabic",
         letterSpacing: 0.15,
       ),
       subtitle2: TextStyle(
-        fontFamily: "Othmani",
+        fontFamily: "Arabic",
         letterSpacing: 0.1,
       ),
     ),
@@ -92,11 +98,11 @@ class ThemeApp {
       elevation: 0.0,
       backgroundColor: Color(0xff010313),
       titleTextStyle: TextStyle(
-        color: Color(0xffffffff),
-        fontWeight: FontWeight.w600,
-        fontSize: 20.0,
-        letterSpacing: 0.15,
-      ),
+          color: Color(0xffffffff),
+          fontWeight: FontWeight.w600,
+          fontSize: 20.0,
+          letterSpacing: 0.15,
+          fontFamily: "Arabic"),
     ),
     bottomNavigationBarTheme: const BottomNavigationBarThemeData(
       elevation: 0.0,
@@ -110,32 +116,38 @@ class ThemeApp {
     ),
     textTheme: const TextTheme(
       headline5: TextStyle(
-        fontFamily: "quran",
+        fontFamily: "Arabic",
         letterSpacing: 0.15,
         fontSize: 20,
       ),
       headline6: TextStyle(
-        fontFamily: "Othmani",
+        fontFamily: "Arabic",
         letterSpacing: 0.15,
       ),
       caption: TextStyle(
-        fontFamily: "Othmani",
+        fontFamily: "Arabic",
         letterSpacing: 0.4,
       ),
       button: TextStyle(
-        fontFamily: "Othmani",
+        fontFamily: "Arabic",
         letterSpacing: 1.25,
       ),
+      bodyText1: TextStyle(
+        fontFamily: "Arabic",
+      ),
+      bodyText2: TextStyle(
+        fontFamily: "Arabic",
+      ),
       overline: TextStyle(
-        fontFamily: "Othmani",
+        fontFamily: "Arabic",
         letterSpacing: 1.5,
       ),
       subtitle1: TextStyle(
-        fontFamily: "Othmani",
+        fontFamily: "Arabic",
         letterSpacing: 0.15,
       ),
       subtitle2: TextStyle(
-        fontFamily: "Othmani",
+        fontFamily: "Arabic",
         letterSpacing: 0.1,
       ),
     ),

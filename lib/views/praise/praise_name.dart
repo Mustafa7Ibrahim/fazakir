@@ -56,7 +56,8 @@ class PraiseName extends StatelessWidget {
                     child: Center(
                       child: Text(
                         "${praiseData.name}",
-                        style: Theme.of(context).textTheme.headline5,
+                        style: Theme.of(context).textTheme.bodyText2,
+                        textAlign: TextAlign.center,
                       ),
                     ),
                   ),

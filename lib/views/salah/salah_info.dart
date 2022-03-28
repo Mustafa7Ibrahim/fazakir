@@ -28,7 +28,7 @@ class SalahInfo extends StatelessWidget {
           ),
           child: Text(
             data,
-            style: const TextStyle(fontFamily: "Arabic"),
+            style: Theme.of(context).textTheme.bodyText2,
           ),
         ))
       ],

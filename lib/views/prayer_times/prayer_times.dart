@@ -27,7 +27,19 @@ class PrayerTime extends StatelessWidget {
               return PrayerTimes(dataModel: state.dataModel);
             }
             if (state is PrayerError) {
-              return Center(child: Text(state.message));
+              return Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const Center(
+                      child: Text(
+                          "يوجد عطل في الاتصال بالانترنت برجاء اعاده المحاولة")),
+                  IconButton(
+                      onPressed: () {
+                        BlocProvider.of<PrayerCubit>(context).getPrayerTimes();
+                      },
+                      icon: const Icon(Icons.refresh))
+                ],
+              );
             }
             if (state is PrayerFirstTime) {
               return const PrayerFirstTimeSet();
@@ -51,8 +63,9 @@ class PrayerTimes extends StatelessWidget {
     final size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
-        title: Text(dataModel.date.readable),
-      ),
+          title: Text(
+        DateFormat.yMMMMd("ar_SA").format(DateTime.now()),
+      )),
       body: Column(
         children: [
           const SizedBox(height: 10),
@@ -138,15 +151,13 @@ class PrayerTimeCard extends StatelessWidget {
           Text(
             prayName,
             style: Theme.of(context).textTheme.bodyText1?.copyWith(
-                  color: Theme.of(context).colorScheme.surface,
-                ),
+                color: Theme.of(context).colorScheme.surface, fontSize: 18),
           ),
           const Spacer(),
           Text(
-            DateFormat.jm().format(DateTime.parse(prayTime).toLocal()),
+            DateFormat.jm("ar_SA").format(DateTime.parse(prayTime).toLocal()),
             style: Theme.of(context).textTheme.bodyText1?.copyWith(
-                  color: Theme.of(context).colorScheme.surface,
-                ),
+                color: Theme.of(context).colorScheme.surface, fontSize: 18),
           ),
           const SizedBox(width: 12.0),
           Icon(prayIcon, color: prayIconColor),

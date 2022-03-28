@@ -48,7 +48,7 @@ class Praise extends StatelessWidget {
                         gridDelegate:
                             const SliverGridDelegateWithMaxCrossAxisExtent(
                           maxCrossAxisExtent: 200,
-                          childAspectRatio: 2 / 2,
+                          childAspectRatio: 2.5 / 2,
                           crossAxisSpacing: 20,
                           mainAxisSpacing: 20,
                         ),

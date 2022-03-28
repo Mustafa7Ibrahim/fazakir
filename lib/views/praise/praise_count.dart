@@ -22,10 +22,10 @@ class PraiseCount extends StatelessWidget {
           ]),
       child: Row(
         children: [
-          const Expanded(
+          Expanded(
               child: Text(
             "قال تعالي \n ( وَمَنْ أَعْرَضَ عَن ذِكْرِى فَإِنَّ لَهُۥ مَعِيشَةً ضَنكًا وَنَحْشُرُهُۥ يَوْمَ ٱلْقِيَٰمَةِ أَعْمَىٰ )* صدق الله العظيم",
-            style: TextStyle(fontFamily: "Arabic"),
+            style: Theme.of(context).textTheme.bodyText2,
           )),
           Expanded(
             child: Container(

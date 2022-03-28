@@ -59,15 +59,15 @@ class SouraList extends StatelessWidget {
                       children: [
                         Text(
                           "عدد الآيات : ${state.souraModel.soura[index].count}",
-                          style: const TextStyle(fontFamily: "Arabic"),
+                          style: Theme.of(context).textTheme.bodyText2,
                         ),
                         Text(
                           "الصفحة : ${state.souraModel.soura[index].pages! + 1}",
-                          style: const TextStyle(fontFamily: "Arabic"),
+                          style: Theme.of(context).textTheme.bodyText2,
                         ),
                         Text(
                           state.souraModel.soura[index].type.toString(),
-                          style: const TextStyle(fontFamily: "Arabic"),
+                          style: Theme.of(context).textTheme.bodyText2,
                         ),
                       ],
                     ),
