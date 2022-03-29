@@ -1,6 +1,7 @@
 import 'package:fazakir/nav_bar.dart';
 import 'package:fazakir/views/hug/hug_view.dart';
 import 'package:fazakir/views/quran/quran_page.dart';
+import 'package:fazakir/views/settings/contect_us/contect_us.dart';
 import 'package:fazakir/views/settings/privacy_policy/privacy_policy.dart';
 import 'package:fazakir/views/settings/settings.dart';
 import 'package:fazakir/views/settings/terms_and_conditions/terms_and_conditions.dart';
@@ -64,6 +65,8 @@ class RouteConfig {
             );
           case HugView.routeName:
             return const HugView();
+          case ContactUS.routeName:
+            return const ContactUS();
 
           default:
             return const NavBar();

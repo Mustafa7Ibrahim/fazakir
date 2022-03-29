@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 
+import '../../core/fade_route.dart';
+import '../../data_source/local/hive_helper.dart';
+import 'praise.dart';
+
 class PraiseCount extends StatelessWidget {
   const PraiseCount({Key? key, required this.sum}) : super(key: key);
   final int sum;
@@ -28,23 +32,35 @@ class PraiseCount extends StatelessWidget {
             style: Theme.of(context).textTheme.bodyText2,
           )),
           Expanded(
-            child: Container(
-              margin: const EdgeInsets.all(15.0),
-              decoration: BoxDecoration(
-                border: Border.all(
-                  color: Theme.of(context).colorScheme.primary,
-                  width: 5.0,
-                  style: BorderStyle.solid,
+            child: InkWell(
+              onTap: () async {
+                await HiveHelper()
+                    .removData("sum")
+                    .then((value) => Navigator.of(context).pushAndRemoveUntil(
+                          FadeRoute(
+                              builder: (BuildContext context) =>
+                                  const Praise()),
+                          ModalRoute.withName('/'),
+                        ));
+              },
+              child: Container(
+                margin: const EdgeInsets.all(15.0),
+                decoration: BoxDecoration(
+                  border: Border.all(
+                    color: Theme.of(context).colorScheme.primary,
+                    width: 5.0,
+                    style: BorderStyle.solid,
+                  ),
+                  shape: BoxShape.circle,
                 ),
-                shape: BoxShape.circle,
-              ),
-              child: Center(
-                child: FittedBox(
-                  child: Padding(
-                    padding: const EdgeInsets.all(20.0),
-                    child: Text(
-                      "$sum",
-                      style: Theme.of(context).textTheme.headline4,
+                child: Center(
+                  child: FittedBox(
+                    child: Padding(
+                      padding: const EdgeInsets.all(20.0),
+                      child: Text(
+                        "$sum",
+                        style: Theme.of(context).textTheme.headline4,
+                      ),
                     ),
                   ),
                 ),

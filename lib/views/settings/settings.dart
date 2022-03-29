@@ -1,3 +1,4 @@
+import 'package:fazakir/views/settings/contect_us/contect_us.dart';
 import 'package:fazakir/views/settings/privacy_policy/privacy_policy.dart';
 import 'package:fazakir/views/settings/terms_and_conditions/terms_and_conditions.dart';
 import 'package:flutter/material.dart';
@@ -17,6 +18,28 @@ class Settings extends StatelessWidget {
       appBar: AppBar(title: const Text("الأعدادات")),
       body: Column(
         children: [
+          CustomCard(
+            onTap: () {
+              Navigator.pushNamed(context, ContactUS.routeName);
+            },
+            size: size,
+            title: "مركز المساعدة",
+            colors: [
+              Theme.of(context).colorScheme.secondary,
+              Color.fromARGB(255, 33, 131, 131),
+            ],
+          ),
+          CustomCard(
+            onTap: () {
+              Navigator.pushNamed(context, PrivacyPolicy.routeName);
+            },
+            size: size,
+            title: "عن التطبيق",
+            colors: [
+              Theme.of(context).colorScheme.secondary,
+              Color.fromARGB(255, 37, 62, 131),
+            ],
+          ),
           CustomCard(
             onTap: () {
               Navigator.pushNamed(context, PrivacyPolicy.routeName);

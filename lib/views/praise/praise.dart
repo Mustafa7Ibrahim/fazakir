@@ -1,3 +1,5 @@
+import 'package:fazakir/data_source/local/hive_helper.dart';
+
 import '../../bloc/praise_cubit/praise_cubit.dart';
 import '../../bloc/praise_cubit/praise_state.dart';
 import '../../injection_container.dart';
@@ -22,9 +24,7 @@ class Praise extends StatelessWidget {
         ),
       ),
       body: BlocProvider(
-        create: (context) =>
-            PraiseCubit(praiseRepositiry: getIt<PraiseRepositiry>())
-              ..getPraise(),
+        create: (context) => getIt<PraiseCubit>()..getPraise(),
         child: BlocConsumer<PraiseCubit, PraiseState>(
           listener: (context, state) {
             if (state is PraiseError) {
@@ -38,7 +38,7 @@ class Praise extends StatelessWidget {
             } else if (state is PraiseScasses) {
               return Column(
                 children: [
-                  PraiseCount(sum: state.sum),
+                  PraiseCount(sum: HiveHelper().getData("sum") ?? 0),
                   Expanded(
                     child: Padding(
                       padding: const EdgeInsets.all(12.0),

@@ -29,7 +29,8 @@ Future<void> init() async {
   //! Features - Number Trivia
   // Bloc
   getIt.registerFactory(() => AzkarCubit(azkarRepositiry: getIt()));
-  getIt.registerFactory(() => PraiseCubit(praiseRepositiry: getIt()));
+  getIt.registerFactory(
+      () => PraiseCubit(praiseRepositiry: getIt(), hiveHelper: getIt()));
   getIt.registerFactory(() => ZekrCubit());
   getIt.registerFactory(
     () => PrayerCubit(

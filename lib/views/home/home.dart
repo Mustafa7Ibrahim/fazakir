@@ -87,7 +87,7 @@ class _HomeState extends State<Home> {
                       fit: BoxFit.none,
                       child: Image.asset(
                         "assets/images/logo.png",
-                        height: size.height * 0.2,
+                        height: size.height * 0.1,
                       ),
                     ),
                   ),

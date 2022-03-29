@@ -29,6 +29,11 @@ class HiveHelper {
     return prayerBox.get(key);
   }
 
+  Future<void> removData(String key) async {
+    final prayerBox = Hive.box(prayerBoxName);
+    return await prayerBox.delete(key);
+  }
+
   Future<void> putData(String key, dynamic value) async {
     final prayerBox = Hive.box(prayerBoxName);
     return prayerBox.put(key, value);

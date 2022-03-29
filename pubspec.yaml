@@ -33,10 +33,16 @@ dependencies:
   flutter_local_notifications: ^9.4.0
   flutter_native_timezone: ^2.0.0
   flutter_markdown: ^0.6.9+1
+  url_launcher: ^6.0.20
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  flutter_launcher_icons:
+flutter_icons:
+  image_path: "assets/images/logo.png"
+  android: true
+  ios: true
 
   flutter_lints: ^1.0.0
   freezed: ^1.1.1
