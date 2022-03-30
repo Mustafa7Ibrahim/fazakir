@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -13,28 +11,11 @@ class ContactUS extends StatefulWidget {
 
 class _ContactUSState extends State<ContactUS> {
   openWhatsApp() async {
-    var whatsapp = "01024573438";
+    var whatsapp = "0201024573438";
     var whatsappURlAndroid =
         "whatsapp://send?phone=" + whatsapp + "&text=hello";
-    var whatappURLIos = "https://wa.me/$whatsapp?text=${Uri.parse("hello")}";
 
-    if (Platform.isIOS) {
-      // for iOS phone only
-      if (await canLaunch(whatappURLIos)) {
-        await launch(whatappURLIos, forceSafariVC: false);
-      } else {
-        ScaffoldMessenger.of(context)
-            .showSnackBar(SnackBar(content: Text("whatsapp no installed")));
-      }
-    } else {
-      // android , web
-      if (await canLaunch(whatsappURlAndroid)) {
-        await launch(whatsappURlAndroid);
-      } else {
-        ScaffoldMessenger.of(context)
-            .showSnackBar(SnackBar(content: Text("whatsapp no installed")));
-      }
-    }
+    await launch(whatsappURlAndroid, forceSafariVC: false);
   }
 
   @override
@@ -50,8 +31,8 @@ class _ContactUSState extends State<ContactUS> {
             child: FittedBox(
               fit: BoxFit.none,
               child: Image.asset(
-                "assets/images/logo.png",
-                height: MediaQuery.of(context).size.height * 0.1,
+                "assets/images/logoicon.png",
+                height: MediaQuery.of(context).size.height * 0.2,
               ),
             ),
           ),

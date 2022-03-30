@@ -2,13 +2,37 @@ import 'package:fazakir/views/settings/contect_us/contect_us.dart';
 import 'package:fazakir/views/settings/privacy_policy/privacy_policy.dart';
 import 'package:fazakir/views/settings/terms_and_conditions/terms_and_conditions.dart';
 import 'package:flutter/material.dart';
+import 'package:package_info_plus/package_info_plus.dart';
 
 import '../../widgets/costum_card.dart';
+import 'info_app/info_app.dart';
 
-class Settings extends StatelessWidget {
+class Settings extends StatefulWidget {
   const Settings({Key? key}) : super(key: key);
 
   static const routeName = '/settings';
+
+  @override
+  State<Settings> createState() => _SettingsState();
+}
+
+class _SettingsState extends State<Settings> {
+  String? localRsult;
+
+  Future getCurrentAppVersion() async {
+    PackageInfo packageInfo = await PackageInfo.fromPlatform();
+    String version = packageInfo.version;
+    setState(() {
+      localRsult = version;
+    });
+    return version;
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    getCurrentAppVersion();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +55,7 @@ class Settings extends StatelessWidget {
           ),
           CustomCard(
             onTap: () {
-              Navigator.pushNamed(context, PrivacyPolicy.routeName);
+              Navigator.pushNamed(context, InfoApp.routeName);
             },
             size: size,
             title: "عن التطبيق",
@@ -61,6 +85,17 @@ class Settings extends StatelessWidget {
               Theme.of(context).colorScheme.secondary,
               const Color(0xffBD84CA),
             ],
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          Text(
+            "الإصدار\n$localRsult",
+            textAlign: TextAlign.center,
+            style: Theme.of(context)
+                .textTheme
+                .bodyText1!
+                .copyWith(fontSize: 16, color: Colors.grey[400]),
           ),
         ],
       ),

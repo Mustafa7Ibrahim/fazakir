@@ -3,11 +3,9 @@ import 'package:fazakir/bloc/save_quran_page_cubit/save_quran_page_state.dart';
 import 'package:fazakir/views/hug/hug_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_local_notifications/flutter_local_notifications.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:timezone/timezone.dart' as tz;
 
-import '../../core/notification/notification.dart';
+import 'package:flutter_svg/svg.dart';
+
 import '../../widgets/costum_card.dart';
 import '../azkar/azkar_list.dart';
 import '../praise/praise.dart';

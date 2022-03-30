@@ -3,7 +3,6 @@ import 'package:fazakir/data_source/local/hive_helper.dart';
 import '../../bloc/praise_cubit/praise_cubit.dart';
 import '../../bloc/praise_cubit/praise_state.dart';
 import '../../injection_container.dart';
-import '../../repository/praise_repository/praise_repository.dart';
 import 'praise_count.dart';
 import 'praise_name.dart';
 import 'package:flutter/material.dart';
