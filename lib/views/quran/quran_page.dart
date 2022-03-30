@@ -104,7 +104,7 @@ class _QuranPageScreanState extends State<QuranPageScrean> {
                                     left: 3,
                                   ),
                             decoration: BoxDecoration(
-                                color: ThemeHandler().isDark()
+                                color: !ThemeHandler().isDark(context)
                                     ? Theme.of(context).scaffoldBackgroundColor
                                     : const Color(0xFFF5F5F5),
                                 borderRadius: index % 2 != 0
@@ -160,7 +160,8 @@ class _QuranPageScreanState extends State<QuranPageScrean> {
                                   child: Container(
                                     decoration: BoxDecoration(
                                       image: DecorationImage(
-                                        invertColors: ThemeHandler().isDark(),
+                                        invertColors:
+                                            !ThemeHandler().isDark(context),
                                         image: AssetImage(
                                           "assets/images/quran-images/page${index + 1}.png",
                                         ),
@@ -192,7 +193,7 @@ class _QuranPageScreanState extends State<QuranPageScrean> {
                               ],
                             ),
                           ),
-                          !ThemeHandler().isDark()
+                          ThemeHandler().isDark(context)
                               ? Container(
                                   decoration: BoxDecoration(
                                     // borderRadius: BorderRadius.circular(20),

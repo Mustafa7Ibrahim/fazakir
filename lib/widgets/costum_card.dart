@@ -6,6 +6,7 @@ class CustomCard extends StatelessWidget {
     Key? key,
     required this.size,
     this.image,
+    this.colorstyle,
     required this.title,
     required this.onTap,
     required this.colors,
@@ -16,6 +17,7 @@ class CustomCard extends StatelessWidget {
   final String title;
   final VoidCallback onTap;
   final List<Color> colors;
+  final Color? colorstyle;
 
   @override
   Widget build(BuildContext context) {
@@ -40,19 +42,15 @@ class CustomCard extends StatelessWidget {
                 children: [
                   Text(
                     title,
-                    style: Theme.of(context)
-                        .textTheme
-                        .headline5!
-                        .copyWith(fontSize: 24, color: Colors.white),
+                    style: Theme.of(context).textTheme.headline5!.copyWith(
+                        fontSize: 24, color: colorstyle ?? Colors.white),
                   ),
                   Row(
                     children: [
                       Text(
                         "اذهب الي",
-                        style: Theme.of(context)
-                            .textTheme
-                            .bodyText2!
-                            .copyWith(fontSize: 18, color: Colors.white38),
+                        style: Theme.of(context).textTheme.bodyText2!.copyWith(
+                            fontSize: 18, color: colorstyle ?? Colors.white38),
                       ),
                       image != null
                           ? const Icon(

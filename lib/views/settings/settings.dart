@@ -2,8 +2,11 @@ import 'package:fazakir/views/settings/contect_us/contect_us.dart';
 import 'package:fazakir/views/settings/privacy_policy/privacy_policy.dart';
 import 'package:fazakir/views/settings/terms_and_conditions/terms_and_conditions.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 
+import '../../bloc/theme_mode_cubit/them_model_cubit.dart';
+import '../../core/them_helper.dart';
 import '../../widgets/costum_card.dart';
 import 'info_app/info_app.dart';
 
@@ -37,6 +40,7 @@ class _SettingsState extends State<Settings> {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
+    bool themMode = ThemeHandler().isDark(context);
 
     return Scaffold(
       appBar: AppBar(title: const Text("الأعدادات")),
@@ -44,13 +48,16 @@ class _SettingsState extends State<Settings> {
         children: [
           CustomCard(
             onTap: () {
-              Navigator.pushNamed(context, ContactUS.routeName);
+              BlocProvider.of<ThemeModeCubit>(context).changeTheme();
             },
             size: size,
-            title: "مركز المساعدة",
+            title: themMode ? "الوضع الليلي " : "الوضع النهاري",
+            colorstyle: themMode ? null : Color.fromARGB(255, 0, 0, 0),
             colors: [
               Theme.of(context).colorScheme.secondary,
-              Color.fromARGB(255, 33, 131, 131),
+              themMode
+                  ? Color.fromARGB(255, 0, 0, 0)
+                  : Color.fromARGB(255, 241, 241, 241),
             ],
           ),
           CustomCard(
@@ -62,6 +69,17 @@ class _SettingsState extends State<Settings> {
             colors: [
               Theme.of(context).colorScheme.secondary,
               Color.fromARGB(255, 37, 62, 131),
+            ],
+          ),
+          CustomCard(
+            onTap: () {
+              Navigator.pushNamed(context, ContactUS.routeName);
+            },
+            size: size,
+            title: "مركز المساعدة",
+            colors: [
+              Theme.of(context).colorScheme.secondary,
+              Color.fromARGB(255, 33, 131, 131),
             ],
           ),
           CustomCard(
