@@ -1,4 +1,4 @@
-package com.example.fazakir
+package com.tech.fazakir
 
 import io.flutter.embedding.android.FlutterActivity
 import android.content.ContentResolver
