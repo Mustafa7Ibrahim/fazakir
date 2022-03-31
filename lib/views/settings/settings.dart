@@ -44,78 +44,80 @@ class _SettingsState extends State<Settings> {
 
     return Scaffold(
       appBar: AppBar(title: const Text("الأعدادات")),
-      body: Column(
-        children: [
-          CustomCard(
-            onTap: () {
-              BlocProvider.of<ThemeModeCubit>(context).changeTheme();
-            },
-            size: size,
-            title: themMode ? "الوضع الليلي " : "الوضع النهاري",
-            colorstyle: themMode ? null : Color.fromARGB(255, 0, 0, 0),
-            colors: [
-              Theme.of(context).colorScheme.secondary,
-              themMode
-                  ? Color.fromARGB(255, 0, 0, 0)
-                  : Color.fromARGB(255, 241, 241, 241),
-            ],
-          ),
-          CustomCard(
-            onTap: () {
-              Navigator.pushNamed(context, InfoApp.routeName);
-            },
-            size: size,
-            title: "عن التطبيق",
-            colors: [
-              Theme.of(context).colorScheme.secondary,
-              Color.fromARGB(255, 37, 62, 131),
-            ],
-          ),
-          CustomCard(
-            onTap: () {
-              Navigator.pushNamed(context, ContactUS.routeName);
-            },
-            size: size,
-            title: "مركز المساعدة",
-            colors: [
-              Theme.of(context).colorScheme.secondary,
-              Color.fromARGB(255, 33, 131, 131),
-            ],
-          ),
-          CustomCard(
-            onTap: () {
-              Navigator.pushNamed(context, PrivacyPolicy.routeName);
-            },
-            size: size,
-            title: "سياسة الخصوصية",
-            colors: [
-              Theme.of(context).colorScheme.secondary,
-              const Color(0xff8DA5E8),
-            ],
-          ),
-          CustomCard(
-            onTap: () {
-              Navigator.pushNamed(context, TermsAndConditions.routeName);
-            },
-            size: size,
-            title: "الشروط والأحكام",
-            colors: [
-              Theme.of(context).colorScheme.secondary,
-              const Color(0xffBD84CA),
-            ],
-          ),
-          SizedBox(
-            height: 20,
-          ),
-          Text(
-            "الإصدار\n$localRsult",
-            textAlign: TextAlign.center,
-            style: Theme.of(context)
-                .textTheme
-                .bodyText1!
-                .copyWith(fontSize: 16, color: Colors.grey[400]),
-          ),
-        ],
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            CustomCard(
+              onTap: () {
+                BlocProvider.of<ThemeModeCubit>(context).changeTheme();
+              },
+              size: size,
+              title: themMode ? "الوضع الليلي " : "الوضع النهاري",
+              colorstyle: themMode ? null : Color.fromARGB(255, 0, 0, 0),
+              colors: [
+                Theme.of(context).colorScheme.secondary,
+                themMode
+                    ? Color.fromARGB(255, 0, 0, 0)
+                    : Color.fromARGB(255, 241, 241, 241),
+              ],
+            ),
+            CustomCard(
+              onTap: () {
+                Navigator.pushNamed(context, InfoApp.routeName);
+              },
+              size: size,
+              title: "عن التطبيق",
+              colors: [
+                Theme.of(context).colorScheme.secondary,
+                Color.fromARGB(255, 37, 62, 131),
+              ],
+            ),
+            CustomCard(
+              onTap: () {
+                Navigator.pushNamed(context, ContactUS.routeName);
+              },
+              size: size,
+              title: "مركز المساعدة",
+              colors: [
+                Theme.of(context).colorScheme.secondary,
+                Color.fromARGB(255, 33, 131, 131),
+              ],
+            ),
+            CustomCard(
+              onTap: () {
+                Navigator.pushNamed(context, PrivacyPolicy.routeName);
+              },
+              size: size,
+              title: "سياسة الخصوصية",
+              colors: [
+                Theme.of(context).colorScheme.secondary,
+                const Color(0xff8DA5E8),
+              ],
+            ),
+            CustomCard(
+              onTap: () {
+                Navigator.pushNamed(context, TermsAndConditions.routeName);
+              },
+              size: size,
+              title: "الشروط والأحكام",
+              colors: [
+                Theme.of(context).colorScheme.secondary,
+                const Color(0xffBD84CA),
+              ],
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Text(
+              "الإصدار\n$localRsult",
+              textAlign: TextAlign.center,
+              style: Theme.of(context)
+                  .textTheme
+                  .bodyText1!
+                  .copyWith(fontSize: 16, color: Colors.grey[400]),
+            ),
+          ],
+        ),
       ),
     );
   }

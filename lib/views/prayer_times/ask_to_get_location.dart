@@ -35,9 +35,11 @@ class AskToGetCurrentLocation extends StatelessWidget {
                   size: 44.0,
                   color: Theme.of(context).colorScheme.primary,
                 ),
-                Text(
-                  "احصل على مواقيت صلاة دقيقة لموقعك",
-                  style: Theme.of(context).textTheme.headline6,
+                FittedBox(
+                  child: Text(
+                    "احصل على مواقيت صلاة دقيقة لموقعك",
+                    style: Theme.of(context).textTheme.headline6,
+                  ),
                 )
               ],
             ),
