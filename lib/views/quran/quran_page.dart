@@ -1,9 +1,12 @@
+import 'dart:convert';
+
 import 'package:fazakir/bloc/quran_cubit/quran_cubit.dart';
 import 'package:fazakir/bloc/quran_cubit/quran_state.dart';
 import 'package:fazakir/bloc/save_quran_page_cubit/save_quran_page_cubit.dart';
 import 'package:fazakir/core/them_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:wakelock/wakelock.dart';
 
 class QuranPageScrean extends StatefulWidget {
   const QuranPageScrean({Key? key, this.index = 0}) : super(key: key);
@@ -16,6 +19,8 @@ class QuranPageScrean extends StatefulWidget {
 class _QuranPageScreanState extends State<QuranPageScrean> {
   late int creindex;
   bool showAppBar = false;
+  bool fullscrean = false;
+  late double num;
 
   String getVerseEndSymbol(int verseNumber) {
     String arabicNumeric = " ";
@@ -52,6 +57,8 @@ class _QuranPageScreanState extends State<QuranPageScrean> {
   @override
   void initState() {
     creindex = widget.index!;
+    num = creindex.toDouble();
+    Wakelock.enable();
     BlocProvider.of<QuranCubit>(context).getpage();
     pageController = PageController(
       initialPage: creindex,
@@ -61,7 +68,14 @@ class _QuranPageScreanState extends State<QuranPageScrean> {
   }
 
   @override
+  void dispose() {
+    Wakelock.disable();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
+    var size = MediaQuery.of(context).size;
     return Scaffold(
       body: BlocBuilder<QuranCubit, QuranState>(
         builder: (context, state) {
@@ -77,189 +91,300 @@ class _QuranPageScreanState extends State<QuranPageScrean> {
                     showAppBar = !showAppBar;
                   });
                 },
-                child: PageView.builder(
-                    onPageChanged: (value) {
-                      BlocProvider.of<SaveQuranPageCubit>(context)
-                          .saveQuranPage(key: "quranPageNumber", value: value);
-                      BlocProvider.of<SaveQuranPageCubit>(context)
-                          .saveQuranPage(
-                              key: "nameSoura",
-                              value: state.quranPageModel.page[value].name);
+                child: Stack(
+                  children: [
+                    PageView.builder(
+                        onPageChanged: (value) {
+                          BlocProvider.of<SaveQuranPageCubit>(context)
+                              .saveQuranPage(
+                                  key: "quranPageNumber", value: value);
+                          BlocProvider.of<SaveQuranPageCubit>(context)
+                              .saveQuranPage(
+                                  key: "nameSoura",
+                                  value: state.quranPageModel.page[value].name);
 
-                      BlocProvider.of<SaveQuranPageCubit>(context)
-                          .getQuranPage();
-                    },
-                    controller: pageController,
-                    itemCount: state.quranPageModel.page.length,
-                    itemBuilder: (context, index) {
-                      return Stack(
-                        children: [
-                          Container(
-                            padding: const EdgeInsets.symmetric(vertical: 20.0),
-                            margin: index % 2 == 0
-                                ? const EdgeInsets.only(
-                                    right: 3,
-                                  )
-                                : const EdgeInsets.only(
-                                    left: 3,
-                                  ),
-                            decoration: BoxDecoration(
-                                color: !ThemeHandler().isDark(context)
-                                    ? Theme.of(context).scaffoldBackgroundColor
-                                    : const Color(0xFFF5F5F5),
-                                borderRadius: index % 2 != 0
-                                    ? const BorderRadius.only(
-                                        topRight: Radius.elliptical(100, 20),
-                                        bottomRight: Radius.elliptical(100, 20))
-                                    : const BorderRadius.only(
-                                        topLeft: Radius.elliptical(100, 20),
-                                        bottomLeft: Radius.elliptical(100, 20),
+                          BlocProvider.of<SaveQuranPageCubit>(context)
+                              .getQuranPage();
+                          setState(() {
+                            num = value.toDouble();
+                          });
+                        },
+                        controller: pageController,
+                        itemCount: state.quranPageModel.page.length,
+                        itemBuilder: (context, index) {
+                          return Stack(
+                            children: [
+                              Container(
+                                padding: fullscrean
+                                    ? const EdgeInsets.symmetric(vertical: 5.0)
+                                    : const EdgeInsets.symmetric(
+                                        vertical: 20.0),
+                                margin: index % 2 == 0
+                                    ? const EdgeInsets.only(
+                                        right: 3,
+                                      )
+                                    : const EdgeInsets.only(
+                                        left: 3,
                                       ),
-                                boxShadow: [
-                                  BoxShadow(
-                                    color:
-                                        Theme.of(context).colorScheme.onSurface,
-                                    blurRadius: 2,
-                                    offset: index % 2 == 0
-                                        ? const Offset(-1, 0)
-                                        : const Offset(1, 0),
-                                  ),
-                                  BoxShadow(
-                                    color:
-                                        Theme.of(context).colorScheme.onSurface,
-                                    blurRadius: 1,
-                                    offset: index % 2 == 0
-                                        ? const Offset(0, 1)
-                                        : const Offset(-0, 1),
-                                  ),
-                                ]),
-                            child: Column(
-                              children: [
-                                Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceAround,
-                                  children: [
-                                    Text(
-                                      state.quranPageModel.page[index].name
-                                          .toString(),
-                                      style:
-                                          const TextStyle(fontFamily: "Arabic"),
-                                    ),
-                                    Text(
-                                      state.quranPageModel.page[index].jza
-                                          .toString(),
-                                      style:
-                                          const TextStyle(fontFamily: "Arabic"),
-                                    )
-                                  ],
-                                ),
-                                const SizedBox(
-                                  height: 1,
-                                ),
-                                Expanded(
-                                  child: Container(
-                                    decoration: BoxDecoration(
-                                      image: DecorationImage(
-                                        invertColors:
-                                            !ThemeHandler().isDark(context),
-                                        image: AssetImage(
-                                          "assets/images/quran-images/page${index + 1}.png",
+                                decoration: BoxDecoration(
+                                    color: !ThemeHandler().isDark(context)
+                                        ? Theme.of(context)
+                                            .scaffoldBackgroundColor
+                                        : const Color(0xFFF5F5F5),
+                                    borderRadius: index % 2 != 0
+                                        ? const BorderRadius.only(
+                                            topRight:
+                                                Radius.elliptical(100, 20),
+                                            bottomRight:
+                                                Radius.elliptical(100, 20))
+                                        : const BorderRadius.only(
+                                            topLeft: Radius.elliptical(100, 20),
+                                            bottomLeft:
+                                                Radius.elliptical(100, 20),
+                                          ),
+                                    boxShadow: [
+                                      BoxShadow(
+                                        color: Theme.of(context)
+                                            .colorScheme
+                                            .onSurface,
+                                        blurRadius: 2,
+                                        offset: index % 2 == 0
+                                            ? const Offset(-1, 0)
+                                            : const Offset(1, 0),
+                                      ),
+                                      BoxShadow(
+                                        color: Theme.of(context)
+                                            .colorScheme
+                                            .onSurface,
+                                        blurRadius: 1,
+                                        offset: index % 2 == 0
+                                            ? const Offset(0, 1)
+                                            : const Offset(-0, 1),
+                                      ),
+                                    ]),
+                                child: fullscrean
+                                    ? Container(
+                                        decoration: BoxDecoration(
+                                          image: DecorationImage(
+                                            invertColors:
+                                                !ThemeHandler().isDark(context),
+                                            fit: BoxFit.fill,
+                                            image: AssetImage(
+                                              "assets/images/quran-images/page${index + 1}.png",
+                                            ),
+                                          ),
+                                        ),
+                                      )
+                                    : Column(
+                                        children: [
+                                          SizedBox(
+                                            height: MediaQuery.of(context)
+                                                    .size
+                                                    .height *
+                                                0.03,
+                                            child: Row(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.spaceAround,
+                                              children: [
+                                                FittedBox(
+                                                  child: Text(
+                                                    state.quranPageModel
+                                                        .page[index].name
+                                                        .toString(),
+                                                    style: const TextStyle(
+                                                        fontFamily: "Arabic"),
+                                                  ),
+                                                ),
+                                                FittedBox(
+                                                  child: Text(
+                                                    state.quranPageModel
+                                                        .page[index].jza
+                                                        .toString(),
+                                                    style: const TextStyle(
+                                                        fontFamily: "Arabic"),
+                                                  ),
+                                                )
+                                              ],
+                                            ),
+                                          ),
+                                          const SizedBox(
+                                            height: 1,
+                                          ),
+                                          Expanded(
+                                            child: Container(
+                                              decoration: BoxDecoration(
+                                                image: DecorationImage(
+                                                    invertColors:
+                                                        !ThemeHandler()
+                                                            .isDark(context),
+                                                    image: MemoryImage(
+                                                        base64Decode(
+                                                      base64ToImageFormatter(
+                                                          state
+                                                              .quranPageModel
+                                                              .page[index]
+                                                              .page),
+                                                    ))),
+                                              ),
+                                            ),
+                                          ),
+                                          SizedBox(
+                                            height: MediaQuery.of(context)
+                                                    .size
+                                                    .height *
+                                                0.04,
+                                            child: Center(
+                                              child: FittedBox(
+                                                child: Text(
+                                                    getVerseEndSymbol(index + 1)
+                                                        .toString(),
+                                                    style: Theme.of(context)
+                                                        .textTheme
+                                                        .bodyText2),
+                                              ),
+                                            ),
+                                          ),
+                                          SizedBox(
+                                            height: MediaQuery.of(context)
+                                                    .size
+                                                    .height *
+                                                0.03,
+                                            child: Padding(
+                                              padding: const EdgeInsets.only(
+                                                  right: 20.0),
+                                              child: Align(
+                                                alignment: Alignment.topRight,
+                                                child: FittedBox(
+                                                  child: Text(
+                                                      "الحزب " +
+                                                          getVerseEndSymbol(
+                                                              int.parse(state
+                                                                  .quranPageModel
+                                                                  .page[index]
+                                                                  .haz
+                                                                  .toString())),
+                                                      style: Theme.of(context)
+                                                          .textTheme
+                                                          .bodyText2),
+                                                ),
+                                              ),
+                                            ),
+                                          )
+                                        ],
+                                      ),
+                              ),
+                              ThemeHandler().isDark(context)
+                                  ? Container(
+                                      decoration: BoxDecoration(
+                                        // borderRadius: BorderRadius.circular(20),
+                                        gradient: LinearGradient(
+                                          colors: [
+                                            Theme.of(context)
+                                                .colorScheme
+                                                .onSurface
+                                                .withOpacity(0.15),
+                                            const Color(0xFFFFF9B6)
+                                                .withOpacity(0.0),
+                                            const Color(0xFFFFF9B6)
+                                                .withOpacity(0.0),
+                                            const Color(0xFFFFF9B6)
+                                                .withOpacity(0.0),
+                                            Theme.of(context)
+                                                .colorScheme
+                                                .onSurface
+                                                .withOpacity(0.15),
+                                          ],
+                                          begin: Alignment.centerLeft,
+                                          end: Alignment.centerRight,
                                         ),
                                       ),
-                                    ),
-                                  ),
+                                    )
+                                  : const SizedBox(),
+                            ],
+                          );
+                        }),
+                    showAppBar
+                        ? Column(
+                            children: [
+                              Container(
+                                color: Theme.of(context)
+                                    .scaffoldBackgroundColor
+                                    .withOpacity(0.7),
+                                height: size.height * 0.05,
+                                child: Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    IconButton(
+                                        onPressed: () {
+                                          Navigator.pop(context);
+                                        },
+                                        icon: Icon(Icons.arrow_back)),
+                                    IconButton(
+                                        onPressed: () {
+                                          setState(() {
+                                            fullscrean = !fullscrean;
+                                          });
+                                        },
+                                        icon: Icon(Icons.fullscreen))
+                                  ],
                                 ),
-                                Center(
-                                  child: Text(
-                                      getVerseEndSymbol(index + 1).toString(),
-                                      style: Theme.of(context)
-                                          .textTheme
-                                          .bodyText2),
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.only(right: 20.0),
-                                  child: Align(
-                                    alignment: Alignment.topRight,
-                                    child: Text(
-                                        "الحزب " +
-                                            getVerseEndSymbol(int.parse(state
-                                                .quranPageModel.page[index].haz
-                                                .toString())),
-                                        style: Theme.of(context)
-                                            .textTheme
-                                            .bodyText2),
-                                  ),
-                                )
-                              ],
-                            ),
-                          ),
-                          ThemeHandler().isDark(context)
-                              ? Container(
-                                  decoration: BoxDecoration(
-                                    // borderRadius: BorderRadius.circular(20),
-                                    gradient: LinearGradient(
-                                      colors: [
-                                        Theme.of(context)
-                                            .colorScheme
-                                            .onSurface
-                                            .withOpacity(0.15),
-                                        const Color(0xFFFFF9B6)
-                                            .withOpacity(0.0),
-                                        const Color(0xFFFFF9B6)
-                                            .withOpacity(0.0),
-                                        const Color(0xFFFFF9B6)
-                                            .withOpacity(0.0),
-                                        Theme.of(context)
-                                            .colorScheme
-                                            .onSurface
-                                            .withOpacity(0.15),
-                                      ],
-                                      begin: Alignment.centerLeft,
-                                      end: Alignment.centerRight,
-                                    ),
-                                  ),
-                                )
-                              : const SizedBox(),
-                          showAppBar
-                              ? Positioned(
-                                  child: Padding(
-                                    padding: const EdgeInsets.only(
-                                        right: 20.0, top: 10),
-                                    child: InkWell(
-                                      onTap: () => Navigator.of(context).pop(),
-                                      child: Container(
-                                        height: 40,
-                                        width: 45,
-                                        // padding:
-                                        //     const EdgeInsets.only(right: 5),
-                                        decoration: BoxDecoration(
-                                            color: Theme.of(context)
-                                                .scaffoldBackgroundColor,
-                                            borderRadius:
-                                                BorderRadius.circular(8),
-                                            boxShadow: const [
-                                              BoxShadow(
-                                                  color: Colors.black26,
-                                                  blurRadius: 3,
-                                                  offset: Offset(1, 3))
-                                            ]),
-                                        child: Center(
-                                            child: Icon(
-                                          Icons.arrow_back,
-                                          size: 20,
-                                          color: Theme.of(context)
-                                              .colorScheme
-                                              .onSurface,
-                                        )),
+                              ),
+                              Spacer(),
+                              Container(
+                                color: Theme.of(context)
+                                    .scaffoldBackgroundColor
+                                    .withOpacity(0.7),
+                                height: size.height * 0.15,
+                                child: Column(
+                                  children: [
+                                    SizedBox(
+                                      height: size.height * 0.04,
+                                      child: Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceEvenly,
+                                        children: [
+                                          FittedBox(
+                                            child: Text(
+                                              "الصفحة : ${getVerseEndSymbol(num.toInt() + 1)}",
+                                              style: Theme.of(context)
+                                                  .textTheme
+                                                  .headline6,
+                                            ),
+                                          ),
+                                          FittedBox(
+                                            child: Text(
+                                              "سورة : ${state.quranPageModel.page[num.toInt()].name}",
+                                              style: Theme.of(context)
+                                                  .textTheme
+                                                  .headline6,
+                                            ),
+                                          )
+                                        ],
                                       ),
                                     ),
-                                  ),
-                                )
-                              : const SizedBox(),
-                          //
-                        ],
-                      );
-                    }),
+                                    Slider(
+                                        value: num,
+                                        max: 603,
+                                        min: 0,
+                                        divisions: 604,
+                                        onChangeEnd: (value) {
+                                          pageController.jumpToPage(creindex);
+                                        },
+                                        onChanged: (value) {
+                                          setState(() {
+                                            num = value;
+                                            creindex = value.toInt();
+                                          });
+                                        }),
+                                  ],
+                                ),
+                              )
+                            ],
+                          )
+                        : SizedBox.shrink(),
+                  ],
+                ),
               ),
             );
           }
@@ -268,4 +393,13 @@ class _QuranPageScreanState extends State<QuranPageScrean> {
       ),
     );
   }
+}
+
+base64ToImageFormatter(page) {
+  final data = page
+      .toString()
+      .substring(1, page.toString().length - 1)
+      .replaceFirst("'", "");
+
+  return data;
 }

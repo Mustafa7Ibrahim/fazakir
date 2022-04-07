@@ -13,13 +13,16 @@ import 'data_source/local/hive_helper.dart';
 import 'injection_container.dart' as di;
 import 'injection_container.dart';
 import 'myobserver.dart';
+import 'package:wakelock/wakelock.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  Wakelock.enable();
   await NotificationSet.init();
   await HiveHelper.init();
   await TimeZoneCo.configureLocalTimeZone();
   await di.init();
+
   final String initialRoute = await NotificationSet.decideWhichRouteToLanch();
 
   BlocOverrides.runZoned(
