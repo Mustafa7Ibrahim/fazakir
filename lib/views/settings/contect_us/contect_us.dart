@@ -21,7 +21,7 @@ class _ContactUSState extends State<ContactUS> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("مركز المساعدة")),
+      appBar: AppBar(title: const Text("مركز المساعدة")),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -36,7 +36,7 @@ class _ContactUSState extends State<ContactUS> {
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           Padding(
@@ -47,14 +47,14 @@ class _ContactUSState extends State<ContactUS> {
               textAlign: TextAlign.justify,
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           ListTile(
             onTap: () async {
               await openWhatsApp();
             },
-            title: Text("اضغط هنا للتواصل معنا "),
+            title: const Text("اضغط هنا للتواصل معنا "),
             leading: Icon(
               Icons.mail,
               color: Theme.of(context).colorScheme.primary,

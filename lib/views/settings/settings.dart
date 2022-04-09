@@ -53,12 +53,12 @@ class _SettingsState extends State<Settings> {
               },
               size: size,
               title: themMode ? "الوضع الليلي " : "الوضع النهاري",
-              colorstyle: themMode ? null : Color.fromARGB(255, 0, 0, 0),
+              colorstyle: themMode ? null : const Color.fromARGB(255, 0, 0, 0),
               colors: [
                 Theme.of(context).colorScheme.secondary,
                 themMode
-                    ? Color.fromARGB(255, 0, 0, 0)
-                    : Color.fromARGB(255, 241, 241, 241),
+                    ? const Color.fromARGB(255, 0, 0, 0)
+                    : const Color.fromARGB(255, 241, 241, 241),
               ],
             ),
             CustomCard(
@@ -69,7 +69,7 @@ class _SettingsState extends State<Settings> {
               title: "عن التطبيق",
               colors: [
                 Theme.of(context).colorScheme.secondary,
-                Color.fromARGB(255, 37, 62, 131),
+                const Color.fromARGB(255, 37, 62, 131),
               ],
             ),
             CustomCard(
@@ -80,7 +80,7 @@ class _SettingsState extends State<Settings> {
               title: "مركز المساعدة",
               colors: [
                 Theme.of(context).colorScheme.secondary,
-                Color.fromARGB(255, 33, 131, 131),
+                const Color.fromARGB(255, 33, 131, 131),
               ],
             ),
             CustomCard(
@@ -105,7 +105,7 @@ class _SettingsState extends State<Settings> {
                 const Color(0xffBD84CA),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Text(

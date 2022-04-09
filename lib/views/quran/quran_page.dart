@@ -319,18 +319,18 @@ class _QuranPageScreanState extends State<QuranPageScrean> {
                                         onPressed: () {
                                           Navigator.pop(context);
                                         },
-                                        icon: Icon(Icons.arrow_back)),
+                                        icon: const Icon(Icons.arrow_back)),
                                     IconButton(
                                         onPressed: () {
                                           setState(() {
                                             fullscrean = !fullscrean;
                                           });
                                         },
-                                        icon: Icon(Icons.fullscreen))
+                                        icon: const Icon(Icons.fullscreen))
                                   ],
                                 ),
                               ),
-                              Spacer(),
+                              const Spacer(),
                               Container(
                                 color: Theme.of(context)
                                     .scaffoldBackgroundColor
@@ -382,7 +382,7 @@ class _QuranPageScreanState extends State<QuranPageScrean> {
                               )
                             ],
                           )
-                        : SizedBox.shrink(),
+                        : const SizedBox.shrink(),
                   ],
                 ),
               ),

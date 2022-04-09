@@ -9,7 +9,7 @@ class InfoApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("عن التطبيق"),
+        title: const Text("عن التطبيق"),
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -29,7 +29,7 @@ class InfoApp extends StatelessWidget {
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.1,
             ),
-            ContantInfoApp(
+            const ContantInfoApp(
               title: "(وَذَكِّرْ فَإِنَّ الذِّكْرَىٰ تَنفَعُ الْمُؤْمِنِينَ)",
               info:
                   """من منطلق الذكر الكريم فقد حرص مطوري تطبيق " فذكر " علي تقديم محتوي الكتروني اسلامي  هادف لاعانة المسلمين في شتي بقاع الارض علي الذكر .
@@ -38,7 +38,7 @@ class InfoApp extends StatelessWidget {
 ومن منطلق هذا الحيث فقد قام مطوري التطبيق باضافة جميع ضوابط المسلم اليومية 
       """,
             ),
-            ContantInfoApp(title: "اقسام التطبيق ", info: """
+            const ContantInfoApp(title: "اقسام التطبيق ", info: """
 - كتاب حصن المسلم :يحتوي علي جميع الاذكار 
 - السبحة الالكترونية
 - القرآ الكريم كامل 
@@ -47,7 +47,7 @@ class InfoApp extends StatelessWidget {
 - مناسك الحج والعمرة 
       
       """),
-            ContantInfoApp(
+            const ContantInfoApp(
                 title: "الاذونات",
                 info:
                     "- تحديد الموقع الحالي : يقوم التطبيق بالحصول علي اذونات تحديد الموقع  الحالي بغرض الحصول علي ادق مواعيد للاذان")
