@@ -1,5 +1,6 @@
-import 'package:fazakir/models/data_model/data_model.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+
+import '../data_model/data_model.dart';
 
 part 'prayer_responce.freezed.dart';
 part 'prayer_responce.g.dart';

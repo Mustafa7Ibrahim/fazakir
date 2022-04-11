@@ -1,11 +1,11 @@
 import 'dart:io';
 
-import 'package:fazakir/nav_bar.dart';
+import '../../nav_bar.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 
-import '../../views/prayer_times/prayer_times.dart';
+import '../../features/azan/presentation/view/prayer_times.dart';
 
 final FlutterLocalNotificationsPlugin notificationsPlugin =
     FlutterLocalNotificationsPlugin();

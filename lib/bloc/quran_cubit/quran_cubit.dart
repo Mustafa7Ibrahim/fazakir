@@ -1,7 +1,7 @@
-import 'package:fazakir/bloc/quran_cubit/quran_state.dart';
-import 'package:fazakir/models/quran_page_model.dart';
-import 'package:fazakir/models/soura_detals_model.dart';
-import 'package:fazakir/repository/quran_repository/quran_repository.dart';
+import 'quran_state.dart';
+import '../../models/quran_page_model.dart';
+import '../../models/soura_detals_model.dart';
+import '../../repository/quran_repository/quran_repository.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class QuranCubit extends Cubit<QuranState> {

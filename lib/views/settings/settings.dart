@@ -1,6 +1,6 @@
-import 'package:fazakir/views/settings/contect_us/contect_us.dart';
-import 'package:fazakir/views/settings/privacy_policy/privacy_policy.dart';
-import 'package:fazakir/views/settings/terms_and_conditions/terms_and_conditions.dart';
+import 'contect_us/contect_us.dart';
+import 'privacy_policy/privacy_policy.dart';
+import 'terms_and_conditions/terms_and_conditions.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:package_info_plus/package_info_plus.dart';

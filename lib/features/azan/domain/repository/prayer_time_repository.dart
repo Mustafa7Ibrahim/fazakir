@@ -1,14 +1,15 @@
 import 'dart:convert';
 
 import 'package:dio/dio.dart';
-import '../../core/constant/prayer_time_constant.dart';
-import '../../core/date/date_formatter.dart';
-import '../../core/location/location.dart';
-import '../../data_source/remote/dio_helper.dart';
-import '../../models/data_model/data_model.dart';
-import '../../models/method_model/method_model.dart';
-import 'save_prayer_time.dart';
 import 'package:geolocator/geolocator.dart';
+
+import '../../../../core/constant/prayer_time_constant.dart';
+import '../../../../core/date/date_formatter.dart';
+import '../../../../core/location/location.dart';
+import '../../../../data_source/remote/dio_helper.dart';
+import '../../data/models/data_model/data_model.dart';
+import '../../data/models/method_model/method_model.dart';
+import 'save_prayer_time.dart';
 
 class PryaerTimeRepositiory {
   final DioHelper dioHelper;

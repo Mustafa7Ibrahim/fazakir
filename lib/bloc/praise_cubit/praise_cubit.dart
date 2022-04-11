@@ -1,4 +1,4 @@
-import 'package:fazakir/data_source/local/hive_helper.dart';
+import '../../data_source/local/hive_helper.dart';
 
 import 'praise_state.dart';
 import '../../models/praise_model.dart';

@@ -1,9 +1,10 @@
-import '../../bloc/prayer_cubit/prayer_cubit.dart';
-import '../../injection_container.dart';
-import '../../repository/prayer_time_repository/prayer_time_repository.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+
+import '../../../../injection_container.dart';
+import '../../domain/repository/prayer_time_repository.dart';
+import '../cubit/prayer_cubit.dart';
 
 class AskToGetCurrentLocation extends StatelessWidget {
   const AskToGetCurrentLocation({

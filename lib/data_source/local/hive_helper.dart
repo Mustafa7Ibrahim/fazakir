@@ -1,5 +1,6 @@
-import '../../models/prayer_settings_model/prayer_settings_model.dart';
 import 'package:hive_flutter/hive_flutter.dart';
+
+import '../../features/azan/data/models/prayer_settings_model/prayer_settings_model.dart';
 
 const String prayerBoxName = "PrayerTimes";
 const String prayerMonthListBox = "PrayerMonthListBox";

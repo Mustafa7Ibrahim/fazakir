@@ -1,11 +1,11 @@
-import 'package:fazakir/nav_bar.dart';
-import 'package:fazakir/views/hug/hug_view.dart';
-import 'package:fazakir/views/quran/quran_page.dart';
-import 'package:fazakir/views/settings/contect_us/contect_us.dart';
-import 'package:fazakir/views/settings/info_app/info_app.dart';
-import 'package:fazakir/views/settings/privacy_policy/privacy_policy.dart';
-import 'package:fazakir/views/settings/settings.dart';
-import 'package:fazakir/views/settings/terms_and_conditions/terms_and_conditions.dart';
+import '../../nav_bar.dart';
+import '../../views/hug/hug_view.dart';
+import '../../views/quran/quran_page.dart';
+import '../../views/settings/contect_us/contect_us.dart';
+import '../../views/settings/info_app/info_app.dart';
+import '../../views/settings/privacy_policy/privacy_policy.dart';
+import '../../views/settings/settings.dart';
+import '../../views/settings/terms_and_conditions/terms_and_conditions.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

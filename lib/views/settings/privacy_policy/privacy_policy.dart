@@ -1,4 +1,4 @@
-import 'package:fazakir/views/settings/widgets/policy.dart';
+import '../widgets/policy.dart';
 import 'package:flutter/material.dart';
 
 const file = "assets/md/privacy.md";

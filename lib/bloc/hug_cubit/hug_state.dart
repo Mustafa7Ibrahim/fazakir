@@ -1,5 +1,5 @@
 import 'package:equatable/equatable.dart';
-import 'package:fazakir/models/hug_model.dart';
+import '../../models/hug_model.dart';
 
 abstract class HugState extends Equatable {
   const HugState();

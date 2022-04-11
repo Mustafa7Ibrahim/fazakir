@@ -1,5 +1,6 @@
-import 'package:fazakir/views/settings/widgets/policy.dart';
 import 'package:flutter/material.dart';
+
+import '../widgets/policy.dart';
 
 const file = "assets/md/terms&conditions.md";
 

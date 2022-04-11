@@ -1,6 +1,7 @@
+import 'package:freezed_annotation/freezed_annotation.dart';
+
 import '../date_model/date_model.dart';
 import '../timings_model/timings_model.dart';
-import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'data_model.freezed.dart';
 part 'data_model.g.dart';

@@ -1,4 +1,4 @@
-import 'package:fazakir/core/date/time_zone_co.dart';
+import 'core/date/time_zone_co.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';

@@ -1,5 +1,5 @@
 import 'package:bloc/bloc.dart';
-import 'package:fazakir/data_source/local/hive_helper.dart';
+import '../../data_source/local/hive_helper.dart';
 
 class ThemeModeCubit extends Cubit<bool> {
   final HiveHelper hiveHelper;

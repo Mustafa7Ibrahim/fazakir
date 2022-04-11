@@ -1,5 +1,5 @@
-import 'package:fazakir/models/hug_model.dart';
-import 'package:fazakir/repository/hug_repository/hug_repository.dart';
+import '../../models/hug_model.dart';
+import '../../repository/hug_repository/hug_repository.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'hug_state.dart';

@@ -2,10 +2,10 @@ import 'dart:developer';
 
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
-import 'package:fazakir/use_cases/prayer_times_use_case/prayer_calendar_use_case.dart';
 
-import '../../data_source/local/hive_helper.dart';
-import '../../models/data_model/data_model.dart';
+import '../../../../data_source/local/hive_helper.dart';
+import '../../data/models/data_model/data_model.dart';
+import '../../data/use_case/prayer_calendar_use_case.dart';
 
 part 'prayer_state.dart';
 

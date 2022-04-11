@@ -1,6 +1,6 @@
-import 'package:fazakir/bloc/quran_cubit/quran_cubit.dart';
-import 'package:fazakir/bloc/quran_cubit/quran_state.dart';
-import 'package:fazakir/views/quran/quran_page.dart';
+import '../../bloc/quran_cubit/quran_cubit.dart';
+import '../../bloc/quran_cubit/quran_state.dart';
+import 'quran_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';

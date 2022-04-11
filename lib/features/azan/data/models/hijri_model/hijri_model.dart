@@ -1,7 +1,8 @@
-import '../designation_model/designation_model.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
+
+import '../../../../../models/designation_model/designation_model.dart';
 import '../month_model/month_model.dart';
 import '../weekday_model/weekday_model.dart';
-import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'hijri_model.freezed.dart';
 part 'hijri_model.g.dart';

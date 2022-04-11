@@ -1,5 +1,6 @@
-import '../../models/praise_model.dart';
 import 'package:flutter/material.dart';
+
+import '../../models/praise_model.dart';
 
 class PraiseInfo extends StatelessWidget {
   static const routeName = "/praise_info";

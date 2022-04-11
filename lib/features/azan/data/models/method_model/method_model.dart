@@ -1,8 +1,9 @@
 import 'dart:convert';
 
+import 'package:freezed_annotation/freezed_annotation.dart';
+
 import '../location_model/location_model.dart';
 import '../params_model/params_model.dart';
-import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'method_model.freezed.dart';
 part 'method_model.g.dart';

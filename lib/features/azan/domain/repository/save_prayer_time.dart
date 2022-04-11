@@ -1,5 +1,5 @@
-import '../../data_source/local/hive_helper.dart';
-import '../../models/prayer_settings_model/prayer_settings_enum.dart';
+import '../../../../data_source/local/hive_helper.dart';
+import '../../data/models/prayer_settings_model/prayer_settings_enum.dart';
 
 class SavePrayerTimes {
   final HiveHelper hiveHelper;

@@ -1,10 +1,11 @@
-import '../../bloc/azkar_cubit/azkar_cubit.dart';
-import '../../injection_container.dart';
-import '../zekr/zekr_list.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+
+import '../../bloc/azkar_cubit/azkar_cubit.dart';
+import '../../injection_container.dart';
+import '../zekr/zekr_list.dart';
 
 class AzkarList extends StatelessWidget {
   const AzkarList({Key? key}) : super(key: key);

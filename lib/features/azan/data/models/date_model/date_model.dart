@@ -1,6 +1,7 @@
+import 'package:freezed_annotation/freezed_annotation.dart';
+
 import '../gregorian_model/gregorian_model.dart';
 import '../hijri_model/hijri_model.dart';
-import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'date_model.freezed.dart';
 part 'date_model.g.dart';

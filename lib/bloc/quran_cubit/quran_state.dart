@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
-import 'package:fazakir/models/quran_page_model.dart';
-import 'package:fazakir/models/soura_detals_model.dart';
+import '../../models/quran_page_model.dart';
+import '../../models/soura_detals_model.dart';
 
 abstract class QuranState extends Equatable {
   const QuranState();

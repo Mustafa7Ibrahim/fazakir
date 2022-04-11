@@ -1,8 +1,9 @@
-import 'package:fazakir/views/home/home.dart';
-import 'package:fazakir/views/prayer_times/prayer_times.dart';
-import 'package:fazakir/views/quran/soura_list.dart';
-import 'package:fazakir/views/settings/settings.dart';
+import 'views/home/home.dart';
+import 'views/quran/soura_list.dart';
+import 'views/settings/settings.dart';
 import 'package:flutter/material.dart';
+
+import 'features/azan/presentation/view/prayer_times.dart';
 
 class NavBar extends StatefulWidget {
   const NavBar({Key? key}) : super(key: key);

@@ -1,6 +1,6 @@
-import 'package:fazakir/bloc/hug_cubit/hug_cubit.dart';
-import 'package:fazakir/bloc/hug_cubit/hug_state.dart';
-import 'package:fazakir/injection_container.dart';
+import '../../bloc/hug_cubit/hug_cubit.dart';
+import '../../bloc/hug_cubit/hug_state.dart';
+import '../../injection_container.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

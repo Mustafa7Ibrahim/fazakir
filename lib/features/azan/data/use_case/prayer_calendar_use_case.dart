@@ -1,11 +1,12 @@
 import 'dart:convert';
 
 import 'package:dio/dio.dart';
-import 'package:fazakir/core/constant/prayer_time_constant.dart';
-import 'package:fazakir/core/date/time_zone_co.dart';
-import 'package:fazakir/data_source/remote/dio_helper.dart';
-import 'package:fazakir/models/prayer_responce/prayer_responce.dart';
-import 'package:fazakir/repository/prayer_time_repository/save_prayer_time.dart';
+import '../../../../core/constant/prayer_time_constant.dart';
+import '../../../../core/date/time_zone_co.dart';
+import '../../../../data_source/remote/dio_helper.dart';
+
+import '../../domain/repository/save_prayer_time.dart';
+import '../models/prayer_responce/prayer_responce.dart';
 
 class PrayerCalenderUseCase {
   PrayerCalenderUseCase({

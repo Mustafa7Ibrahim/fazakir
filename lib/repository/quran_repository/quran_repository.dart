@@ -1,8 +1,8 @@
 import 'dart:convert';
 
-import 'package:fazakir/data_source/local/json_helper.dart';
-import 'package:fazakir/models/quran_page_model.dart';
-import 'package:fazakir/models/soura_detals_model.dart';
+import '../../data_source/local/json_helper.dart';
+import '../../models/quran_page_model.dart';
+import '../../models/soura_detals_model.dart';
 
 class QuranRepository {
   final JsonHelper jsonHelper;

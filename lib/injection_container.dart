@@ -1,11 +1,9 @@
 import 'package:dio/dio.dart';
-import 'package:fazakir/use_cases/prayer_times_use_case/prayer_calendar_use_case.dart';
 import 'package:get_it/get_it.dart';
 
 import 'bloc/azkar_cubit/azkar_cubit.dart';
 import 'bloc/hug_cubit/hug_cubit.dart';
 import 'bloc/praise_cubit/praise_cubit.dart';
-import 'bloc/prayer_cubit/prayer_cubit.dart';
 import 'bloc/quran_cubit/quran_cubit.dart';
 import 'bloc/salah_cubit/salah_cubit.dart';
 import 'bloc/save_quran_page_cubit/save_quran_page_cubit.dart';
@@ -16,11 +14,13 @@ import 'core/date/date_formatter.dart';
 import 'data_source/local/hive_helper.dart';
 import 'data_source/local/json_helper.dart';
 import 'data_source/remote/dio_helper.dart';
+import 'features/azan/data/use_case/prayer_calendar_use_case.dart';
+import 'features/azan/domain/repository/prayer_time_repository.dart';
+import 'features/azan/domain/repository/save_prayer_time.dart';
+import 'features/azan/presentation/cubit/prayer_cubit.dart';
 import 'repository/azkar_repository/azkar_repository.dart';
 import 'repository/hug_repository/hug_repository.dart';
 import 'repository/praise_repository/praise_repository.dart';
-import 'repository/prayer_time_repository/prayer_time_repository.dart';
-import 'repository/prayer_time_repository/save_prayer_time.dart';
 import 'repository/quran_repository/quran_repository.dart';
 import 'repository/salah_repositroy/salah_repository.dart';
 

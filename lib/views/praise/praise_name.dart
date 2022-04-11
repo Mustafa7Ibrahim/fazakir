@@ -1,9 +1,10 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+
 import '../../bloc/praise_cubit/praise_cubit.dart';
 import '../../bloc/zekr_cubit/zekr_cubit.dart';
 import '../../models/praise_model.dart';
 import 'praise_info.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 
 class PraiseName extends StatelessWidget {
   const PraiseName({

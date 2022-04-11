@@ -1,6 +1,6 @@
-import 'package:fazakir/bloc/save_quran_page_cubit/save_quran_page_cubit.dart';
-import 'package:fazakir/bloc/save_quran_page_cubit/save_quran_page_state.dart';
-import 'package:fazakir/views/hug/hug_view.dart';
+import '../../bloc/save_quran_page_cubit/save_quran_page_cubit.dart';
+import '../../bloc/save_quran_page_cubit/save_quran_page_state.dart';
+import '../hug/hug_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

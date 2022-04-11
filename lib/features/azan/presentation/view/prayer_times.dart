@@ -1,11 +1,12 @@
-import '../../bloc/prayer_cubit/prayer_cubit.dart';
-import '../../injection_container.dart';
-import '../../models/data_model/data_model.dart';
-import 'prayer_first_time.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:intl/intl.dart';
+
+import '../../../../injection_container.dart';
+import '../../data/models/data_model/data_model.dart';
+import '../cubit/prayer_cubit.dart';
+import 'prayer_first_time.dart';
 
 class PrayerTime extends StatelessWidget {
   const PrayerTime({Key? key}) : super(key: key);
@@ -31,13 +32,16 @@ class PrayerTime extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   const Center(
-                      child: Text(
-                          "يوجد عطل في الاتصال بالانترنت برجاء اعاده المحاولة")),
+                    child: Text(
+                      "يوجد عطل في الاتصال بالانترنت برجاء اعاده المحاولة",
+                    ),
+                  ),
                   IconButton(
-                      onPressed: () {
-                        BlocProvider.of<PrayerCubit>(context).getPrayerTimes();
-                      },
-                      icon: const Icon(Icons.refresh))
+                    onPressed: () {
+                      BlocProvider.of<PrayerCubit>(context).getPrayerTimes();
+                    },
+                    icon: const Icon(Icons.refresh),
+                  )
                 ],
               );
             }
