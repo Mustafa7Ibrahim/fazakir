@@ -15,7 +15,7 @@
 </queries>
 
    <application
-        android:label="fazakir"
+        android:label="فَذَكِّرْ"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"
