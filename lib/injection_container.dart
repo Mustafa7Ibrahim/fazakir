@@ -40,7 +40,8 @@ Future<void> init() async {
     ),
   );
   getIt.registerFactory(() => SalahCubit(salahRepositiry: getIt()));
-  getIt.registerFactory(() => QuranCubit(quranRepository: getIt()));
+  getIt.registerFactory(
+      () => QuranCubit(quranRepository: getIt(), hiveHelper: getIt()));
   getIt.registerFactory(() => SaveQuranPageCubit(hiveHelper: getIt()));
   getIt.registerFactory(() => HugCubit(hugRepositiry: getIt()));
   getIt.registerFactory(() => ThemeModeCubit(getIt()));

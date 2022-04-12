@@ -1,3 +1,5 @@
+import 'package:fazakir/bloc/azkar_cubit/azkar_cubit.dart';
+
 import 'core/date/time_zone_co.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -40,9 +42,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiBlocProvider(
       providers: [
-        BlocProvider<QuranCubit>(create: (context) => getIt<QuranCubit>()),
+        BlocProvider<QuranCubit>(
+            create: (context) => getIt<QuranCubit>()..getMarkPage()),
         BlocProvider<ThemeModeCubit>(
             create: (context) => getIt<ThemeModeCubit>()),
+        BlocProvider<AzkarCubit>(create: (context) => getIt<AzkarCubit>()),
         BlocProvider<SaveQuranPageCubit>(
             create: (context) => getIt<SaveQuranPageCubit>()..getQuranPage()),
       ],

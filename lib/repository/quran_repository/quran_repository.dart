@@ -21,7 +21,7 @@ class QuranRepository {
 
   Future<QuranPageModel> getListOfQuranPage() async {
     final String data = await jsonHelper.convertJsonFileToList(
-        jsonFile: 'assets/json/quran_index.json');
+        jsonFile: 'assets/json/quran_page.json');
     final list = json.decode(data);
     QuranPageModel quranPageModel = QuranPageModel.fromjson(list);
     return quranPageModel;

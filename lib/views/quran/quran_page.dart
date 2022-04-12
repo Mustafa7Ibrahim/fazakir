@@ -21,6 +21,7 @@ class _QuranPageScreanState extends State<QuranPageScrean> {
   bool showAppBar = false;
   bool fullscrean = false;
   late double num;
+  int? indexpa;
 
   String getVerseEndSymbol(int verseNumber) {
     String arabicNumeric = " ";
@@ -73,6 +74,29 @@ class _QuranPageScreanState extends State<QuranPageScrean> {
     super.dispose();
   }
 
+  Widget savePage(
+      {required String title,
+      required Function()? ontap,
+      required IconData icon}) {
+    return InkWell(
+      onTap: ontap,
+      child: SizedBox(
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            FittedBox(
+              child: Text(
+                title,
+                style: Theme.of(context).textTheme.headline6,
+              ),
+            ),
+            Icon(icon),
+          ],
+        ),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
@@ -112,6 +136,7 @@ class _QuranPageScreanState extends State<QuranPageScrean> {
                         controller: pageController,
                         itemCount: state.quranPageModel.page.length,
                         itemBuilder: (context, index) {
+                          indexpa = index;
                           return Stack(
                             children: [
                               Container(
@@ -214,17 +239,12 @@ class _QuranPageScreanState extends State<QuranPageScrean> {
                                             child: Container(
                                               decoration: BoxDecoration(
                                                 image: DecorationImage(
-                                                    invertColors:
-                                                        !ThemeHandler()
-                                                            .isDark(context),
-                                                    image: MemoryImage(
-                                                        base64Decode(
-                                                      base64ToImageFormatter(
-                                                          state
-                                                              .quranPageModel
-                                                              .page[index]
-                                                              .page),
-                                                    ))),
+                                                  invertColors: !ThemeHandler()
+                                                      .isDark(context),
+                                                  image: AssetImage(
+                                                    "assets/images/quran-images/page${index + 1}.png",
+                                                  ),
+                                                ),
                                               ),
                                             ),
                                           ),
@@ -300,6 +320,27 @@ class _QuranPageScreanState extends State<QuranPageScrean> {
                                       ),
                                     )
                                   : const SizedBox(),
+                              if (index ==
+                                  BlocProvider.of<QuranCubit>(context)
+                                      .markPageNo)
+                                Align(
+                                  alignment: Alignment.topLeft,
+                                  child: Container(
+                                    margin: const EdgeInsets.symmetric(
+                                        horizontal: 30),
+                                    height: size.height * 0.25,
+                                    width: size.width * 0.05,
+                                    decoration: BoxDecoration(
+                                        color: const Color.fromARGB(
+                                                255, 107, 26, 20)
+                                            .withOpacity(0.5),
+                                        borderRadius: const BorderRadius.only(
+                                            bottomLeft:
+                                                Radius.elliptical(20, 50),
+                                            bottomRight:
+                                                Radius.elliptical(20, 50))),
+                                  ),
+                                )
                             ],
                           );
                         }),
@@ -335,9 +376,60 @@ class _QuranPageScreanState extends State<QuranPageScrean> {
                                 color: Theme.of(context)
                                     .scaffoldBackgroundColor
                                     .withOpacity(0.7),
-                                height: size.height * 0.15,
+                                height: size.height * 0.25,
                                 child: Column(
                                   children: [
+                                    SizedBox(
+                                      height: size.height * 0.04,
+                                      child: Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceEvenly,
+                                        children: [
+                                          Expanded(
+                                            child: savePage(
+                                                ontap: () {
+                                                  BlocProvider.of<QuranCubit>(
+                                                          context)
+                                                      .addMarkPage(
+                                                          value: indexpa)
+                                                      .then((value) =>
+                                                          BlocProvider.of<
+                                                                      QuranCubit>(
+                                                                  context)
+                                                              .getpage());
+                                                },
+                                                title: "اضف علامة",
+                                                icon: Icons.book_outlined),
+                                          ),
+                                          VerticalDivider(
+                                            thickness: 1.0,
+                                            color: Theme.of(context)
+                                                .colorScheme
+                                                .secondary
+                                                .withOpacity(0.7),
+                                          ),
+                                          Expanded(
+                                            child: savePage(
+                                                ontap: () {
+                                                  pageController.jumpToPage(
+                                                      BlocProvider.of<
+                                                                  QuranCubit>(
+                                                              context)
+                                                          .markPageNo);
+                                                },
+                                                title: "انتقال الي العلامة",
+                                                icon: Icons.bookmark_outlined),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                    Divider(
+                                      thickness: 1.0,
+                                      color: Theme.of(context)
+                                          .colorScheme
+                                          .secondary
+                                          .withOpacity(0.7),
+                                    ),
                                     SizedBox(
                                       height: size.height * 0.04,
                                       child: Row(
@@ -395,11 +487,11 @@ class _QuranPageScreanState extends State<QuranPageScrean> {
   }
 }
 
-base64ToImageFormatter(page) {
-  final data = page
-      .toString()
-      .substring(1, page.toString().length - 1)
-      .replaceFirst("'", "");
+// base64ToImageFormatter(page) {
+//   final data = page
+//       .toString()
+//       .substring(1, page.toString().length - 1)
+//       .replaceFirst("'", "");
 
-  return data;
-}
+//   return data;
+// }

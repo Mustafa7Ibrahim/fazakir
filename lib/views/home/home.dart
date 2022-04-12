@@ -1,3 +1,4 @@
+import '../../bloc/azkar_cubit/azkar_cubit.dart';
 import '../../bloc/save_quran_page_cubit/save_quran_page_cubit.dart';
 import '../../bloc/save_quran_page_cubit/save_quran_page_state.dart';
 import '../hug/hug_view.dart';
@@ -11,6 +12,7 @@ import '../azkar/azkar_list.dart';
 import '../praise/praise.dart';
 import '../quran/quran_page.dart';
 import '../salah/salah.dart';
+import '../zekr/zekr_list.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -22,6 +24,9 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  bool mornig = DateTime.now().hour >= 5 && DateTime.now().hour <= 10;
+  bool nigth = DateTime.now().hour >= 16 && DateTime.now().hour <= 19;
+
   // tz.TZDateTime _nextInstanceOfTenAM() {
   //   final tz.TZDateTime now = tz.TZDateTime.now(tz.local);
   //   tz.TZDateTime scheduledDate = tz.TZDateTime(
@@ -172,6 +177,37 @@ class _HomeState extends State<Home> {
                       );
                     },
                   ),
+                  if (mornig || nigth)
+                    CustomCard(
+                      onTap: () {
+                        BlocProvider.of<AzkarCubit>(context)
+                            .getAzkar()
+                            .then((value) {
+                          var pageMor =
+                              BlocProvider.of<AzkarCubit>(context).azkar?[28];
+                          var pagenig =
+                              BlocProvider.of<AzkarCubit>(context).azkar?[29];
+                          Navigator.pushNamed(
+                            context,
+                            ZekrList.routeName,
+                            arguments: mornig ? pageMor : pagenig,
+                          );
+                        });
+                      },
+                      size: size,
+                      image: mornig
+                          ? "assets/icons/morning.svg"
+                          : "assets/icons/moon.svg",
+                      title: mornig
+                          ? "أَذْكَارُ الصَّبَاحِ"
+                          : "أَذْكَارُ الْمَسَاءِ",
+                      colors: [
+                        Theme.of(context).colorScheme.secondary,
+                        mornig
+                            ? const Color.fromARGB(255, 112, 169, 207)
+                            : const Color.fromARGB(255, 18, 30, 65),
+                      ],
+                    ),
                   CustomCard(
                     onTap: () {
                       Navigator.pushNamed(context, AzkarList.routeName);

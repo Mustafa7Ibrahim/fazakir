@@ -12,12 +12,12 @@ class AzkarCubit extends Cubit<AzkarState> {
   final AzkarRepositiry azkarRepositiry;
 
   static AzkarCubit get(context) => BlocProvider.of(context);
-
-  void getAzkar() async {
+  List<AzkarModel>? azkar;
+  getAzkar() async {
     emit(AzkarLoading());
     try {
-      final List<AzkarModel> azkar = await azkarRepositiry.getListOfAzkar();
-      emit(AzkarLoaded(azkar));
+      azkar = await azkarRepositiry.getListOfAzkar();
+      emit(AzkarLoaded(azkar!));
     } catch (e) {
       emit(AzkarError(e.toString()));
       addError(e);
