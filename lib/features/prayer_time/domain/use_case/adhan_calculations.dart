@@ -1,9 +1,8 @@
 // ignore: import_of_legacy_library_into_null_safe
 import 'package:adhan/adhan.dart';
-import 'package:intl/intl.dart';
-
 import 'package:fazakir/core/location/location.dart';
 import 'package:fazakir/features/prayer_time/data/models/adhantimes/adhantimes_model.dart';
+import 'package:intl/intl.dart';
 
 class AdhanCalculations {
   Future<AdhanTimes> getAdhansOfASpecificDay({
