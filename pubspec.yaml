@@ -36,6 +36,7 @@ dependencies:
   url_launcher: ^6.0.20
   package_info_plus: ^1.4.0
   wakelock: ^0.6.1+2
+  adhan: ^1.1.16
 
 dev_dependencies:
   flutter_test:

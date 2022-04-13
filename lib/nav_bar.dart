@@ -1,12 +1,9 @@
-import 'package:flutter_bloc/flutter_bloc.dart';
-
-import 'bloc/azkar_cubit/azkar_cubit.dart';
-import 'views/home/home.dart';
-import 'views/quran/soura_list.dart';
-import 'views/settings/settings.dart';
 import 'package:flutter/material.dart';
 
 import 'features/azan/presentation/view/prayer_times.dart';
+import 'views/home/home.dart';
+import 'views/quran/soura_list.dart';
+import 'views/settings/settings.dart';
 
 class NavBar extends StatefulWidget {
   const NavBar({Key? key}) : super(key: key);

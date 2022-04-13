@@ -1,12 +1,11 @@
-import 'dart:convert';
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:wakelock/wakelock.dart';
 
 import '../../bloc/quran_cubit/quran_cubit.dart';
 import '../../bloc/quran_cubit/quran_state.dart';
 import '../../bloc/save_quran_page_cubit/save_quran_page_cubit.dart';
 import '../../core/them_helper.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:wakelock/wakelock.dart';
 
 class QuranPageScrean extends StatefulWidget {
   const QuranPageScrean({Key? key, this.index = 0}) : super(key: key);
