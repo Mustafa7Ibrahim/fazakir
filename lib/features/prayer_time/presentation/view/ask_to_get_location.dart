@@ -1,10 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-
-import '../../../../injection_container.dart';
-import '../../domain/repository/prayer_time_repository.dart';
-import '../cubit/prayer_cubit.dart';
 
 class AskToGetCurrentLocation extends StatelessWidget {
   const AskToGetCurrentLocation({
@@ -51,8 +46,8 @@ class AskToGetCurrentLocation extends StatelessWidget {
               width: size.width,
               child: OutlinedButton(
                 onPressed: () {
-                  getIt<PryaerTimeRepositiory>().getPosition().then((value) =>
-                      BlocProvider.of<PrayerCubit>(context).getPrayerTimes());
+                  // getIt<PryaerTimeRepositiory>().getPosition().then((value) =>
+                  //     BlocProvider.of<PrayerCubit>(context).getPrayerTimes());
                 },
                 style: OutlinedButton.styleFrom(shape: const StadiumBorder()),
                 child: const Text("حدد موقعي"),

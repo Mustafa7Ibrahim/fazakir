@@ -1,6 +1,6 @@
+import 'package:fazakir/features/prayer_time/presentation/view/prayer_times.dart';
 import 'package:flutter/material.dart';
 
-import 'features/azan/presentation/view/prayer_times.dart';
 import 'views/home/home.dart';
 import 'views/quran/soura_list.dart';
 import 'views/settings/settings.dart';

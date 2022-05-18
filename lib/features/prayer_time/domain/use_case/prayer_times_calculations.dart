@@ -4,8 +4,8 @@ import 'package:fazakir/core/location/location.dart';
 import 'package:fazakir/features/prayer_time/data/models/adhantimes/adhantimes_model.dart';
 import 'package:intl/intl.dart';
 
-class AdhanCalculations {
-  Future<AdhanTimes> getAdhansOfASpecificDay({
+class PrayerTimesCalculations {
+  Future<AdhanTimesModel> getAdhansOfASpecificDay({
     required int year,
     required int month,
     required int day,
@@ -18,7 +18,7 @@ class AdhanCalculations {
     final DateComponents date = DateComponents(year, month, day);
     final prayerTimes = PrayerTimes(userPosition, date, params);
 
-    return AdhanTimes(
+    return AdhanTimesModel(
       fajr: dateFormat(prayerTimes.fajr),
       sunrise: dateFormat(prayerTimes.sunrise),
       dhuhr: dateFormat(prayerTimes.dhuhr),
@@ -28,7 +28,7 @@ class AdhanCalculations {
     );
   }
 
-  Future<AdhanTimes> getAdhansOfTheDay() async {
+  Future<AdhanTimesModel> getAdhansOfTheDay() async {
     final position = await Location.getPosition();
     final userPosition = Coordinates(position.latitude, position.longitude);
     final params = CalculationMethod.egyptian.getParameters();
@@ -36,7 +36,7 @@ class AdhanCalculations {
     params.method = CalculationMethod.egyptian;
     final prayerTimes = PrayerTimes.today(userPosition, params);
 
-    return AdhanTimes(
+    return AdhanTimesModel(
       fajr: dateFormat(prayerTimes.fajr),
       sunrise: dateFormat(prayerTimes.sunrise),
       dhuhr: dateFormat(prayerTimes.dhuhr),
@@ -47,6 +47,6 @@ class AdhanCalculations {
   }
 
   String dateFormat(DateTime time) {
-    return DateFormat.jm().format(time);
+    return DateFormat.jm("ar_EG").format(time.toLocal());
   }
 }

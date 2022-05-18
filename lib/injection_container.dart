@@ -1,4 +1,6 @@
 import 'package:dio/dio.dart';
+import 'package:fazakir/features/prayer_time/domain/use_case/prayer_times_calculations.dart';
+import 'package:fazakir/features/prayer_time/presentation/cubit/prayer_time_cubit.dart';
 import 'package:get_it/get_it.dart';
 
 import 'bloc/azkar_cubit/azkar_cubit.dart';
@@ -14,10 +16,6 @@ import 'core/date/date_formatter.dart';
 import 'data_source/local/hive_helper.dart';
 import 'data_source/local/json_helper.dart';
 import 'data_source/remote/dio_helper.dart';
-import 'features/azan/data/use_case/prayer_calendar_use_case.dart';
-import 'features/azan/domain/repository/prayer_time_repository.dart';
-import 'features/azan/domain/repository/save_prayer_time.dart';
-import 'features/azan/presentation/cubit/prayer_cubit.dart';
 import 'repository/azkar_repository/azkar_repository.dart';
 import 'repository/hug_repository/hug_repository.dart';
 import 'repository/praise_repository/praise_repository.dart';
@@ -27,21 +25,19 @@ import 'repository/salah_repositroy/salah_repository.dart';
 final getIt = GetIt.instance;
 
 Future<void> init() async {
-  //! Features - Number Trivia
   // Bloc
   getIt.registerFactory(() => AzkarCubit(azkarRepositiry: getIt()));
   getIt.registerFactory(
-      () => PraiseCubit(praiseRepositiry: getIt(), hiveHelper: getIt()));
+    () => PraiseCubit(praiseRepositiry: getIt(), hiveHelper: getIt()),
+  );
   getIt.registerFactory(() => ZekrCubit());
   getIt.registerFactory(
-    () => PrayerCubit(
-      prayerCalenderUseCase: getIt(),
-      hiveHelper: getIt(),
-    ),
+    () => PrayerTimeCubit(prayerTimesCalculations: getIt()),
   );
   getIt.registerFactory(() => SalahCubit(salahRepositiry: getIt()));
   getIt.registerFactory(
-      () => QuranCubit(quranRepository: getIt(), hiveHelper: getIt()));
+    () => QuranCubit(quranRepository: getIt(), hiveHelper: getIt()),
+  );
   getIt.registerFactory(() => SaveQuranPageCubit(hiveHelper: getIt()));
   getIt.registerFactory(() => HugCubit(hugRepositiry: getIt()));
   getIt.registerFactory(() => ThemeModeCubit(getIt()));
@@ -49,14 +45,6 @@ Future<void> init() async {
   // Repository
   getIt.registerLazySingleton(() => AzkarRepositiry(jsonHelper: getIt()));
   getIt.registerLazySingleton(() => PraiseRepositiry(jsonHelper: getIt()));
-  getIt.registerLazySingleton(
-    () => PryaerTimeRepositiory(
-      dioHelper: getIt(),
-      savePrayerTimes: getIt(),
-      formatter: getIt(),
-    ),
-  );
-  getIt.registerLazySingleton(() => SavePrayerTimes(hiveHelper: getIt()));
   getIt.registerLazySingleton(() => SalahRepositiry(jsonHelper: getIt()));
   getIt.registerLazySingleton(() => QuranRepository(jsonHelper: getIt()));
   getIt.registerLazySingleton(() => HugRepositiry(jsonHelper: getIt()));
@@ -66,18 +54,12 @@ Future<void> init() async {
   getIt.registerLazySingleton(() => HiveHelper());
 
   // user case
-  getIt.registerLazySingleton(
-    () => PrayerCalenderUseCase(
-      dioHelper: getIt(),
-      savePrayerTimes: getIt(),
-    ),
-  );
+  getIt.registerLazySingleton(() => PrayerTimesCalculations());
 
   //! Core
   getIt.registerLazySingleton(() => DateFormatter());
 
   //! External
-
   getIt.registerLazySingleton(() => DioHelper(dio: getIt()));
   getIt.registerLazySingleton(
     () => Dio(

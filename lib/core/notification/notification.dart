@@ -5,8 +5,6 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 
-import '../../features/azan/presentation/view/prayer_times.dart';
-
 final FlutterLocalNotificationsPlugin notificationsPlugin =
     FlutterLocalNotificationsPlugin();
 
@@ -61,7 +59,6 @@ class NotificationSet {
 
     if (appLaunchDetails?.didNotificationLaunchApp ?? false) {
       selectedNotificationPayload = appLaunchDetails!.payload;
-      initialRoute = PrayerTime.routeName;
     }
     return initialRoute;
   }

@@ -6,8 +6,8 @@ part of 'adhantimes_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_AdhanTimes _$$_AdhanTimesFromJson(Map<String, dynamic> json) =>
-    _$_AdhanTimes(
+_$_AdhanTimesModel _$$_AdhanTimesModelFromJson(Map<String, dynamic> json) =>
+    _$_AdhanTimesModel(
       fajr: json['fajr'] as String,
       sunrise: json['sunrise'] as String,
       dhuhr: json['dhuhr'] as String,
@@ -16,7 +16,7 @@ _$_AdhanTimes _$$_AdhanTimesFromJson(Map<String, dynamic> json) =>
       isha: json['isha'] as String,
     );
 
-Map<String, dynamic> _$$_AdhanTimesToJson(_$_AdhanTimes instance) =>
+Map<String, dynamic> _$$_AdhanTimesModelToJson(_$_AdhanTimesModel instance) =>
     <String, dynamic>{
       'fajr': instance.fajr,
       'sunrise': instance.sunrise,
