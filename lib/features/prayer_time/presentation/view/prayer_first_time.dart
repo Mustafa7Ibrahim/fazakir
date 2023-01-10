@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
-import 'ask_to_get_location.dart';
+import '../widgets/ask_to_get_location.dart';
 
 class PrayerFirstTimeSet extends StatefulWidget {
   const PrayerFirstTimeSet({Key? key}) : super(key: key);
