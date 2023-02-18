@@ -29,7 +29,7 @@ class PraiseCount extends StatelessWidget {
           Expanded(
               child: Text(
             "قال تعالي \n ( وَمَنْ أَعْرَضَ عَن ذِكْرِى فَإِنَّ لَهُۥ مَعِيشَةً ضَنكًا وَنَحْشُرُهُۥ يَوْمَ ٱلْقِيَٰمَةِ أَعْمَىٰ )* صدق الله العظيم",
-            style: Theme.of(context).textTheme.bodyText2,
+            style: Theme.of(context).textTheme.bodyMedium,
           )),
           Expanded(
             child: InkWell(
@@ -59,7 +59,7 @@ class PraiseCount extends StatelessWidget {
                       padding: const EdgeInsets.all(20.0),
                       child: Text(
                         "$sum",
-                        style: Theme.of(context).textTheme.headline4,
+                        style: Theme.of(context).textTheme.headlineMedium,
                       ),
                     ),
                   ),

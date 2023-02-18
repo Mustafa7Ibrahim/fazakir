@@ -12,10 +12,14 @@ class ContactUS extends StatefulWidget {
 class _ContactUSState extends State<ContactUS> {
   openWhatsApp() async {
     var whatsapp = "0201024573438";
-    var whatsappURlAndroid =
-        "whatsapp://send?phone=" + whatsapp + "&text=hello";
 
-    await launch(whatsappURlAndroid, forceSafariVC: false);
+    await launchUrl(
+      Uri(
+        scheme: "whatsapp",
+        host: "send",
+        queryParameters: {"phone": whatsapp},
+      ),
+    );
   }
 
   @override
@@ -43,7 +47,7 @@ class _ContactUSState extends State<ContactUS> {
             padding: const EdgeInsets.all(20.0),
             child: Text(
               "مرحبا بك في تطبيق فذكر ، حرصا منا على الاستفادة الكاملة من التطبيق وعدم مواجهة أي مشكلة خلال استخدامك للتطبيق وكذلك لتلقي الاقتراحات لتطوير التطبيق  ، يمكنك ارسال مشكلتك وسيقوم مصمم التطبيق بالرد عليك لحل المشكلة فورا ، نعتذر في حالة تأخر الرد ولكن سنقوم بالرد وحل المشكلة فورا تقبل الله منا ومنكم صالح الاعمال",
-              style: Theme.of(context).textTheme.headline5,
+              style: Theme.of(context).textTheme.headlineSmall,
               textAlign: TextAlign.justify,
             ),
           ),

@@ -113,7 +113,7 @@ class _SettingsState extends State<Settings> {
               textAlign: TextAlign.center,
               style: Theme.of(context)
                   .textTheme
-                  .bodyText1!
+                  .bodyLarge!
                   .copyWith(fontSize: 16, color: Colors.grey[400]),
             ),
           ],

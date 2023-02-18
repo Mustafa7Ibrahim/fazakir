@@ -65,7 +65,7 @@ class HugView extends StatelessWidget {
                                                 "\n",
                                             style: Theme.of(context)
                                                 .textTheme
-                                                .headline6,
+                                                .titleLarge,
                                           ),
                                           Column(
                                             crossAxisAlignment:
@@ -77,7 +77,7 @@ class HugView extends StatelessWidget {
                                                         e + "\n",
                                                         style: Theme.of(context)
                                                             .textTheme
-                                                            .bodyText2,
+                                                            .bodyMedium,
                                                       ))
                                             ],
                                           )

@@ -19,7 +19,7 @@ class SouraList extends StatelessWidget {
       appBar: AppBar(
         title: Text(
           "القران الكريم",
-          style: Theme.of(context).textTheme.headline5,
+          style: Theme.of(context).textTheme.headlineSmall,
         ),
       ),
       body: BlocProvider(
@@ -52,22 +52,22 @@ class SouraList extends StatelessWidget {
                     ),
                     title: Text(
                       state.souraModel.soura[index].titleAr!,
-                      style: Theme.of(context).textTheme.headline5,
+                      style: Theme.of(context).textTheme.headlineSmall,
                     ),
                     subtitle: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
                           "عدد الآيات : ${state.souraModel.soura[index].count}",
-                          style: Theme.of(context).textTheme.bodyText2,
+                          style: Theme.of(context).textTheme.bodyMedium,
                         ),
                         Text(
                           "الصفحة : ${state.souraModel.soura[index].pages! + 1}",
-                          style: Theme.of(context).textTheme.bodyText2,
+                          style: Theme.of(context).textTheme.bodyMedium,
                         ),
                         Text(
                           state.souraModel.soura[index].type.toString(),
-                          style: Theme.of(context).textTheme.bodyText2,
+                          style: Theme.of(context).textTheme.bodyMedium,
                         ),
                       ],
                     ),

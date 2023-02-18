@@ -42,14 +42,14 @@ class CustomCard extends StatelessWidget {
                 children: [
                   Text(
                     title,
-                    style: Theme.of(context).textTheme.headline5!.copyWith(
+                    style: Theme.of(context).textTheme.headlineSmall!.copyWith(
                         fontSize: 24, color: colorstyle ?? Colors.white),
                   ),
                   Row(
                     children: [
                       Text(
                         "اذهب الي",
-                        style: Theme.of(context).textTheme.bodyText2!.copyWith(
+                        style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                             fontSize: 18, color: colorstyle ?? Colors.white38),
                       ),
                       image != null

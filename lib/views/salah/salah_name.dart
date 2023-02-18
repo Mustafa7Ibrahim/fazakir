@@ -68,7 +68,7 @@ class _SalahListState extends State<SalahList> {
                 children: [
                   Text(
                     "${widget.sahalInfo.name}",
-                    style: Theme.of(context).textTheme.headline5,
+                    style: Theme.of(context).textTheme.headlineSmall,
                   ),
                   Icon(_see ? Icons.expand_less : Icons.expand_more)
                 ],

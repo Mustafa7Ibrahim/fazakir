@@ -15,7 +15,7 @@ class ContantInfoApp extends StatelessWidget {
           width: double.infinity,
           child: Text(
             title,
-            style: Theme.of(context).textTheme.headline6,
+            style: Theme.of(context).textTheme.titleLarge,
             textAlign: TextAlign.center,
           ),
         ),
@@ -26,7 +26,7 @@ class ContantInfoApp extends StatelessWidget {
           width: double.infinity,
           child: Text(
             info,
-            style: Theme.of(context).textTheme.bodyText2,
+            style: Theme.of(context).textTheme.bodyMedium,
             textAlign: TextAlign.justify,
           ),
         ),

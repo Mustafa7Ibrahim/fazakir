@@ -25,12 +25,10 @@ void main() async {
   await TimeZoneCo.configureLocalTimeZone();
   await di.init();
 
-  final String initialRoute = await NotificationSet.decideWhichRouteToLanch();
+  final String initialRoute = await NotificationSet.decideWhichRouteToLunch();
 
-  BlocOverrides.runZoned(
-    () => runApp(MyApp(initRoute: initialRoute)),
-    blocObserver: MyObserver(),
-  );
+  Bloc.observer = MyObserver();
+  runApp(MyApp(initRoute: initialRoute));
 }
 
 class MyApp extends StatelessWidget {
@@ -43,12 +41,15 @@ class MyApp extends StatelessWidget {
     return MultiBlocProvider(
       providers: [
         BlocProvider<QuranCubit>(
-            create: (context) => getIt<QuranCubit>()..getMarkPage()),
+          create: (context) => getIt<QuranCubit>()..getMarkPage(),
+        ),
         BlocProvider<ThemeModeCubit>(
-            create: (context) => getIt<ThemeModeCubit>()),
+          create: (context) => getIt<ThemeModeCubit>(),
+        ),
         BlocProvider<AzkarCubit>(create: (context) => getIt<AzkarCubit>()),
         BlocProvider<SaveQuranPageCubit>(
-            create: (context) => getIt<SaveQuranPageCubit>()..getQuranPage()),
+          create: (context) => getIt<SaveQuranPageCubit>()..getQuranPage(),
+        ),
       ],
       child: BlocBuilder<ThemeModeCubit, bool>(
         builder: (context, state) {

@@ -39,38 +39,38 @@ class ThemeApp {
       backgroundColor: Color(0xff2EB3AF),
     ),
     textTheme: const TextTheme(
-      headline5: TextStyle(
+      headlineSmall: TextStyle(
         fontFamily: "Arabic",
         letterSpacing: 0.15,
         fontSize: 20,
       ),
-      headline6: TextStyle(
+      titleLarge: TextStyle(
         fontFamily: "Arabic",
         letterSpacing: 0.15,
       ),
-      caption: TextStyle(
+      bodySmall: TextStyle(
         fontFamily: "Arabic",
         letterSpacing: 0.4,
       ),
-      button: TextStyle(
+      labelLarge: TextStyle(
         fontFamily: "Arabic",
         letterSpacing: 1.25,
       ),
-      bodyText1: TextStyle(
+      bodyLarge: TextStyle(
         fontFamily: "Arabic",
       ),
-      bodyText2: TextStyle(
+      bodyMedium: TextStyle(
         fontFamily: "Arabic",
       ),
-      overline: TextStyle(
+      labelSmall: TextStyle(
         fontFamily: "Arabic",
         letterSpacing: 1.5,
       ),
-      subtitle1: TextStyle(
+      titleMedium: TextStyle(
         fontFamily: "Arabic",
         letterSpacing: 0.15,
       ),
-      subtitle2: TextStyle(
+      titleSmall: TextStyle(
         fontFamily: "Arabic",
         letterSpacing: 0.1,
       ),
@@ -78,21 +78,7 @@ class ThemeApp {
   );
 
   static ThemeData darkTheme = ThemeData(
-    backgroundColor: const Color(0xff010313),
     scaffoldBackgroundColor: const Color(0xff010313),
-    colorScheme: const ColorScheme(
-      primary: Color(0xff2EB3AF),
-      secondary: Color(0xffA5D2D6),
-      surface: Color(0xff010313),
-      background: Color(0xff010313),
-      error: Color(0xffEF4444),
-      onPrimary: Color(0xffffffff),
-      onSecondary: Color(0xff010313),
-      onSurface: Colors.white70,
-      onBackground: Color(0xffffffff),
-      onError: Color(0xffCF6679),
-      brightness: Brightness.dark,
-    ),
     appBarTheme: const AppBarTheme(
       centerTitle: true,
       elevation: 0.0,
@@ -115,41 +101,53 @@ class ThemeApp {
       backgroundColor: Color(0xff65C7A8),
     ),
     textTheme: const TextTheme(
-      headline5: TextStyle(
+      headlineSmall: TextStyle(
         fontFamily: "Arabic",
         letterSpacing: 0.15,
         fontSize: 20,
       ),
-      headline6: TextStyle(
+      titleLarge: TextStyle(
         fontFamily: "Arabic",
         letterSpacing: 0.15,
       ),
-      caption: TextStyle(
+      bodySmall: TextStyle(
         fontFamily: "Arabic",
         letterSpacing: 0.4,
       ),
-      button: TextStyle(
+      labelLarge: TextStyle(
         fontFamily: "Arabic",
         letterSpacing: 1.25,
       ),
-      bodyText1: TextStyle(
+      bodyLarge: TextStyle(
         fontFamily: "Arabic",
       ),
-      bodyText2: TextStyle(
+      bodyMedium: TextStyle(
         fontFamily: "Arabic",
       ),
-      overline: TextStyle(
+      labelSmall: TextStyle(
         fontFamily: "Arabic",
         letterSpacing: 1.5,
       ),
-      subtitle1: TextStyle(
+      titleMedium: TextStyle(
         fontFamily: "Arabic",
         letterSpacing: 0.15,
       ),
-      subtitle2: TextStyle(
+      titleSmall: TextStyle(
         fontFamily: "Arabic",
         letterSpacing: 0.1,
       ),
-    ),
+    ), colorScheme: const ColorScheme(
+      primary: Color(0xff2EB3AF),
+      secondary: Color(0xffA5D2D6),
+      surface: Color(0xff010313),
+      background: Color(0xff010313),
+      error: Color(0xffEF4444),
+      onPrimary: Color(0xffffffff),
+      onSecondary: Color(0xff010313),
+      onSurface: Colors.white70,
+      onBackground: Color(0xffffffff),
+      onError: Color(0xffCF6679),
+      brightness: Brightness.dark,
+    ).copyWith(background: const Color(0xff010313)),
   );
 }

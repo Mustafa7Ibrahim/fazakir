@@ -28,7 +28,7 @@ class SalahInfo extends StatelessWidget {
           ),
           child: Text(
             data,
-            style: Theme.of(context).textTheme.bodyText2,
+            style: Theme.of(context).textTheme.bodyMedium,
           ),
         ))
       ],

@@ -85,7 +85,7 @@ class Zekr extends StatelessWidget {
                       margin: const EdgeInsets.all(18.0),
                       child: Text(
                         zekrModel.text,
-                        style: Theme.of(context).textTheme.headline6,
+                        style: Theme.of(context).textTheme.titleLarge,
                         textAlign: TextAlign.center,
                       ),
                     ),
@@ -100,12 +100,12 @@ class Zekr extends StatelessWidget {
                       children: [
                         Text(
                           '${zekrModel.fadl}',
-                          style: Theme.of(context).textTheme.bodyText2,
+                          style: Theme.of(context).textTheme.bodyMedium,
                         ),
                         const SizedBox(height: 6.0),
                         Text(
                           zekrModel.source,
-                          style: Theme.of(context).textTheme.caption,
+                          style: Theme.of(context).textTheme.bodySmall,
                         ),
                       ],
                     ),

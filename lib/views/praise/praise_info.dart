@@ -12,7 +12,7 @@ class PraiseInfo extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text("${praiseData.name}",
-            style: Theme.of(context).textTheme.headline5),
+            style: Theme.of(context).textTheme.headlineSmall),
       ),
       body: Container(
         margin: const EdgeInsets.all(30.0),
@@ -35,12 +35,12 @@ class PraiseInfo extends StatelessWidget {
           children: [
             Text(
               "${praiseData.info}",
-              style: Theme.of(context).textTheme.bodyText2,
+              style: Theme.of(context).textTheme.bodyMedium,
             ),
             const Divider(),
             Text(
               "${praiseData.mening}",
-              style: Theme.of(context).textTheme.bodyText2,
+              style: Theme.of(context).textTheme.bodyMedium,
             ),
           ],
         ),

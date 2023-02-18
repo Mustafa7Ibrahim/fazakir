@@ -86,7 +86,7 @@ class _QuranPageScreanState extends State<QuranPageScrean> {
             FittedBox(
               child: Text(
                 title,
-                style: Theme.of(context).textTheme.headline6,
+                style: Theme.of(context).textTheme.titleLarge,
               ),
             ),
             Icon(icon),
@@ -259,7 +259,7 @@ class _QuranPageScreanState extends State<QuranPageScrean> {
                                                         .toString(),
                                                     style: Theme.of(context)
                                                         .textTheme
-                                                        .bodyText2),
+                                                        .bodyMedium),
                                               ),
                                             ),
                                           ),
@@ -284,7 +284,7 @@ class _QuranPageScreanState extends State<QuranPageScrean> {
                                                                   .toString())),
                                                       style: Theme.of(context)
                                                           .textTheme
-                                                          .bodyText2),
+                                                          .bodyMedium),
                                                 ),
                                               ),
                                             ),
@@ -440,7 +440,7 @@ class _QuranPageScreanState extends State<QuranPageScrean> {
                                               "الصفحة : ${getVerseEndSymbol(num.toInt() + 1)}",
                                               style: Theme.of(context)
                                                   .textTheme
-                                                  .headline6,
+                                                  .titleLarge,
                                             ),
                                           ),
                                           FittedBox(
@@ -448,7 +448,7 @@ class _QuranPageScreanState extends State<QuranPageScrean> {
                                               "سورة : ${state.quranPageModel.page[num.toInt()].name}",
                                               style: Theme.of(context)
                                                   .textTheme
-                                                  .headline6,
+                                                  .titleLarge,
                                             ),
                                           )
                                         ],

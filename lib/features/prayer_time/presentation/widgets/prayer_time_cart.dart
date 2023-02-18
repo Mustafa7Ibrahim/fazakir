@@ -27,7 +27,7 @@ class PrayerTimeCard extends StatelessWidget {
         children: [
           Text(
             prayName,
-            style: Theme.of(context).textTheme.bodyText1?.copyWith(
+            style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                 color: Theme.of(context).colorScheme.surface, fontSize: 18),
           ),
           const Spacer(),
@@ -35,7 +35,7 @@ class PrayerTimeCard extends StatelessWidget {
             prayTime,
             // DateTime.parse(prayTime).toLocal().toString(),
             // DateFormat.jm("ar_SA").format(DateTime.parse(prayTime).toLocal()),
-            style: Theme.of(context).textTheme.bodyText1?.copyWith(
+            style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                   color: Theme.of(context).colorScheme.surface,
                   fontSize: 18,
                 ),

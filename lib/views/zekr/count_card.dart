@@ -30,14 +30,14 @@ class CountCard extends StatelessWidget {
           title != null
               ? Text(
                   title!,
-                  style: Theme.of(context).textTheme.caption,
+                  style: Theme.of(context).textTheme.bodySmall,
                 )
               : const SizedBox(),
           Text(
             count,
             style: title != null
-                ? Theme.of(context).textTheme.overline
-                : Theme.of(context).textTheme.headline3,
+                ? Theme.of(context).textTheme.labelSmall
+                : Theme.of(context).textTheme.displaySmall,
           ),
         ],
       ),

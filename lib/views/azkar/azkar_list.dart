@@ -46,7 +46,7 @@ class AzkarList extends StatelessWidget {
                     ),
                     title: Text(
                       state.azkarModel[index].title,
-                      style: Theme.of(context).textTheme.bodyText2,
+                      style: Theme.of(context).textTheme.bodyMedium,
                     ),
                   );
                 },

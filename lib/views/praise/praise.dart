@@ -19,7 +19,7 @@ class Praise extends StatelessWidget {
       appBar: AppBar(
         title: Text(
           "اذكر الله يذكرك",
-          style: Theme.of(context).textTheme.headline5,
+          style: Theme.of(context).textTheme.headlineSmall,
         ),
       ),
       body: BlocProvider(

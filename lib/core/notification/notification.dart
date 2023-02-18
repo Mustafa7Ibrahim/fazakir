@@ -53,7 +53,7 @@ class NotificationSet {
     );
   }
 
-  static Future<String> decideWhichRouteToLanch() async {
+  static Future<String> decideWhichRouteToLunch() async {
     final appLaunchDetails = await _notificationAppLanch();
     String initialRoute = NavBar.routeName;
 
