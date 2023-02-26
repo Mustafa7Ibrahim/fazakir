@@ -8,20 +8,20 @@ part of 'adhantimes_model.dart';
 
 _$_AdhanTimesModel _$$_AdhanTimesModelFromJson(Map<String, dynamic> json) =>
     _$_AdhanTimesModel(
-      fajr: json['fajr'] as String,
-      sunrise: json['sunrise'] as String,
-      dhuhr: json['dhuhr'] as String,
-      asr: json['asr'] as String,
-      maghrib: json['maghrib'] as String,
-      isha: json['isha'] as String,
+      fajr: DateTime.parse(json['fajr'] as String),
+      sunrise: DateTime.parse(json['sunrise'] as String),
+      dhuhr: DateTime.parse(json['dhuhr'] as String),
+      asr: DateTime.parse(json['asr'] as String),
+      maghrib: DateTime.parse(json['maghrib'] as String),
+      isha: DateTime.parse(json['isha'] as String),
     );
 
 Map<String, dynamic> _$$_AdhanTimesModelToJson(_$_AdhanTimesModel instance) =>
     <String, dynamic>{
-      'fajr': instance.fajr,
-      'sunrise': instance.sunrise,
-      'dhuhr': instance.dhuhr,
-      'asr': instance.asr,
-      'maghrib': instance.maghrib,
-      'isha': instance.isha,
+      'fajr': instance.fajr.toIso8601String(),
+      'sunrise': instance.sunrise.toIso8601String(),
+      'dhuhr': instance.dhuhr.toIso8601String(),
+      'asr': instance.asr.toIso8601String(),
+      'maghrib': instance.maghrib.toIso8601String(),
+      'isha': instance.isha.toIso8601String(),
     };

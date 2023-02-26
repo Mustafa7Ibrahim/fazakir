@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'adhantimes_model.dart';
 
@@ -12,49 +12,20 @@ part of 'adhantimes_model.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 AdhanTimesModel _$AdhanTimesModelFromJson(Map<String, dynamic> json) {
   return _AdhanTimesModel.fromJson(json);
 }
 
 /// @nodoc
-class _$AdhanTimesModelTearOff {
-  const _$AdhanTimesModelTearOff();
-
-  _AdhanTimesModel call(
-      {required String fajr,
-      required String sunrise,
-      required String dhuhr,
-      required String asr,
-      required String maghrib,
-      required String isha}) {
-    return _AdhanTimesModel(
-      fajr: fajr,
-      sunrise: sunrise,
-      dhuhr: dhuhr,
-      asr: asr,
-      maghrib: maghrib,
-      isha: isha,
-    );
-  }
-
-  AdhanTimesModel fromJson(Map<String, Object?> json) {
-    return AdhanTimesModel.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $AdhanTimesModel = _$AdhanTimesModelTearOff();
-
-/// @nodoc
 mixin _$AdhanTimesModel {
-  String get fajr => throw _privateConstructorUsedError;
-  String get sunrise => throw _privateConstructorUsedError;
-  String get dhuhr => throw _privateConstructorUsedError;
-  String get asr => throw _privateConstructorUsedError;
-  String get maghrib => throw _privateConstructorUsedError;
-  String get isha => throw _privateConstructorUsedError;
+  DateTime get fajr => throw _privateConstructorUsedError;
+  DateTime get sunrise => throw _privateConstructorUsedError;
+  DateTime get dhuhr => throw _privateConstructorUsedError;
+  DateTime get asr => throw _privateConstructorUsedError;
+  DateTime get maghrib => throw _privateConstructorUsedError;
+  DateTime get isha => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -66,124 +37,126 @@ mixin _$AdhanTimesModel {
 abstract class $AdhanTimesModelCopyWith<$Res> {
   factory $AdhanTimesModelCopyWith(
           AdhanTimesModel value, $Res Function(AdhanTimesModel) then) =
-      _$AdhanTimesModelCopyWithImpl<$Res>;
+      _$AdhanTimesModelCopyWithImpl<$Res, AdhanTimesModel>;
+  @useResult
   $Res call(
-      {String fajr,
-      String sunrise,
-      String dhuhr,
-      String asr,
-      String maghrib,
-      String isha});
+      {DateTime fajr,
+      DateTime sunrise,
+      DateTime dhuhr,
+      DateTime asr,
+      DateTime maghrib,
+      DateTime isha});
 }
 
 /// @nodoc
-class _$AdhanTimesModelCopyWithImpl<$Res>
+class _$AdhanTimesModelCopyWithImpl<$Res, $Val extends AdhanTimesModel>
     implements $AdhanTimesModelCopyWith<$Res> {
   _$AdhanTimesModelCopyWithImpl(this._value, this._then);
 
-  final AdhanTimesModel _value;
   // ignore: unused_field
-  final $Res Function(AdhanTimesModel) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? fajr = freezed,
-    Object? sunrise = freezed,
-    Object? dhuhr = freezed,
-    Object? asr = freezed,
-    Object? maghrib = freezed,
-    Object? isha = freezed,
+    Object? fajr = null,
+    Object? sunrise = null,
+    Object? dhuhr = null,
+    Object? asr = null,
+    Object? maghrib = null,
+    Object? isha = null,
   }) {
     return _then(_value.copyWith(
-      fajr: fajr == freezed
+      fajr: null == fajr
           ? _value.fajr
           : fajr // ignore: cast_nullable_to_non_nullable
-              as String,
-      sunrise: sunrise == freezed
+              as DateTime,
+      sunrise: null == sunrise
           ? _value.sunrise
           : sunrise // ignore: cast_nullable_to_non_nullable
-              as String,
-      dhuhr: dhuhr == freezed
+              as DateTime,
+      dhuhr: null == dhuhr
           ? _value.dhuhr
           : dhuhr // ignore: cast_nullable_to_non_nullable
-              as String,
-      asr: asr == freezed
+              as DateTime,
+      asr: null == asr
           ? _value.asr
           : asr // ignore: cast_nullable_to_non_nullable
-              as String,
-      maghrib: maghrib == freezed
+              as DateTime,
+      maghrib: null == maghrib
           ? _value.maghrib
           : maghrib // ignore: cast_nullable_to_non_nullable
-              as String,
-      isha: isha == freezed
+              as DateTime,
+      isha: null == isha
           ? _value.isha
           : isha // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+              as DateTime,
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$AdhanTimesModelCopyWith<$Res>
+abstract class _$$_AdhanTimesModelCopyWith<$Res>
     implements $AdhanTimesModelCopyWith<$Res> {
-  factory _$AdhanTimesModelCopyWith(
-          _AdhanTimesModel value, $Res Function(_AdhanTimesModel) then) =
-      __$AdhanTimesModelCopyWithImpl<$Res>;
+  factory _$$_AdhanTimesModelCopyWith(
+          _$_AdhanTimesModel value, $Res Function(_$_AdhanTimesModel) then) =
+      __$$_AdhanTimesModelCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
-      {String fajr,
-      String sunrise,
-      String dhuhr,
-      String asr,
-      String maghrib,
-      String isha});
+      {DateTime fajr,
+      DateTime sunrise,
+      DateTime dhuhr,
+      DateTime asr,
+      DateTime maghrib,
+      DateTime isha});
 }
 
 /// @nodoc
-class __$AdhanTimesModelCopyWithImpl<$Res>
-    extends _$AdhanTimesModelCopyWithImpl<$Res>
-    implements _$AdhanTimesModelCopyWith<$Res> {
-  __$AdhanTimesModelCopyWithImpl(
-      _AdhanTimesModel _value, $Res Function(_AdhanTimesModel) _then)
-      : super(_value, (v) => _then(v as _AdhanTimesModel));
+class __$$_AdhanTimesModelCopyWithImpl<$Res>
+    extends _$AdhanTimesModelCopyWithImpl<$Res, _$_AdhanTimesModel>
+    implements _$$_AdhanTimesModelCopyWith<$Res> {
+  __$$_AdhanTimesModelCopyWithImpl(
+      _$_AdhanTimesModel _value, $Res Function(_$_AdhanTimesModel) _then)
+      : super(_value, _then);
 
-  @override
-  _AdhanTimesModel get _value => super._value as _AdhanTimesModel;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? fajr = freezed,
-    Object? sunrise = freezed,
-    Object? dhuhr = freezed,
-    Object? asr = freezed,
-    Object? maghrib = freezed,
-    Object? isha = freezed,
+    Object? fajr = null,
+    Object? sunrise = null,
+    Object? dhuhr = null,
+    Object? asr = null,
+    Object? maghrib = null,
+    Object? isha = null,
   }) {
-    return _then(_AdhanTimesModel(
-      fajr: fajr == freezed
+    return _then(_$_AdhanTimesModel(
+      fajr: null == fajr
           ? _value.fajr
           : fajr // ignore: cast_nullable_to_non_nullable
-              as String,
-      sunrise: sunrise == freezed
+              as DateTime,
+      sunrise: null == sunrise
           ? _value.sunrise
           : sunrise // ignore: cast_nullable_to_non_nullable
-              as String,
-      dhuhr: dhuhr == freezed
+              as DateTime,
+      dhuhr: null == dhuhr
           ? _value.dhuhr
           : dhuhr // ignore: cast_nullable_to_non_nullable
-              as String,
-      asr: asr == freezed
+              as DateTime,
+      asr: null == asr
           ? _value.asr
           : asr // ignore: cast_nullable_to_non_nullable
-              as String,
-      maghrib: maghrib == freezed
+              as DateTime,
+      maghrib: null == maghrib
           ? _value.maghrib
           : maghrib // ignore: cast_nullable_to_non_nullable
-              as String,
-      isha: isha == freezed
+              as DateTime,
+      isha: null == isha
           ? _value.isha
           : isha // ignore: cast_nullable_to_non_nullable
-              as String,
+              as DateTime,
     ));
   }
 }
@@ -205,17 +178,17 @@ class _$_AdhanTimesModel
       _$$_AdhanTimesModelFromJson(json);
 
   @override
-  final String fajr;
+  final DateTime fajr;
   @override
-  final String sunrise;
+  final DateTime sunrise;
   @override
-  final String dhuhr;
+  final DateTime dhuhr;
   @override
-  final String asr;
+  final DateTime asr;
   @override
-  final String maghrib;
+  final DateTime maghrib;
   @override
-  final String isha;
+  final DateTime isha;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
@@ -239,62 +212,60 @@ class _$_AdhanTimesModel
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _AdhanTimesModel &&
-            const DeepCollectionEquality().equals(other.fajr, fajr) &&
-            const DeepCollectionEquality().equals(other.sunrise, sunrise) &&
-            const DeepCollectionEquality().equals(other.dhuhr, dhuhr) &&
-            const DeepCollectionEquality().equals(other.asr, asr) &&
-            const DeepCollectionEquality().equals(other.maghrib, maghrib) &&
-            const DeepCollectionEquality().equals(other.isha, isha));
+            other is _$_AdhanTimesModel &&
+            (identical(other.fajr, fajr) || other.fajr == fajr) &&
+            (identical(other.sunrise, sunrise) || other.sunrise == sunrise) &&
+            (identical(other.dhuhr, dhuhr) || other.dhuhr == dhuhr) &&
+            (identical(other.asr, asr) || other.asr == asr) &&
+            (identical(other.maghrib, maghrib) || other.maghrib == maghrib) &&
+            (identical(other.isha, isha) || other.isha == isha));
   }
-
-  @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(fajr),
-      const DeepCollectionEquality().hash(sunrise),
-      const DeepCollectionEquality().hash(dhuhr),
-      const DeepCollectionEquality().hash(asr),
-      const DeepCollectionEquality().hash(maghrib),
-      const DeepCollectionEquality().hash(isha));
 
   @JsonKey(ignore: true)
   @override
-  _$AdhanTimesModelCopyWith<_AdhanTimesModel> get copyWith =>
-      __$AdhanTimesModelCopyWithImpl<_AdhanTimesModel>(this, _$identity);
+  int get hashCode =>
+      Object.hash(runtimeType, fajr, sunrise, dhuhr, asr, maghrib, isha);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_AdhanTimesModelCopyWith<_$_AdhanTimesModel> get copyWith =>
+      __$$_AdhanTimesModelCopyWithImpl<_$_AdhanTimesModel>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AdhanTimesModelToJson(this);
+    return _$$_AdhanTimesModelToJson(
+      this,
+    );
   }
 }
 
 abstract class _AdhanTimesModel implements AdhanTimesModel {
   factory _AdhanTimesModel(
-      {required String fajr,
-      required String sunrise,
-      required String dhuhr,
-      required String asr,
-      required String maghrib,
-      required String isha}) = _$_AdhanTimesModel;
+      {required final DateTime fajr,
+      required final DateTime sunrise,
+      required final DateTime dhuhr,
+      required final DateTime asr,
+      required final DateTime maghrib,
+      required final DateTime isha}) = _$_AdhanTimesModel;
 
   factory _AdhanTimesModel.fromJson(Map<String, dynamic> json) =
       _$_AdhanTimesModel.fromJson;
 
   @override
-  String get fajr;
+  DateTime get fajr;
   @override
-  String get sunrise;
+  DateTime get sunrise;
   @override
-  String get dhuhr;
+  DateTime get dhuhr;
   @override
-  String get asr;
+  DateTime get asr;
   @override
-  String get maghrib;
+  DateTime get maghrib;
   @override
-  String get isha;
+  DateTime get isha;
   @override
   @JsonKey(ignore: true)
-  _$AdhanTimesModelCopyWith<_AdhanTimesModel> get copyWith =>
+  _$$_AdhanTimesModelCopyWith<_$_AdhanTimesModel> get copyWith =>
       throw _privateConstructorUsedError;
 }

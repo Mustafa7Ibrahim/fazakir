@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'prayer_time_cubit.dart';
 
@@ -12,33 +12,7 @@ part of 'prayer_time_cubit.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$PrayerTimeStateTearOff {
-  const _$PrayerTimeStateTearOff();
-
-  _Initial initial() {
-    return const _Initial();
-  }
-
-  _loading loading() {
-    return const _loading();
-  }
-
-  _loaded loaded(AdhanTimesModel adantimes) {
-    return _loaded(
-      adantimes,
-    );
-  }
-
-  _firstTime firstTime() {
-    return const _firstTime();
-  }
-}
-
-/// @nodoc
-const $PrayerTimeState = _$PrayerTimeStateTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
 mixin _$PrayerTimeState {
@@ -52,10 +26,10 @@ mixin _$PrayerTimeState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loading,
-    TResult Function(AdhanTimesModel adantimes)? loaded,
-    TResult Function()? firstTime,
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(AdhanTimesModel adantimes)? loaded,
+    TResult? Function()? firstTime,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -77,10 +51,10 @@ mixin _$PrayerTimeState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_loading value)? loading,
-    TResult Function(_loaded value)? loaded,
-    TResult Function(_firstTime value)? firstTime,
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_loading value)? loading,
+    TResult? Function(_loaded value)? loaded,
+    TResult? Function(_firstTime value)? firstTime,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -98,33 +72,33 @@ mixin _$PrayerTimeState {
 abstract class $PrayerTimeStateCopyWith<$Res> {
   factory $PrayerTimeStateCopyWith(
           PrayerTimeState value, $Res Function(PrayerTimeState) then) =
-      _$PrayerTimeStateCopyWithImpl<$Res>;
+      _$PrayerTimeStateCopyWithImpl<$Res, PrayerTimeState>;
 }
 
 /// @nodoc
-class _$PrayerTimeStateCopyWithImpl<$Res>
+class _$PrayerTimeStateCopyWithImpl<$Res, $Val extends PrayerTimeState>
     implements $PrayerTimeStateCopyWith<$Res> {
   _$PrayerTimeStateCopyWithImpl(this._value, this._then);
 
-  final PrayerTimeState _value;
   // ignore: unused_field
-  final $Res Function(PrayerTimeState) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 }
 
 /// @nodoc
-abstract class _$InitialCopyWith<$Res> {
-  factory _$InitialCopyWith(_Initial value, $Res Function(_Initial) then) =
-      __$InitialCopyWithImpl<$Res>;
+abstract class _$$_InitialCopyWith<$Res> {
+  factory _$$_InitialCopyWith(
+          _$_Initial value, $Res Function(_$_Initial) then) =
+      __$$_InitialCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$InitialCopyWithImpl<$Res> extends _$PrayerTimeStateCopyWithImpl<$Res>
-    implements _$InitialCopyWith<$Res> {
-  __$InitialCopyWithImpl(_Initial _value, $Res Function(_Initial) _then)
-      : super(_value, (v) => _then(v as _Initial));
-
-  @override
-  _Initial get _value => super._value as _Initial;
+class __$$_InitialCopyWithImpl<$Res>
+    extends _$PrayerTimeStateCopyWithImpl<$Res, _$_Initial>
+    implements _$$_InitialCopyWith<$Res> {
+  __$$_InitialCopyWithImpl(_$_Initial _value, $Res Function(_$_Initial) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -140,13 +114,13 @@ class _$_Initial with DiagnosticableTreeMixin implements _Initial {
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
-    properties..add(DiagnosticsProperty('type', 'PrayerTimeState.initial'));
+    properties.add(DiagnosticsProperty('type', 'PrayerTimeState.initial'));
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _Initial);
+        (other.runtimeType == runtimeType && other is _$_Initial);
   }
 
   @override
@@ -166,10 +140,10 @@ class _$_Initial with DiagnosticableTreeMixin implements _Initial {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loading,
-    TResult Function(AdhanTimesModel adantimes)? loaded,
-    TResult Function()? firstTime,
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(AdhanTimesModel adantimes)? loaded,
+    TResult? Function()? firstTime,
   }) {
     return initial?.call();
   }
@@ -203,10 +177,10 @@ class _$_Initial with DiagnosticableTreeMixin implements _Initial {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_loading value)? loading,
-    TResult Function(_loaded value)? loaded,
-    TResult Function(_firstTime value)? firstTime,
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_loading value)? loading,
+    TResult? Function(_loaded value)? loaded,
+    TResult? Function(_firstTime value)? firstTime,
   }) {
     return initial?.call(this);
   }
@@ -232,19 +206,18 @@ abstract class _Initial implements PrayerTimeState {
 }
 
 /// @nodoc
-abstract class _$loadingCopyWith<$Res> {
-  factory _$loadingCopyWith(_loading value, $Res Function(_loading) then) =
-      __$loadingCopyWithImpl<$Res>;
+abstract class _$$_loadingCopyWith<$Res> {
+  factory _$$_loadingCopyWith(
+          _$_loading value, $Res Function(_$_loading) then) =
+      __$$_loadingCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$loadingCopyWithImpl<$Res> extends _$PrayerTimeStateCopyWithImpl<$Res>
-    implements _$loadingCopyWith<$Res> {
-  __$loadingCopyWithImpl(_loading _value, $Res Function(_loading) _then)
-      : super(_value, (v) => _then(v as _loading));
-
-  @override
-  _loading get _value => super._value as _loading;
+class __$$_loadingCopyWithImpl<$Res>
+    extends _$PrayerTimeStateCopyWithImpl<$Res, _$_loading>
+    implements _$$_loadingCopyWith<$Res> {
+  __$$_loadingCopyWithImpl(_$_loading _value, $Res Function(_$_loading) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -260,13 +233,13 @@ class _$_loading with DiagnosticableTreeMixin implements _loading {
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
-    properties..add(DiagnosticsProperty('type', 'PrayerTimeState.loading'));
+    properties.add(DiagnosticsProperty('type', 'PrayerTimeState.loading'));
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _loading);
+        (other.runtimeType == runtimeType && other is _$_loading);
   }
 
   @override
@@ -286,10 +259,10 @@ class _$_loading with DiagnosticableTreeMixin implements _loading {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loading,
-    TResult Function(AdhanTimesModel adantimes)? loaded,
-    TResult Function()? firstTime,
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(AdhanTimesModel adantimes)? loaded,
+    TResult? Function()? firstTime,
   }) {
     return loading?.call();
   }
@@ -323,10 +296,10 @@ class _$_loading with DiagnosticableTreeMixin implements _loading {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_loading value)? loading,
-    TResult Function(_loaded value)? loaded,
-    TResult Function(_firstTime value)? firstTime,
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_loading value)? loading,
+    TResult? Function(_loaded value)? loaded,
+    TResult? Function(_firstTime value)? firstTime,
   }) {
     return loading?.call(this);
   }
@@ -352,29 +325,29 @@ abstract class _loading implements PrayerTimeState {
 }
 
 /// @nodoc
-abstract class _$loadedCopyWith<$Res> {
-  factory _$loadedCopyWith(_loaded value, $Res Function(_loaded) then) =
-      __$loadedCopyWithImpl<$Res>;
+abstract class _$$_loadedCopyWith<$Res> {
+  factory _$$_loadedCopyWith(_$_loaded value, $Res Function(_$_loaded) then) =
+      __$$_loadedCopyWithImpl<$Res>;
+  @useResult
   $Res call({AdhanTimesModel adantimes});
 
   $AdhanTimesModelCopyWith<$Res> get adantimes;
 }
 
 /// @nodoc
-class __$loadedCopyWithImpl<$Res> extends _$PrayerTimeStateCopyWithImpl<$Res>
-    implements _$loadedCopyWith<$Res> {
-  __$loadedCopyWithImpl(_loaded _value, $Res Function(_loaded) _then)
-      : super(_value, (v) => _then(v as _loaded));
+class __$$_loadedCopyWithImpl<$Res>
+    extends _$PrayerTimeStateCopyWithImpl<$Res, _$_loaded>
+    implements _$$_loadedCopyWith<$Res> {
+  __$$_loadedCopyWithImpl(_$_loaded _value, $Res Function(_$_loaded) _then)
+      : super(_value, _then);
 
-  @override
-  _loaded get _value => super._value as _loaded;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? adantimes = freezed,
+    Object? adantimes = null,
   }) {
-    return _then(_loaded(
-      adantimes == freezed
+    return _then(_$_loaded(
+      null == adantimes
           ? _value.adantimes
           : adantimes // ignore: cast_nullable_to_non_nullable
               as AdhanTimesModel,
@@ -382,6 +355,7 @@ class __$loadedCopyWithImpl<$Res> extends _$PrayerTimeStateCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $AdhanTimesModelCopyWith<$Res> get adantimes {
     return $AdhanTimesModelCopyWith<$Res>(_value.adantimes, (value) {
       return _then(_value.copyWith(adantimes: value));
@@ -414,18 +388,19 @@ class _$_loaded with DiagnosticableTreeMixin implements _loaded {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _loaded &&
-            const DeepCollectionEquality().equals(other.adantimes, adantimes));
+            other is _$_loaded &&
+            (identical(other.adantimes, adantimes) ||
+                other.adantimes == adantimes));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(adantimes));
+  int get hashCode => Object.hash(runtimeType, adantimes);
 
   @JsonKey(ignore: true)
   @override
-  _$loadedCopyWith<_loaded> get copyWith =>
-      __$loadedCopyWithImpl<_loaded>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$_loadedCopyWith<_$_loaded> get copyWith =>
+      __$$_loadedCopyWithImpl<_$_loaded>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -441,10 +416,10 @@ class _$_loaded with DiagnosticableTreeMixin implements _loaded {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loading,
-    TResult Function(AdhanTimesModel adantimes)? loaded,
-    TResult Function()? firstTime,
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(AdhanTimesModel adantimes)? loaded,
+    TResult? Function()? firstTime,
   }) {
     return loaded?.call(adantimes);
   }
@@ -478,10 +453,10 @@ class _$_loaded with DiagnosticableTreeMixin implements _loaded {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_loading value)? loading,
-    TResult Function(_loaded value)? loaded,
-    TResult Function(_firstTime value)? firstTime,
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_loading value)? loading,
+    TResult? Function(_loaded value)? loaded,
+    TResult? Function(_firstTime value)? firstTime,
   }) {
     return loaded?.call(this);
   }
@@ -503,28 +478,28 @@ class _$_loaded with DiagnosticableTreeMixin implements _loaded {
 }
 
 abstract class _loaded implements PrayerTimeState {
-  const factory _loaded(AdhanTimesModel adantimes) = _$_loaded;
+  const factory _loaded(final AdhanTimesModel adantimes) = _$_loaded;
 
   AdhanTimesModel get adantimes;
   @JsonKey(ignore: true)
-  _$loadedCopyWith<_loaded> get copyWith => throw _privateConstructorUsedError;
+  _$$_loadedCopyWith<_$_loaded> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$firstTimeCopyWith<$Res> {
-  factory _$firstTimeCopyWith(
-          _firstTime value, $Res Function(_firstTime) then) =
-      __$firstTimeCopyWithImpl<$Res>;
+abstract class _$$_firstTimeCopyWith<$Res> {
+  factory _$$_firstTimeCopyWith(
+          _$_firstTime value, $Res Function(_$_firstTime) then) =
+      __$$_firstTimeCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$firstTimeCopyWithImpl<$Res> extends _$PrayerTimeStateCopyWithImpl<$Res>
-    implements _$firstTimeCopyWith<$Res> {
-  __$firstTimeCopyWithImpl(_firstTime _value, $Res Function(_firstTime) _then)
-      : super(_value, (v) => _then(v as _firstTime));
-
-  @override
-  _firstTime get _value => super._value as _firstTime;
+class __$$_firstTimeCopyWithImpl<$Res>
+    extends _$PrayerTimeStateCopyWithImpl<$Res, _$_firstTime>
+    implements _$$_firstTimeCopyWith<$Res> {
+  __$$_firstTimeCopyWithImpl(
+      _$_firstTime _value, $Res Function(_$_firstTime) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -540,13 +515,13 @@ class _$_firstTime with DiagnosticableTreeMixin implements _firstTime {
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
-    properties..add(DiagnosticsProperty('type', 'PrayerTimeState.firstTime'));
+    properties.add(DiagnosticsProperty('type', 'PrayerTimeState.firstTime'));
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _firstTime);
+        (other.runtimeType == runtimeType && other is _$_firstTime);
   }
 
   @override
@@ -566,10 +541,10 @@ class _$_firstTime with DiagnosticableTreeMixin implements _firstTime {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loading,
-    TResult Function(AdhanTimesModel adantimes)? loaded,
-    TResult Function()? firstTime,
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(AdhanTimesModel adantimes)? loaded,
+    TResult? Function()? firstTime,
   }) {
     return firstTime?.call();
   }
@@ -603,10 +578,10 @@ class _$_firstTime with DiagnosticableTreeMixin implements _firstTime {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_loading value)? loading,
-    TResult Function(_loaded value)? loaded,
-    TResult Function(_firstTime value)? firstTime,
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_loading value)? loading,
+    TResult? Function(_loaded value)? loaded,
+    TResult? Function(_firstTime value)? firstTime,
   }) {
     return firstTime?.call(this);
   }

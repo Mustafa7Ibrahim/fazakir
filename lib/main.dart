@@ -1,13 +1,14 @@
 import 'package:fazakir/bloc/azkar_cubit/azkar_cubit.dart';
-
-import 'core/date/time_zone_co.dart';
+import 'package:fazakir/features/prayer_time/domain/use_case/prayer_times_calculations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:wakelock/wakelock.dart';
 
 import 'bloc/quran_cubit/quran_cubit.dart';
 import 'bloc/save_quran_page_cubit/save_quran_page_cubit.dart';
 import 'bloc/theme_mode_cubit/them_model_cubit.dart';
+import 'core/date/time_zone_co.dart';
 import 'core/notification/notification.dart';
 import 'core/route_config/route_config.dart';
 import 'core/theme_app.dart';
@@ -15,17 +16,19 @@ import 'data_source/local/hive_helper.dart';
 import 'injection_container.dart' as di;
 import 'injection_container.dart';
 import 'myobserver.dart';
-import 'package:wakelock/wakelock.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
   Wakelock.enable();
-  await NotificationSet.init();
+  await NotificationService.init();
   await HiveHelper.init();
-  await TimeZoneCo.configureLocalTimeZone();
+  await TimeZoneHelper.configureLocalTimeZone();
+
   await di.init();
 
-  final String initialRoute = await NotificationSet.decideWhichRouteToLunch();
+  final initialRoute = await NotificationService.decideWhichRouteToLunch();
+  await PrayerTimesCalculations().setNotificationAdhansOfTheDay();
 
   Bloc.observer = MyObserver();
   runApp(MyApp(initRoute: initialRoute));

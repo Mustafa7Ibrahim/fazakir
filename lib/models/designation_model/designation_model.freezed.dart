@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'designation_model.dart';
 
@@ -12,31 +12,11 @@ part of 'designation_model.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 DesignationModel _$DesignationModelFromJson(Map<String, dynamic> json) {
   return _DesignationModel.fromJson(json);
 }
-
-/// @nodoc
-class _$DesignationModelTearOff {
-  const _$DesignationModelTearOff();
-
-  _DesignationModel call(
-      {required String abbreviated, required String expanded}) {
-    return _DesignationModel(
-      abbreviated: abbreviated,
-      expanded: expanded,
-    );
-  }
-
-  DesignationModel fromJson(Map<String, Object?> json) {
-    return DesignationModel.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $DesignationModel = _$DesignationModelTearOff();
 
 /// @nodoc
 mixin _$DesignationModel {
@@ -53,69 +33,71 @@ mixin _$DesignationModel {
 abstract class $DesignationModelCopyWith<$Res> {
   factory $DesignationModelCopyWith(
           DesignationModel value, $Res Function(DesignationModel) then) =
-      _$DesignationModelCopyWithImpl<$Res>;
+      _$DesignationModelCopyWithImpl<$Res, DesignationModel>;
+  @useResult
   $Res call({String abbreviated, String expanded});
 }
 
 /// @nodoc
-class _$DesignationModelCopyWithImpl<$Res>
+class _$DesignationModelCopyWithImpl<$Res, $Val extends DesignationModel>
     implements $DesignationModelCopyWith<$Res> {
   _$DesignationModelCopyWithImpl(this._value, this._then);
 
-  final DesignationModel _value;
   // ignore: unused_field
-  final $Res Function(DesignationModel) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? abbreviated = freezed,
-    Object? expanded = freezed,
+    Object? abbreviated = null,
+    Object? expanded = null,
   }) {
     return _then(_value.copyWith(
-      abbreviated: abbreviated == freezed
+      abbreviated: null == abbreviated
           ? _value.abbreviated
           : abbreviated // ignore: cast_nullable_to_non_nullable
               as String,
-      expanded: expanded == freezed
+      expanded: null == expanded
           ? _value.expanded
           : expanded // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$DesignationModelCopyWith<$Res>
+abstract class _$$_DesignationModelCopyWith<$Res>
     implements $DesignationModelCopyWith<$Res> {
-  factory _$DesignationModelCopyWith(
-          _DesignationModel value, $Res Function(_DesignationModel) then) =
-      __$DesignationModelCopyWithImpl<$Res>;
+  factory _$$_DesignationModelCopyWith(
+          _$_DesignationModel value, $Res Function(_$_DesignationModel) then) =
+      __$$_DesignationModelCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({String abbreviated, String expanded});
 }
 
 /// @nodoc
-class __$DesignationModelCopyWithImpl<$Res>
-    extends _$DesignationModelCopyWithImpl<$Res>
-    implements _$DesignationModelCopyWith<$Res> {
-  __$DesignationModelCopyWithImpl(
-      _DesignationModel _value, $Res Function(_DesignationModel) _then)
-      : super(_value, (v) => _then(v as _DesignationModel));
+class __$$_DesignationModelCopyWithImpl<$Res>
+    extends _$DesignationModelCopyWithImpl<$Res, _$_DesignationModel>
+    implements _$$_DesignationModelCopyWith<$Res> {
+  __$$_DesignationModelCopyWithImpl(
+      _$_DesignationModel _value, $Res Function(_$_DesignationModel) _then)
+      : super(_value, _then);
 
-  @override
-  _DesignationModel get _value => super._value as _DesignationModel;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? abbreviated = freezed,
-    Object? expanded = freezed,
+    Object? abbreviated = null,
+    Object? expanded = null,
   }) {
-    return _then(_DesignationModel(
-      abbreviated: abbreviated == freezed
+    return _then(_$_DesignationModel(
+      abbreviated: null == abbreviated
           ? _value.abbreviated
           : abbreviated // ignore: cast_nullable_to_non_nullable
               as String,
-      expanded: expanded == freezed
+      expanded: null == expanded
           ? _value.expanded
           : expanded // ignore: cast_nullable_to_non_nullable
               as String,
@@ -145,33 +127,35 @@ class _$_DesignationModel implements _DesignationModel {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _DesignationModel &&
-            const DeepCollectionEquality()
-                .equals(other.abbreviated, abbreviated) &&
-            const DeepCollectionEquality().equals(other.expanded, expanded));
+            other is _$_DesignationModel &&
+            (identical(other.abbreviated, abbreviated) ||
+                other.abbreviated == abbreviated) &&
+            (identical(other.expanded, expanded) ||
+                other.expanded == expanded));
   }
-
-  @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(abbreviated),
-      const DeepCollectionEquality().hash(expanded));
 
   @JsonKey(ignore: true)
   @override
-  _$DesignationModelCopyWith<_DesignationModel> get copyWith =>
-      __$DesignationModelCopyWithImpl<_DesignationModel>(this, _$identity);
+  int get hashCode => Object.hash(runtimeType, abbreviated, expanded);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_DesignationModelCopyWith<_$_DesignationModel> get copyWith =>
+      __$$_DesignationModelCopyWithImpl<_$_DesignationModel>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DesignationModelToJson(this);
+    return _$$_DesignationModelToJson(
+      this,
+    );
   }
 }
 
 abstract class _DesignationModel implements DesignationModel {
   factory _DesignationModel(
-      {required String abbreviated,
-      required String expanded}) = _$_DesignationModel;
+      {required final String abbreviated,
+      required final String expanded}) = _$_DesignationModel;
 
   factory _DesignationModel.fromJson(Map<String, dynamic> json) =
       _$_DesignationModel.fromJson;
@@ -182,6 +166,6 @@ abstract class _DesignationModel implements DesignationModel {
   String get expanded;
   @override
   @JsonKey(ignore: true)
-  _$DesignationModelCopyWith<_DesignationModel> get copyWith =>
+  _$$_DesignationModelCopyWith<_$_DesignationModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
